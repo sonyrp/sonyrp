@@ -1,6 +1,6 @@
 <!-- ═══════════════════  ENCABEZADO  ═══════════════════ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:7f5af0&height=220&section=header&text=Sonia%20Restrepo&fontSize=58&fontColor=ffffff&fontAlignY=38&desc=Data%20%26%20AI%20Engineer%20%E2%9C%A6%20Ingeniera%20F%C3%ADsica&descAlignY=58&descSize=20&animation=fadeIn" width="100%"/>
+  <img src="assets/header.svg" width="100%" alt="Sonia Restrepo · Data & AI Engineer"/>
 </p>
 
 <p align="center">
@@ -99,8 +99,10 @@ Cargar un bus eléctrico parece simple, pero hacerlo al menor costo, cuidando la
 
 <p align="center">
   <a href="https://github.com/sonyrp/phishing-detector">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=sonyrp&repo=phishing-detector&theme=tokyonight&hide_border=true&bg_color=0f0c29&title_color=a78bfa&icon_color=7f5af0"/>
+    <img src="https://img.shields.io/badge/%F0%9F%8E%A3%20phishing--detector-Ver%20proyecto-7f5af0?style=for-the-badge&labelColor=0f0c29"/>
   </a>
+  <img src="https://img.shields.io/badge/Python-NLP%20%2B%20ML-a78bfa?style=for-the-badge&logo=python&logoColor=white&labelColor=302b63"/>
+  <img src="https://img.shields.io/badge/Flask-App%20web-a78bfa?style=for-the-badge&logo=flask&logoColor=white&labelColor=302b63"/>
 </p>
 
 > 🎣 **phishing-detector** — Detecta correos y mensajes de phishing con NLP y Machine Learning.
@@ -111,12 +113,7 @@ Cargar un bus eléctrico parece simple, pero hacerlo al menor costo, cuidando la
 ## 📡 Telemetría de la nave
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=sonyrp&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0c29&title_color=a78bfa&icon_color=7f5af0&locale=es"/>
-  <img height="165" src="https://streak-stats.demolab.com?user=sonyrp&theme=tokyonight&hide_border=true&background=0f0c29&ring=7f5af0&fire=a78bfa&currStreakLabel=a78bfa&locale=es"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sonyrp&bg_color=0f0c29&color=a78bfa&line=7f5af0&point=ffffff&area=true&hide_border=true&custom_title=Actividad%20de%20la%20nave"/>
+  <img src="https://streak-stats.demolab.com?user=sonyrp&theme=tokyonight&hide_border=true&background=0f0c29&ring=7f5af0&fire=a78bfa&currStreakLabel=a78bfa&locale=es"/>
 </p>
 
 ---
@@ -147,5 +144,5 @@ Cargar un bus eléctrico parece simple, pero hacerlo al menor costo, cuidando la
 
 <!-- ═══════════════════  PIE  ═══════════════════ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:7f5af0,50:302b63,100:0f0c29&height=120&section=footer&text=Fin%20de%20la%20transmisi%C3%B3n&fontSize=22&fontColor=ffffff&fontAlignY=70" width="100%"/>
+  <img src="assets/footer.svg" width="100%" alt="Fin de la transmisión"/>
 </p>
