@@ -105,7 +105,7 @@ Charging an electric bus sounds simple, but doing it at the lowest cost, protect
   <img src="https://img.shields.io/badge/Flask-Web%20app-a78bfa?style=for-the-badge&logo=flask&logoColor=white&labelColor=302b63"/>
 </p>
 
-> 🎣 **phishing-detector** — Detects phishing emails and messages using NLP and Machine Learning.
+> 🎣 **phishing-detector** — Detects phishing emails and messages using NLP and Machine Learning.<br>
 > 🛰️ *More AI and automation projects landing soon...*
 
 ---
