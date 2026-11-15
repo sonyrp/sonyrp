@@ -1,6 +1,6 @@
 <!-- ═══════════════════  HEADER  ═══════════════════ -->
 <p align="center">
-  <img src="assets/header.svg" width="100%" alt="Sonia Restrepo · Data & AI Engineer"/>
+  <img src="assets/header.svg?v=2" width="100%" alt="Sonia Restrepo · Data & AI Engineer"/>
 </p>
 
 <p align="center">
@@ -144,5 +144,5 @@ Charging an electric bus sounds simple, but doing it at the lowest cost, protect
 
 <!-- ═══════════════════  FOOTER  ═══════════════════ -->
 <p align="center">
-  <img src="assets/footer.svg" width="100%" alt="End of transmission"/>
+  <img src="assets/footer.svg?v=2" width="100%" alt="End of transmission"/>
 </p>
