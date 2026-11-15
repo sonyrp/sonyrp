@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/sonia-marcela-restrepo-perez-83b893289">
+  <a href="https://www.linkedin.com/in/sonia-restrepo-perez">
     <img src="https://img.shields.io/badge/LinkedIn-Let's%20connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   <img src="https://img.shields.io/badge/Data%20%26%20AI%20Engineer-Integra%20S.A.%20%7C%20R%26D%26I-7f5af0?style=for-the-badge&logo=rocket&logoColor=white"/>
