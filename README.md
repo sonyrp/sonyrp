@@ -10,10 +10,6 @@
 </p>
 
 <p align="center">
-  <b>🇬🇧 English</b> &nbsp;·&nbsp; <a href="README.es.md">🇨🇴 Español</a>
-</p>
-
-<p align="center">
   <a href="https://www.linkedin.com/in/sonia-restrepo-perez">
     <img src="https://img.shields.io/badge/LinkedIn-Join%20my%20crew-C0392B?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=3B2A1A"/>
   </a>

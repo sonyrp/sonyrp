@@ -64,18 +64,51 @@ STRAW_HAT = f'''<ellipse cx="0" cy="10" rx="44" ry="11" fill="{STRAW}" stroke="#
 <path d="M-26 2 Q0 10 26 2 L26 9 Q0 16 -26 9 Z" fill="#e63946"/>
 <path d="M-18 -12 q18 -6 36 0 M-22 -4 q22 -6 44 0" fill="none" stroke="#c9952c" stroke-width="1"/>'''
 
-SHIP = f'''<rect x="-3" y="-150" width="5" height="126" fill="{INK}"/><rect x="-50" y="-108" width="4" height="84" fill="{INK}"/>
-<path d="M70 -34 L104 -52" stroke="{INK}" stroke-width="4" stroke-linecap="round"/>
+SHIP = f'''<!-- caravel with a ram figurehead -->
+<rect x="-3" y="-150" width="5" height="116" fill="{INK}"/>
+<rect x="-63" y="-116" width="4" height="52" fill="{INK}"/>
 <g class="flag"><path d="M2 -150 h34 q-5 8 0 18 h-34 Z" fill="#111"/><circle cx="18" cy="-140" r="4.2" fill="#fff"/>
 <path d="M11 -143 q7 -7 14 0 Z" fill="{STRAW}"/><path d="M9 -143 h18" stroke="{STRAW}" stroke-width="1.6" stroke-linecap="round"/>
 <path d="M11 -135 l14 -4 M11 -139 l14 4" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/></g>
-<path d="M-38 -126 Q0 -116 38 -126 L44 -62 Q0 -46 -44 -62 Z" fill="#fffaf0" stroke="{INK}" stroke-width="1.8"/>
-<path d="M-30 -110 Q0 -102 30 -110 M-34 -92 Q0 -82 34 -92 M-38 -76 Q0 -64 38 -76" fill="none" stroke="#e63946" stroke-width="3.5"/>
-<path d="M-72 -96 Q-48 -90 -26 -96 L-22 -52 Q-48 -42 -76 -52 Z" fill="#fffaf0" stroke="{INK}" stroke-width="1.8"/>
-<path d="M70 -36 L4 -112 L4 -40 Z" fill="#fffaf0" stroke="{INK}" stroke-width="1.8"/>
-<path d="M-84 -34 L80 -34 Q70 0 46 6 L-52 6 Q-74 0 -84 -34 Z" fill="#8b5a2b" stroke="#2b1a0c" stroke-width="2"/>
-<path d="M-80 -24 L76 -24" stroke="{STRAW}" stroke-width="3"/><path d="M-76 -14 L72 -14" stroke="#e63946" stroke-width="2"/>
-<g fill="#ffe9a8" stroke="#2b1a0c"><circle cx="-40" cy="-4" r="3"/><circle cx="-12" cy="-4" r="3"/><circle cx="16" cy="-4" r="3"/><circle cx="44" cy="-4" r="3"/></g>'''
+<!-- crow's nest -->
+<path d="M-11 -132 h21 l-3 10 h-15 Z" fill="#a0672f" stroke="{INK}" stroke-width="1.5"/>
+<!-- jib -->
+<path d="M6 -112 L66 -46 L6 -50 Z" fill="#fffaf0" stroke="{INK}" stroke-width="1.8"/>
+<!-- striped lateen sail at the stern -->
+<path d="M-61 -116 L-20 -70 L-61 -66 Z" fill="#fffaf0" stroke="{INK}" stroke-width="1.8"/>
+<path d="M-52 -106 V-67 M-42 -95 V-68 M-32 -84 V-69" stroke="#e63946" stroke-width="4"/>
+<path d="M-61 -116 L-20 -70 L-61 -66 Z" fill="none" stroke="{INK}" stroke-width="1.8"/>
+<!-- main sail with the straw hat jolly roger -->
+<path d="M-46 -120 H46" stroke="{INK}" stroke-width="4" stroke-linecap="round"/>
+<path d="M-42 -118 Q0 -108 42 -118 L46 -56 Q0 -40 -46 -56 Z" fill="#fffaf0" stroke="{INK}" stroke-width="1.8"/>
+<g stroke-linecap="round"><path d="M-19 -99 L19 -67 M19 -99 L-19 -67" stroke="{INK}" stroke-width="6"/><path d="M-19 -99 L19 -67 M19 -99 L-19 -67" stroke="#fffaf0" stroke-width="2.6"/></g>
+<circle cx="0" cy="-84" r="11" fill="#fffaf0" stroke="{INK}" stroke-width="2"/>
+<rect x="-6" y="-76" width="12" height="8" rx="2.5" fill="#fffaf0" stroke="{INK}" stroke-width="2"/>
+<circle cx="-4" cy="-83" r="2.8" fill="{INK}"/><circle cx="4" cy="-83" r="2.8" fill="{INK}"/><path d="M-2.500 -71 v3 M0 -71 v3.500 M2.500 -71 v3" stroke="{INK}" stroke-width="1"/>
+<ellipse cx="0" cy="-92" rx="16" ry="4" fill="{STRAW}" stroke="{INK}" stroke-width="1.5"/>
+<path d="M-9 -92 Q-8 -103 0 -103 Q8 -103 9 -92 Q0 -89 -9 -92 Z" fill="#f7d06a" stroke="{INK}" stroke-width="1.5"/>
+<path d="M-9 -94 Q0 -91 9 -94" fill="none" stroke="#e63946" stroke-width="2.4"/>
+<!-- stern cabin -->
+<path d="M-88 -64 h34 v30 h-34 Z" fill="#fffaf0" stroke="{INK}" stroke-width="2"/>
+<path d="M-92 -64 h42 l-5 -9 h-32 Z" fill="#e67e22" stroke="{INK}" stroke-width="2"/>
+<rect x="-78" y="-56" width="12" height="12" rx="2" fill="#9be7f5" stroke="{INK}" stroke-width="1.5"/><path d="M-72 -56 v12 M-78 -50 h12" stroke="{INK}" stroke-width="1"/>
+<!-- railing -->
+<path d="M-52 -45 H62 M-46 -45 v9 M-34 -45 v9 M-22 -45 v9 M-10 -45 v9 M14 -45 v9 M26 -45 v9 M38 -45 v9 M50 -45 v9" fill="none" stroke="{INK}" stroke-width="1.8"/>
+<!-- hull -->
+<path d="M-90 -36 L64 -36 Q78 -36 88 -50 Q88 -12 52 6 L-56 6 Q-82 0 -90 -36 Z" fill="#c98b4a" stroke="#2b1a0c" stroke-width="2"/>
+<path d="M-90 -36 L64 -36 Q78 -36 88 -50 Q89 -40 86 -32 Q76 -24 62 -24 L-87 -24 Z" fill="#fffaf0" stroke="#2b1a0c" stroke-width="1.8"/>
+<path d="M-80 -10 Q0 -2 74 -16" fill="none" stroke="#8b5a2b" stroke-width="3"/>
+<path d="M-70 2 Q-10 8 56 0" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<g fill="#2b1a0c"><circle cx="-30" cy="-13" r="3.5"/><circle cx="10" cy="-13" r="3.5"/></g>
+<path d="M-90 -30 l-7 4 v18 l7 4" fill="#a0672f" stroke="#2b1a0c" stroke-width="1.8"/>
+<!-- the ram -->
+<path d="M80 -44 Q98 -46 102 -64" fill="none" stroke="{INK}" stroke-width="17" stroke-linecap="round"/>
+<path d="M80 -44 Q98 -46 102 -64" fill="none" stroke="#fffaf0" stroke-width="13" stroke-linecap="round"/>
+<g fill="#fffaf0" stroke="{INK}" stroke-width="2"><circle cx="96" cy="-82" r="6"/><circle cx="104" cy="-86" r="6.500"/><circle cx="112" cy="-82" r="6"/>
+<ellipse cx="104" cy="-70" rx="14" ry="12"/><ellipse cx="117" cy="-66" rx="8" ry="7"/></g>
+<circle cx="95" cy="-70" r="7.500" fill="{STRAW}" stroke="{INK}" stroke-width="2"/><path d="M95 -70 m-3.500 0 a3.500 3.500 0 1 1 3.500 3.500" fill="none" stroke="#8a5a12" stroke-width="1.6"/>
+<circle cx="109" cy="-72" r="2.2" fill="{INK}"/><circle cx="109.700" cy="-72.700" r=".7" fill="#fff"/>
+<path d="M113 -63 q5 4 9 -1" fill="none" stroke="{INK}" stroke-width="1.6" stroke-linecap="round"/><circle cx="121" cy="-68" r="1" fill="{INK}"/>'''
 
 SMALL_SHIP = '''<path d="M-22 0 h44 q-4 13 -13 15 h-20 q-8 -2 -11 -15 Z" fill="#8b5a2b" stroke="#2b1a0c" stroke-width="1.2"/>
 <path d="M0 0 V-42" stroke="#2b1a0c" stroke-width="2.2"/>
