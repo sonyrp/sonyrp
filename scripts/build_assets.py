@@ -34,6 +34,20 @@ def frame(w, h):
 <g fill="{STRAW}" stroke="{INK}" stroke-width="1"><circle cx="8" cy="8" r="3.5"/><circle cx="{w - 8}" cy="8" r="3.5"/><circle cx="8" cy="{h - 8}" r="3.5"/><circle cx="{w - 8}" cy="{h - 8}" r="3.5"/></g>'''
 
 
+def papyrus(w, h):
+    """A papyrus sheet: woven fibres, stains and slightly torn edges."""
+    box = f'x="7" y="7" width="{w - 14}" height="{h - 14}" rx="4"'
+    return f'''<defs>
+<linearGradient id="pap" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eedca6"/><stop offset=".5" stop-color="#e4cd8e"/><stop offset="1" stop-color="#d6bb76"/></linearGradient>
+<pattern id="fibH" width="60" height="5" patternUnits="userSpaceOnUse"><path d="M0 2.500 H60" stroke="#a8823f" stroke-width="1" opacity=".38"/></pattern>
+<pattern id="fibV" width="9" height="60" patternUnits="userSpaceOnUse"><path d="M4.500 0 V60" stroke="#a8823f" stroke-width="1.8" opacity=".17"/></pattern>
+<filter id="torn" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="9"/></filter>
+<filter id="stain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="9"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .33  0 0 0 0 .1  0 0 0 .75 -.24"/><feComposite operator="in" in2="SourceGraphic"/></filter>
+</defs>
+<g filter="url(#torn)"><rect {box} fill="url(#pap)" stroke="#8a6a3a" stroke-width="2.500"/>
+<rect {box} fill="url(#fibH)"/><rect {box} fill="url(#fibV)"/><rect {box} filter="url(#stain)"/></g>'''
+
+
 def svg(w, h, style, body, framed=True):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">\n'
             f'<style>text{{font-family:{SERIF}}}.mono{{font-family:{MONO}}}{style}</style>\n'
@@ -688,7 +702,7 @@ def sagas():
 def captain_log():
     """Narration card that sits beside the wanted poster (parchment, like the other panels)."""
     w, h = 600, 556
-    gold, cream, teal, coral, amber = "#a12a1e", INK, "#c0392b", "#c0392b", "#a12a1e"
+    gold, cream, teal, coral, amber = "#8f2f17", INK, "#8f2f17", "#8f2f17", "#6b2a10"
     style = """
 .r{animation:rv 1.2s ease-out backwards}
 @keyframes rv{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -701,14 +715,14 @@ def captain_log():
 .quill{animation:ql 1.8s ease-in-out infinite;transform-origin:548px 536px}
 @keyframes ql{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg) translate(4px,0)}}
 .quote{animation:qc 4s ease-in-out infinite}
-@keyframes qc{0%,100%{fill:#a12a1e}50%{fill:#e63946}}
+@keyframes qc{0%,100%{fill:#8f2f17}50%{fill:#b5451f}}
 .spk{animation:spk 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 @keyframes spk{0%,100%{transform:scale(0)}50%{transform:scale(1)}}
 .twist{animation:tw 1.2s linear infinite}@keyframes tw{to{stroke-dashoffset:-10}}
 """
     words = "".join(f'<g class="r" style="animation-delay:{i * .5:.1f}s"><g class="pulse" style="animation-delay:{2 + i * .8:.1f}s">'
-                    f'{otext(x, 78, t, 23, c, "middle")}</g></g>'
-                    for i, (x, t, c) in enumerate(((104, "DATA.", "#e63946"), (286, "INSIGHT.", "#ff9f1c"), (476, "AUTOMATION.", "#e63946"))))
+                    f'<text x="{x}" y="78" text-anchor="middle" font-size="23" font-weight="700" fill="{c}" letter-spacing="1.5">{t}</text></g></g>'
+                    for i, (x, t, c) in enumerate(((88, "DATA.", "#8f2f17"), (248, "INSIGHT.", "#3b2a1a"), (462, "AUTOMATION.", "#8f2f17"))))
 
     def line(y, txt, delay, size=17.5, extra='font-style="italic"', fill=cream, cls=""):
         return (f'<g class="r" style="animation-delay:{delay}s"><text class="{cls}" x="300" y="{y}" text-anchor="middle" '
@@ -717,11 +731,11 @@ def captain_log():
     def b(t):
         return f'<tspan font-weight="700" fill="{amber}">{t}</tspan>'
 
-    sparks = "".join(f'<path class="spk" style="animation-delay:{d}s" d="M{x} {y - 7} l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="{INK}" stroke-width=".7"/>'
+    sparks = "".join(f'<path class="spk" style="animation-delay:{d}s" d="M{x} {y - 7} l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#8a6a3a"/>'
                      for x, y, d in ((40, 40, 0), (560, 44, .9), (92, 190, 1.6), (508, 190, .4), (566, 300, 1.2), (34, 300, 2)))
     rope = "M40 272 Q150 279 262 272 M338 272 Q450 265 560 272"
     planks = "".join(f'<path d="M0 {y} H{w}" stroke="#1d1108" stroke-width="2" opacity=".55"/>' for y in range(70, h, 70))
-    body = f'''{frame(w, h)}
+    body = f'''{papyrus(w, h)}
 {sparks}
 <text class="r" x="300" y="38" text-anchor="middle" font-size="12" font-weight="700" fill="{gold}" letter-spacing="7">THE LEGEND</text>
 {words}
@@ -759,7 +773,7 @@ def captain_log():
 def captain_code():
     import re
     w, h = 1200, 436
-    gold, cream, teal, coral, amber, dim = "#a8480f", INK, "#0e7c96", "#c0392b", "#8a5a12", "#8a6a3a"
+    gold, cream, teal, coral, amber, dim = "#7a4a12", INK, "#5a2d0c", "#8f2f17", "#6b4a22", "#8a6a3a"
     code = [
         'class Captain:',
         '    name      = "Sonia Restrepo"',
@@ -806,8 +820,8 @@ def captain_code():
     style = """
 .r{animation:rv .6s ease-out backwards}
 @keyframes rv{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
-.cover{transform:translateX(330px);animation:type 7s steps(26) infinite}
-@keyframes type{0%,12%{transform:translateX(0)}55%,100%{transform:translateX(330px)}}
+.out{animation:out 7s steps(1) infinite}
+@keyframes out{0%{opacity:0}18%,100%{opacity:1}}
 .cur{animation:cur .9s steps(1) infinite}
 @keyframes cur{50%{opacity:0}}
 .w1{animation:wv 6s linear infinite}.w2{animation:wv 9s linear infinite reverse}
@@ -821,31 +835,28 @@ def captain_code():
 """
     planks = "".join(f'<path d="M0 {y} H{w}" stroke="#1d1108" stroke-width="2" opacity=".5"/>' for y in range(96, h, 70))
     body = f'''<defs><clipPath id="term"><rect x="742" y="68" width="424" height="336" rx="10"/></clipPath></defs>
-{frame(w, h)}
-<path d="M8 50 V16 q0 -8 8 -8 H{w - 16} q8 0 8 8 V50 Z" fill="{WOOD}"/><path d="M8 50 H{w - 8}" stroke="{INK}" stroke-width="2"/>
-<g stroke="{INK}" stroke-width="1.5"><circle cx="34" cy="29" r="7" fill="#e63946"/><circle cx="58" cy="29" r="7" fill="{STRAW}"/><circle cx="82" cy="29" r="7" fill="#ff9f1c"/></g>
-<path d="M108 51 V20 q0 -6 6 -6 h150 q6 0 6 6 V51 Z" fill="#f8ebc8" stroke="{INK}" stroke-width="2"/>
-<text class="mono" x="189" y="38" text-anchor="middle" font-size="16" font-weight="700" fill="{INK}">captain.py</text>
-<text x="{w - 30}" y="35" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#ffe9a8" letter-spacing="2">THE CAPTAIN, IN PYTHON</text>
-<path d="M62 64 V{h - 24}" stroke="{dim}" stroke-width="1" opacity=".6"/>
+{papyrus(w, h)}
+<text class="mono" x="72" y="44" font-size="19" font-weight="700" fill="#8f2f17">captain.py</text>
+<text x="{w - 36}" y="43" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#6b4a22" letter-spacing="2">THE CAPTAIN, IN PYTHON</text>
+<path d="M30 58 H{w - 30}" stroke="{INK}" stroke-width="1.6"/><path d="M30 62 H{w - 30}" stroke="{INK}" stroke-width=".7"/>
+<path d="M62 74 V{h - 26}" stroke="{dim}" stroke-width="1" opacity=".7"/>
 {lines}
 <!-- terminal -->
 <g clip-path="url(#term)">
-<rect x="742" y="68" width="424" height="336" fill="#c8f1fb"/>
-<g fill="#fff"><circle cx="1010" cy="318" r="30"/><circle cx="1050" cy="306" r="38"/><circle cx="1100" cy="318" r="30"/><circle cx="1140" cy="312" r="28"/></g>
+<rect x="742" y="68" width="424" height="336" fill="#f3e4b4" opacity=".55"/>
 <text class="mono" x="762" y="98" font-size="15" fill="{dim}">~/grand-line $ <tspan fill="{cream}">python</tspan></text>
 <text class="mono" x="762" y="130" font-size="16" fill="{teal}" font-weight="700">&gt;&gt;&gt; <tspan fill="{cream}" font-weight="400">Captain().set_sail()</tspan></text>
-<text class="mono" x="762" y="162" font-size="16" font-weight="700" fill="{gold}">'Vibecoding at full sail'</text>
-<rect class="cover" x="760" y="144" width="340" height="26" fill="#c8f1fb"/>
+<text class="mono out" x="762" y="162" font-size="16" font-weight="700" fill="#8f2f17">'Vibecoding at full sail'</text>
 <text class="mono" x="762" y="194" font-size="16" fill="{teal}" font-weight="700">&gt;&gt;&gt; <tspan class="cur" fill="{cream}">▌</tspan></text>
-<path class="spk" d="M1120 96 l2.500 6 l6 2.500 l-6 2.500 l-2.500 6 l-2.500 -6 l-6 -2.500 l6 -2.500 Z" fill="#fff"/>
-<path class="spk" style="animation-delay:1.2s" d="M1070 232 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#fff"/>
-<circle cx="820" cy="262" r="22" fill="#ffd23f" stroke="#f39c12" stroke-width="3"/>
-{wave(330, 10, "#2ec4c6", "w2", bottom=420)}
+<path class="spk" d="M1120 96 l2.500 6 l6 2.500 l-6 2.500 l-2.500 6 l-2.500 -6 l-6 -2.500 l6 -2.500 Z" fill="#8a6a3a"/>
+<path class="spk" style="animation-delay:1.2s" d="M1070 232 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#8a6a3a"/>
+<g stroke="{INK}" stroke-width="2" stroke-linecap="round"><path d="M820 226 v-10 M820 298 v10 M784 262 h-10 M856 262 h10 M795 237 l-7 -7 M845 237 l7 -7 M795 287 l-7 7 M845 287 l7 7"/></g>
+<circle cx="820" cy="262" r="22" fill="#e6c36a" stroke="{INK}" stroke-width="2"/>
+{wave(330, 10, "#dcc48d", "w2", 'stroke="#3b2a1a" stroke-width="2"', bottom=420)}
 <g class="sail"><g transform="translate(0 340)"><g class="bob">{SMALL_SHIP}</g></g></g>
-{wave(350, 12, "#17a2b8", "w1", bottom=420)}
+{wave(350, 12, "#cdb173", "w1", 'stroke="#3b2a1a" stroke-width="2"', bottom=420)}
 </g>
-<rect x="742" y="68" width="424" height="336" rx="10" fill="none" stroke="{INK}" stroke-width="4"/>'''
+<rect x="742" y="68" width="424" height="336" rx="10" fill="none" stroke="{INK}" stroke-width="2.500"/>'''
     save("captain-code.svg", svg(w, h, style, body, framed=False))
 
 
