@@ -21,6 +21,10 @@
 
 ## 🏴‍☠️ Captain's log
 
+<p align="center">
+  <img src="assets/captain-log.svg" width="100%" alt="The legend: Data. Insight. Automation. Legend tells of a treasure hidden at the end of the Grand Line of Data: a world where machines do the boring work and people are free to create. 'It is real. Come and find it.' And so dreamers everywhere set sail. The Great Age of AI had begun! The captain: one of them was a Physics Engineer from Pereira, Colombia, who learned to read the universe through equations, and now uses that to teach machines how to think. She sails as a Data & AI Engineer with the R&D&I crew of Integra S.A.: building software, charting data architectures and bringing artificial intelligence aboard. Her dream: let machines do the repetitive work, so people can do the creative work. Captain Sonia Restrepo, the Data Navigator."/>
+</p>
+
 <table>
   <tr>
     <td width="36%" align="center" valign="top">
@@ -29,11 +33,7 @@
     </td>
     <td valign="top">
 
-I'm a **Physics Engineer** from Universidad Tecnológica de Pereira: I learned to read the universe through equations, and now I use that to teach machines how to think.
-
-I sail as a **Data & AI Engineer in the R&D&I department at Integra S.A.**, building software, charting data architectures and bringing artificial intelligence aboard the company's operations. My dream: let machines do the repetitive work so people can do the creative work.
-
-📍 Pereira, Colombia · 🎓 M.Sc. in Systems and Computer Engineering (UTP)
+📍 **Home sea:** Pereira, Colombia &nbsp;·&nbsp; 🎓 **Training:** Physics Engineering + M.Sc. in Systems and Computer Engineering (UTP)
 
 ```python
 class Captain:

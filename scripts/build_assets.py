@@ -684,6 +684,71 @@ def sagas():
     save("sagas.svg", svg(1200, 322, style, body))
 
 
+# ─────────────── captain's log: opening narration ───────────────
+def captain_log():
+    style = """
+.r{animation:rv 1.2s ease-out backwards}
+@keyframes rv{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.pulse{animation:pl 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pl{0%,30%,100%{transform:scale(1)}12%{transform:scale(1.14) rotate(-2deg)}}
+.flame{animation:fm .45s ease-in-out infinite alternate;transform-origin:78px 508px}
+@keyframes fm{from{transform:scale(1,1) rotate(-3deg)}to{transform:scale(.88,1.14) rotate(3deg)}}
+.halo{animation:hl 2.2s ease-in-out infinite}
+@keyframes hl{0%,100%{opacity:.25}50%{opacity:.5}}
+.quill{animation:ql 1.8s ease-in-out infinite;transform-origin:1118px 566px}
+@keyframes ql{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg) translate(5px,0)}}
+.quote{animation:qc 5s ease-in-out infinite}
+@keyframes qc{0%,100%{fill:#a12a1e}50%{fill:#e63946}}
+.spk{animation:spk 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spk{0%,100%{transform:scale(0)}50%{transform:scale(1)}}
+.twist{animation:tw 1.2s linear infinite}@keyframes tw{to{stroke-dashoffset:-10}}
+"""
+    words = "".join(f'<g class="r" style="animation-delay:{i * .5:.1f}s"><g class="pulse" style="animation-delay:{2 + i * .8:.1f}s">'
+                    f'{otext(x, 112, w, 36, c, "middle")}</g></g>'
+                    for i, (x, w, c) in enumerate(((270, "DATA.", "#e63946"), (600, "INSIGHT.", "#ff9f1c"), (950, "AUTOMATION.", "#e63946"))))
+
+    def line(y, txt, delay, size=21, extra='font-style="italic"', fill=INK, cls=""):
+        return (f'<g class="r" style="animation-delay:{delay}s"><text class="{cls}" x="600" y="{y}" text-anchor="middle" '
+                f'font-size="{size}" fill="{fill}" {extra}>{txt}</text></g>')
+
+    b = 'font-weight="700"'
+    sparks = "".join(f'<path class="spk" style="animation-delay:{d}s" d="M{x} {y - 8} l2.500 5.500 l5.500 2.500 l-5.500 2.500 l-2.500 5.500 l-2.500 -5.500 l-5.500 -2.500 l5.500 -2.500 Z" fill="#ff9f1c" stroke="{INK}" stroke-width=".8"/>'
+                     for x, y, d in ((120, 96, 0), (1085, 100, .9), (395, 232, 1.6), (805, 232, .4), (1120, 330, 1.2), (84, 330, 2)))
+    rope = "M70 304 Q320 314 548 304 M652 304 Q880 294 1130 304"
+    body = f'''{sparks}
+<text class="r" x="600" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#a12a1e" letter-spacing="8">THE LEGEND</text>
+{words}
+{line(160, "Legend tells of a treasure hidden at the end of the Grand Line of Data:", 1.8)}
+{line(190, "a world where machines do the boring work and people are free to create.", 2.3)}
+{line(234, "“It is real. Come and find it.”", 3.1, 27, 'font-style="italic" font-weight="700"', "#a12a1e", "quote")}
+{line(272, "And so dreamers everywhere set sail. The Great Age of AI had begun!", 3.9)}
+<g class="r" style="animation-delay:4.4s"><path d="{rope}" fill="none" stroke="{INK}" stroke-width="7" stroke-linecap="round"/>
+<path d="{rope}" fill="none" stroke="#d2ae6c" stroke-width="4.500" stroke-linecap="round"/>
+<path class="twist" d="{rope}" fill="none" stroke="#8a5a12" stroke-width="4.500" stroke-dasharray="2 8"/>
+<g transform="translate(600 300) scale(.8)">{STRAW_HAT}</g></g>
+<text class="r" style="animation-delay:4.8s" x="600" y="348" text-anchor="middle" font-size="13" font-weight="700" fill="#a12a1e" letter-spacing="8">THE CAPTAIN</text>
+{line(384, f'One of them was a <tspan {b}>Physics Engineer</tspan> from Pereira, Colombia, who learned to read', 5.2, 20, "")}
+{line(411, "the universe through equations, and now uses that to teach machines how to think.", 5.2, 20, "")}
+{line(448, f'She sails as a <tspan {b}>Data &amp; AI Engineer</tspan> with the <tspan {b}>R&amp;D&amp;I crew of Integra S.A.</tspan>: building software,', 5.8, 20, "")}
+{line(475, "charting data architectures and bringing artificial intelligence aboard.", 5.8, 20, "")}
+{line(516, "Her dream: let machines do the repetitive work, so people can do the creative work.", 6.4, 21, 'font-weight="700"', "#a12a1e")}
+<g class="r" style="animation-delay:7s"><text x="1090" y="566" text-anchor="end" font-size="20" font-style="italic" font-weight="700" fill="{INK}">— Captain Sonia Restrepo, “the Data Navigator”</text>
+<path d="M660 574 q110 10 430 0" fill="none" stroke="{INK}" stroke-width="1.5" stroke-linecap="round"/></g>
+<!-- quill -->
+<g class="quill"><path d="M1118 566 L1150 500 Q1176 470 1168 520 Q1160 548 1124 562 Z" fill="#fffaf0" stroke="{INK}" stroke-width="2"/>
+<path d="M1118 566 L1162 492 M1140 530 l14 -4 M1146 518 l14 -6 M1134 542 l14 -2" fill="none" stroke="{INK}" stroke-width="1.4"/>
+<path d="M1118 566 l5 -9" stroke="{INK}" stroke-width="3.500" stroke-linecap="round"/></g>
+<!-- candle -->
+<circle class="halo" cx="78" cy="500" r="40" fill="#ffd23f"/>
+<rect x="66" y="518" width="24" height="46" rx="3" fill="#fffaf0" stroke="{INK}" stroke-width="2"/>
+<path d="M66 530 q6 6 4 14 M84 518 q4 8 0 16" fill="none" stroke="#d9c08a" stroke-width="2"/>
+<path d="M56 564 h44 l-5 9 h-34 Z" fill="{STRAW}" stroke="{INK}" stroke-width="2"/>
+<path d="M78 518 v-8" stroke="{INK}" stroke-width="2"/>
+<g class="flame"><path d="M78 508 q-11 -14 0 -30 q11 16 0 30 Z" fill="#ff9f1c" stroke="{INK}" stroke-width="1.5"/><path d="M78 506 q-5 -8 0 -16 q5 8 0 16 Z" fill="#ffd23f"/></g>'''
+    save("captain-log.svg", svg(1200, 600, style, body))
+
+
 if __name__ == "__main__":
+    captain_log()
     header(); footer(); current_arc(); crew_flag(); news(); chest(); poneglyph(); dividers()
     crew_fruits(); sagas()
