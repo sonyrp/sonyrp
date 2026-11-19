@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <radialGradient id="parch" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0" stop-color="#f6e7c1"/>
+      <stop offset="0.7" stop-color="#ecd49c"/>
+      <stop offset="1" stop-color="#b98f4e"/>
+    </radialGradient>
+    <filter id="paper" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="4" seed="7"/>
+      <feColorMatrix values="0 0 0 0 .45  0 0 0 0 .30  0 0 0 0 .12  0 0 0 .6 -.14"/>
+    </filter>
+    <clipPath id="sheet"><rect x="6" y="6" width="1188" height="688" rx="16"/></clipPath>
+    <pattern id="rock" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="14" height="14" fill="#b5533c"/>
+      <path d="M0 7 h14" stroke="#7d2f1f" stroke-width="2"/>
+    </pattern>
+    <path id="route" d="M140 545 C 180 470, 250 420, 320 352 S 420 325, 485 340 S 600 385, 672 365 S 800 318, 880 335 S 1010 372, 1075 352"/>
+    <g id="palm">
+      <path d="M0 0 q-2 -10 2 -18" fill="none" stroke="#3b2a1a" stroke-width="1.6"/>
+      <path d="M2 -18 q-10 -6 -14 2 M2 -18 q10 -6 14 2 M2 -18 q-4 -10 -12 -8 M2 -18 q4 -10 12 -8" fill="none" stroke="#2f6b3a" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g id="swell" fill="none" stroke="#3b2a1a" stroke-width="1.2" stroke-linecap="round" opacity=".45">
+      <path d="M0 0 q6 -6 12 0 t12 0 M8 9 q6 -6 12 0 t12 0"/>
+    </g>
+    <style>
+      text{font-family:Georgia,'Times New Roman',serif;fill:#3b2a1a}
+      .ttl{font-size:34px;font-weight:700;letter-spacing:3px}
+      .sub{font-size:15px;font-style:italic}
+      .sea{font-size:20px;font-style:italic;letter-spacing:8px;opacity:.38}
+      .belt{font-size:11px;font-style:italic;letter-spacing:5px;opacity:.6}
+      .isl{font-size:17px;font-weight:700}
+      .cap{font-size:13px;font-style:italic}
+      .gl{font-size:15px;font-weight:700;letter-spacing:10px;opacity:.5}
+      .march{stroke-dasharray:12 9;animation:mr 1.4s linear infinite}
+      @keyframes mr{to{stroke-dashoffset:-21}}
+      .x{animation:px 1.8s ease-in-out infinite;transform-origin:1075px 352px}
+      @keyframes px{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+      .ring{animation:rg 1.8s ease-out infinite;transform-origin:1075px 352px}
+      @keyframes rg{from{transform:scale(.4);opacity:.9}to{transform:scale(2.2);opacity:0}}
+      .king{animation:kg 6s ease-in-out infinite}
+      @keyframes kg{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+      .needle{animation:nd 5s ease-in-out infinite;transform-origin:1085px 585px}
+      @keyframes nd{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(9deg)}}
+      .spin{animation:sp 9s linear infinite;transform-origin:430px 575px}
+      @keyframes sp{to{transform:rotate(-360deg)}}
+    </style>
+  </defs>
+
+  <!-- parchment -->
+  <rect x="6" y="6" width="1188" height="688" rx="16" fill="url(#parch)" stroke="#6b4a22" stroke-width="3"/>
+  <g clip-path="url(#sheet)">
+    <rect width="1200" height="700" filter="url(#paper)"/>
+  </g>
+  <rect x="22" y="22" width="1156" height="656" rx="8" fill="none" stroke="#3b2a1a" stroke-width="1.5"/>
+  <rect x="28" y="28" width="1144" height="644" rx="6" fill="none" stroke="#3b2a1a" stroke-width=".6"/>
+
+  <!-- the four seas -->
+  <text class="sea" x="520" y="205" text-anchor="middle">NORTH BLUE</text>
+  <text class="sea" x="640" y="540" text-anchor="middle">SOUTH BLUE</text>
+  <text class="sea" x="150" y="496" text-anchor="middle">EAST BLUE</text>
+  <text class="sea" x="1010" y="150" text-anchor="middle">WEST BLUE</text>
+
+  <!-- Grand Line band + calm belts -->
+  <rect x="29" y="262" width="1142" height="194" fill="#1b6ca8" opacity=".13"/>
+  <path d="M29 262 H1171 M29 456 H1171" stroke="#3b2a1a" stroke-width="1.2" stroke-dasharray="3 7" opacity=".7"/>
+  <text class="belt" x="110" y="255">CALM BELT</text>
+  <text class="belt" x="520" y="472">CALM BELT</text>
+  <text class="gl" x="52" y="372">GRAND</text>
+  <text class="gl" x="52" y="396">LINE</text>
+
+  <!-- Red Line (twice, like any good globe) -->
+  <rect x="304" y="29" width="30" height="642" fill="url(#rock)" opacity=".8"/>
+  <path d="M304 29 V671 M334 29 V671" stroke="#5c2014" stroke-width="1.4"/>
+  <text x="319" y="560" text-anchor="middle" transform="rotate(-90 319 560)" style="font-size:12px;font-weight:700;letter-spacing:6px;fill:#fbe9d0">RED LINE</text>
+  <rect x="760" y="29" width="26" height="642" fill="url(#rock)" opacity=".8"/>
+  <path d="M760 29 V671 M786 29 V671" stroke="#5c2014" stroke-width="1.4"/>
+  <text x="773" y="600" text-anchor="middle" transform="rotate(-90 773 600)" style="font-size:12px;font-weight:700;letter-spacing:6px;fill:#fbe9d0">RED LINE</text>
+  <!-- openings where the Grand Line crosses -->
+  <rect x="300" y="322" width="38" height="60" fill="#ecd9a8"/>
+  <rect x="756" y="318" width="34" height="60" fill="#ecd9a8"/>
+  <text x="890" y="440" text-anchor="middle" style="font-size:15px;font-weight:700;letter-spacing:7px;opacity:.55">NEW WORLD</text>
+  <text x="400" y="440" text-anchor="middle" style="font-size:15px;font-weight:700;letter-spacing:7px;opacity:.5">PARADISE</text>
+
+  <!-- title cartouche -->
+  <g>
+    <path d="M52 52 h440 l-14 34 l14 34 h-440 l14 -34 Z" fill="#f6e7c1" stroke="#3b2a1a" stroke-width="1.5"/>
+    <text class="ttl" x="272" y="88" style="font-size:30px" text-anchor="middle">THE VOYAGE SO FAR</text>
+    <text class="sub" x="272" y="109" text-anchor="middle">a navigator's chart of my Grand Line</text>
+  </g>
+
+  <!-- swell doodles -->
+  <use href="#swell" x="80" y="320"/><use href="#swell" x="560" y="110"/><use href="#swell" x="900" y="520"/>
+  <use href="#swell" x="230" y="620"/><use href="#swell" x="1090" y="250"/><use href="#swell" x="420" y="480"/>
+  <use href="#swell" x="860" y="210"/><use href="#swell" x="560" y="600"/><use href="#swell" x="180" y="180"/>
+
+  <!-- sea king -->
+  <g class="king">
+    <g fill="#4f8a6d" stroke="#3b2a1a" stroke-width="1.6">
+      <path d="M840 110 q22 -52 44 0 Z"/>
+      <path d="M892 110 q18 -38 36 0 Z"/>
+      <path d="M936 110 q12 -24 24 0 Z"/>
+      <path d="M800 110 q-6 -58 22 -70 q30 -8 30 16 q-2 14 -22 14 q10 8 6 40 Z"/>
+    </g>
+    <circle cx="832" cy="56" r="3.2" fill="#fff" stroke="#3b2a1a"/>
+    <circle cx="833" cy="56" r="1.2" fill="#3b2a1a"/>
+    <path d="M836 70 l5 6 l4 -6" fill="#fff" stroke="#3b2a1a" stroke-width="1"/>
+    <path d="M806 60 l-8 -8 M808 74 l-10 -4 M812 48 l-5 -10" stroke="#3b2a1a" stroke-width="1.4"/>
+  </g>
+  <path d="M786 112 q8 -7 16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0" fill="none" stroke="#3b2a1a" stroke-width="1.4"/>
+  <text class="cap" x="890" y="134" text-anchor="middle">here be bugs</text>
+
+  <!-- whirlpool -->
+  <g class="spin" fill="none" stroke="#3b2a1a" stroke-width="1.3" opacity=".65">
+    <path d="M430 575 m-2 0 a2 2 0 1 1 4 0 a5 5 0 1 1 -10 0 a9 9 0 1 1 18 0 a14 14 0 1 1 -28 0 a20 20 0 1 1 40 0 a27 27 0 1 1 -54 0"/>
+  </g>
+  <text class="cap" x="430" y="622" text-anchor="middle" opacity=".8">legacy-code maelstrom</text>
+
+  <!-- route -->
+  <use href="#route" fill="none" stroke="#f6e7c1" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+  <use class="march" href="#route" fill="none" stroke="#c0392b" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- 1 · UTP Island (East Blue) -->
+  <g>
+    <path d="M100 548 q4 -22 30 -22 q20 -8 38 6 q16 10 6 24 q-10 14 -36 10 q-34 6 -38 -18 Z" fill="#9dbb7a" stroke="#3b2a1a" stroke-width="1.6"/>
+    <path d="M96 552 q6 16 40 14 q30 4 40 -12" fill="none" stroke="#3b2a1a" stroke-width=".8" stroke-dasharray="2 3"/>
+    <use href="#palm" x="118" y="546"/><use href="#palm" x="158" y="552"/>
+    <!-- atom: physics -->
+    <g transform="translate(140 540)" fill="none" stroke="#3b2a1a" stroke-width="1">
+      <ellipse rx="10" ry="3.6"/><ellipse rx="10" ry="3.6" transform="rotate(60)"/><ellipse rx="10" ry="3.6" transform="rotate(-60)"/>
+      <circle r="1.6" fill="#c0392b" stroke="none"/>
+    </g>
+    <text class="isl" x="140" y="598" text-anchor="middle">UTP Island</text>
+    <text class="cap" x="140" y="615" text-anchor="middle">Physics Engineering</text>
+    <text class="cap" x="140" y="631" text-anchor="middle">where the voyage began</text>
+  </g>
+
+  <!-- 2 · Reverse Mountain -->
+  <g>
+    <path d="M296 366 L312 326 L320 340 L330 318 L344 366 Z" fill="#c9a36a" stroke="#3b2a1a" stroke-width="1.6"/>
+    <path d="M312 326 l4 10 l-6 4 M330 318 l-4 12 l6 6" fill="none" stroke="#3b2a1a" stroke-width="1"/>
+    <text class="isl" x="212" y="294" text-anchor="middle" style="font-size:15px">Reverse Mountain</text>
+    <text class="cap" x="212" y="310" text-anchor="middle">from physics to AI</text>
+  </g>
+
+  <!-- 3 · Integra Island -->
+  <g>
+    <path d="M452 342 q2 -20 26 -20 q24 -8 38 10 q10 14 -4 24 q-18 10 -36 6 q-24 0 -24 -20 Z" fill="#9dbb7a" stroke="#3b2a1a" stroke-width="1.6"/>
+    <use href="#palm" x="468" y="344"/>
+    <!-- lab tower with gear -->
+    <path d="M484 346 v-18 h14 v18 Z M487 328 v-6 h8 v6" fill="#f6e7c1" stroke="#3b2a1a" stroke-width="1.2"/>
+    <path d="M488 334 h6 M488 339 h6" stroke="#3b2a1a" stroke-width="1"/>
+    <text class="isl" x="485" y="296" text-anchor="middle">Integra Island</text>
+    <text class="cap" x="485" y="312" text-anchor="middle">R&amp;D&amp;I · Data &amp; AI Engineer</text>
+  </g>
+
+  <!-- 4 · M.Sc. Archipelago -->
+  <g>
+    <path d="M648 366 q2 -16 20 -16 q20 -4 26 10 q4 14 -14 18 q-30 6 -32 -12 Z" fill="#9dbb7a" stroke="#3b2a1a" stroke-width="1.6"/>
+    <path d="M704 384 q8 -8 16 0 q2 8 -8 8 q-8 0 -8 -8 Z M628 388 q6 -6 12 0 q0 6 -6 6 q-6 0 -6 -6 Z" fill="#9dbb7a" stroke="#3b2a1a" stroke-width="1.3"/>
+    <!-- open book -->
+    <path d="M662 368 q5 -4 10 0 q5 -4 10 0 v-8 q-5 -4 -10 0 q-5 -4 -10 0 Z M672 360 v8" fill="#f6e7c1" stroke="#3b2a1a" stroke-width="1.1"/>
+    <text class="isl" x="672" y="412" text-anchor="middle">M.Sc. Archipelago</text>
+    <text class="cap" x="672" y="428" text-anchor="middle">Systems &amp; Computer Engineering</text>
+    <text class="cap" x="672" y="444" text-anchor="middle">Minciencias scholarship · UTP</text>
+  </g>
+
+  <!-- 5 · Megabús Island -->
+  <g>
+    <path d="M850 338 q0 -20 26 -22 q26 -6 36 12 q8 16 -8 24 q-20 8 -36 4 q-18 -2 -18 -18 Z" fill="#9dbb7a" stroke="#3b2a1a" stroke-width="1.6"/>
+    <!-- electric bus -->
+    <rect x="866" y="326" width="30" height="14" rx="3" fill="#f6e7c1" stroke="#3b2a1a" stroke-width="1.2"/>
+    <path d="M870 330 h6 v4 h-6 Z M879 330 h6 v4 h-6 Z M888 330 h5 v4 h-5 Z" fill="#1b6ca8" opacity=".7"/>
+    <circle cx="873" cy="341" r="2.6" fill="#3b2a1a"/><circle cx="889" cy="341" r="2.6" fill="#3b2a1a"/>
+    <path d="M883 308 l-6 9 h5 l-3 8 l8 -11 h-5 Z" fill="#f4c430" stroke="#3b2a1a" stroke-width=".9"/>
+    <text class="isl" x="900" y="282" text-anchor="middle">Megabús Island</text>
+    <text class="cap" x="900" y="298" text-anchor="middle">AI charging for electric buses</text>
+  </g>
+
+  <!-- 6 · the treasure -->
+  <g>
+    <path d="M1042 356 q2 -22 30 -22 q28 -4 36 14 q6 18 -14 24 q-22 6 -36 2 q-16 -4 -16 -18 Z" fill="#e6cf8a" stroke="#3b2a1a" stroke-width="1.6"/>
+    <circle class="ring" cx="1075" cy="352" r="12" fill="none" stroke="#c0392b" stroke-width="2"/>
+    <g class="x"><path d="M1065 342 L1085 362 M1085 342 L1065 362" stroke="#c0392b" stroke-width="5" stroke-linecap="round"/></g>
+    <text class="isl" x="1078" y="402" text-anchor="middle" style="fill:#a12a1e">THE ONE PIECE</text>
+    <text class="cap" x="1078" y="418" text-anchor="middle" style="font-size:12px">open-source release (MIT)</text>
+  </g>
+
+  <!-- my ship following the route -->
+  <g>
+    <g transform="translate(0 -6)">
+      <path d="M-13 0 h26 q-2 8 -8 9 h-11 q-5 -1 -7 -9 Z" fill="#5a3a1e" stroke="#2b1a0c" stroke-width="1"/>
+      <path d="M0 0 V-24" stroke="#2b1a0c" stroke-width="1.6"/>
+      <path d="M1 -22 q12 4 10 18 h-10 Z" fill="#fbf1d3" stroke="#2b1a0c" stroke-width="1"/>
+      <path d="M-1 -19 q-9 4 -8 15 h8 Z" fill="#fbf1d3" stroke="#2b1a0c" stroke-width="1"/>
+      <path d="M0 -24 h8 l-2 3 l2 3 h-8 Z" fill="#111"/>
+    </g>
+    <animateMotion dur="26s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.9;1" calcMode="linear">
+      <mpath href="#route"/>
+    </animateMotion>
+  </g>
+
+  <!-- compass rose -->
+  <g>
+    <circle cx="1085" cy="585" r="58" fill="#f6e7c1" fill-opacity=".6" stroke="#3b2a1a" stroke-width="1.5"/>
+    <circle cx="1085" cy="585" r="50" fill="none" stroke="#3b2a1a" stroke-width=".7" stroke-dasharray="2 4"/>
+    <path d="M1085 585 m-34 -34 l30 26 l4 8 l-8 -4 Z M1085 585 m34 -34 l-30 26 l-4 8 l8 -4 Z M1085 585 m-34 34 l30 -26 l4 -8 l-8 4 Z M1085 585 m34 34 l-30 -26 l-4 -8 l8 4 Z" fill="#c9a36a" stroke="#3b2a1a" stroke-width=".8"/>
+    <g class="needle">
+      <path d="M1085 535 L1094 577 L1085 585 L1076 577 Z" fill="#c0392b" stroke="#3b2a1a" stroke-width="1"/>
+      <path d="M1085 635 L1094 593 L1085 585 L1076 593 Z" fill="#f6e7c1" stroke="#3b2a1a" stroke-width="1"/>
+      <path d="M1035 585 L1077 576 L1085 585 L1077 594 Z M1135 585 L1093 576 L1085 585 L1093 594 Z" fill="#f6e7c1" stroke="#3b2a1a" stroke-width="1"/>
+    </g>
+    <circle cx="1085" cy="585" r="4" fill="#3b2a1a"/>
+    <text x="1085" y="522" text-anchor="middle" style="font-size:15px;font-weight:700">N</text>
+  </g>
+
+  <!-- log pose scroll -->
+  <g>
+    <path d="M808 566 h200 q10 0 10 10 v44 q0 10 -10 10 h-200 q-10 0 -10 -10 v-44 q0 -10 10 -10 Z" fill="#f6e7c1" fill-opacity=".75" stroke="#3b2a1a" stroke-width="1.2"/>
+    <circle cx="828" cy="598" r="13" fill="#cfe8f3" stroke="#3b2a1a" stroke-width="1.4"/>
+    <path d="M828 598 l7 -7" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="828" cy="598" r="1.6" fill="#3b2a1a"/>
+    <text x="850" y="592" style="font-size:13px;font-weight:700;letter-spacing:2px">LOG POSE</text>
+    <text class="cap" x="850" y="610">next island: open source</text>
+    <text class="cap" x="850" y="624" style="font-size:11px">- - -  route sailed   ✕ treasure</text>
+  </g>
+</svg>
