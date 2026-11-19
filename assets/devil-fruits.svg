@@ -4,7 +4,7 @@
       <stop offset="0" stop-color="#0b1d33"/><stop offset="1" stop-color="#12355b"/>
     </linearGradient>
     <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0" stop-color="#ffd23f" stop-opacity=".7"/><stop offset="1" stop-color="#ffd23f" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="shade" cx="0.32" cy="0.28" r="0.85">
       <stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="0.45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/>
@@ -36,9 +36,9 @@
     <clipPath id="frame"><rect width="1200" height="330" rx="14"/></clipPath>
     <style>
       text{font-family:Georgia,'Times New Roman',serif;text-anchor:middle}
-      .n{font-size:24px;font-weight:700;fill:#f4c430}
-      .d{font-size:15px;fill:#f1dfb5}
-      .j{font-size:12px;font-style:italic;fill:#9fb3c8;letter-spacing:2px}
+      .n{font-size:25px;font-weight:700;fill:#a12a1e}
+      .d{font-size:15px;fill:#3b2a1a}
+      .j{font-size:12px;font-style:italic;font-weight:700;fill:#8a5a12;letter-spacing:2px}
       .f{animation:fl 4s ease-in-out infinite}
       .f2{animation-delay:-1s}.f3{animation-delay:-2s}.f4{animation-delay:-3s}
       @keyframes fl{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(4deg)}}
@@ -53,8 +53,17 @@
   </defs>
 
   <g clip-path="url(#frame)">
-    <rect width="1200" height="330" fill="url(#bg)"/>
-    <rect x="1" y="1" width="1198" height="328" rx="14" fill="none" stroke="#f4c430" stroke-opacity=".35" stroke-width="2"/>
+    <defs>
+<radialGradient id="parch" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#f8ebc8"/><stop offset=".75" stop-color="#eed9a4"/><stop offset="1" stop-color="#d2ae6c"/></radialGradient>
+<filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="4" seed="5"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .30  0 0 0 0 .12  0 0 0 .5 -.12"/><feComposite operator="in" in2="SourceGraphic"/></filter>
+</defs>
+<rect width="1200" height="330" rx="14" fill="#5a3a1e"/>
+<rect x="2" y="2" width="1196" height="326" rx="12" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="8" y="8" width="1184" height="314" rx="8" fill="url(#parch)"/>
+<rect x="8" y="8" width="1184" height="314" rx="8" filter="url(#paper)"/>
+<rect x="15" y="15" width="1170" height="300" rx="5" fill="none" stroke="#3b2a1a" stroke-opacity=".45" stroke-width="1.2"/>
+<g fill="#f2c14e" stroke="#3b2a1a" stroke-width="1"><circle cx="8" cy="8" r="3.5"/><circle cx="1192" cy="8" r="3.5"/><circle cx="8" cy="322" r="3.5"/><circle cx="1192" cy="322" r="3.5"/></g>
+    
 
     <!-- 1 · Ai-Ai no Mi -->
     <g transform="translate(150 120)">
@@ -67,8 +76,8 @@
         <use href="#s1" fill="none" stroke="#3d1a5c" stroke-width="2.5"/>
         <use href="#stem" y="-46"/>
       </g>
-      <path class="sp" d="M70 -56 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3 Z" fill="#fff8e1"/>
-      <path class="sp sp2" d="M-76 -20 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 Z" fill="#fff8e1"/>
+      <path class="sp" d="M70 -56 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/>
+      <path class="sp sp2" d="M-76 -20 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/>
       <text class="n" y="120">Ai-Ai no Mi</text>
       <text class="j" y="140">APPLIED AI</text>
       <text class="d" y="164">Integrating AI into</text>
@@ -86,8 +95,8 @@
         <use href="#s2" fill="none" stroke="#0a3a5c" stroke-width="2.5"/>
         <use href="#stem" y="-48"/>
       </g>
-      <path class="sp sp2" d="M66 -40 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3 Z" fill="#fff8e1"/>
-      <path class="sp sp3" d="M-70 10 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 Z" fill="#fff8e1"/>
+      <path class="sp sp2" d="M66 -40 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/>
+      <path class="sp sp3" d="M-70 10 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/>
       <text class="n" y="120">Data-Data no Mi</text>
       <text class="j" y="140">DATA ENGINEERING</text>
       <text class="d" y="164">Designing data architectures</text>
@@ -105,8 +114,8 @@
         <use href="#s3" fill="none" stroke="#6e3206" stroke-width="2.5"/>
         <use href="#stem" y="-40"/>
       </g>
-      <path class="sp sp3" d="M76 -30 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3 Z" fill="#fff8e1"/>
-      <path class="sp" d="M-80 -36 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 Z" fill="#fff8e1"/>
+      <path class="sp sp3" d="M76 -30 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/>
+      <path class="sp" d="M-80 -36 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/>
       <text class="n" y="120">Auto-Auto no Mi</text>
       <text class="j" y="140">AUTOMATION</text>
       <text class="d" y="164">Eliminating manual,</text>
@@ -124,8 +133,8 @@
         <use href="#s4" fill="none" stroke="#66102e" stroke-width="2.5"/>
         <use href="#stem" y="-32"/>
       </g>
-      <path class="sp" d="M72 -50 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3 Z" fill="#fff8e1"/>
-      <path class="sp sp2" d="M-74 0 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 Z" fill="#fff8e1"/>
+      <path class="sp" d="M72 -50 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/>
+      <path class="sp sp2" d="M-74 0 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/>
       <text class="n" y="120">Vibe-Vibe no Mi</text>
       <text class="j" y="140">VIBECODING</text>
       <text class="d" y="164">Prototypes at the speed of</text>

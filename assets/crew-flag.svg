@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+<style>text{font-family:Georgia,'Times New Roman',serif}.mono{font-family:Consolas,'Courier New',monospace}
+.flag{animation:fl 2.2s ease-in-out infinite;transform-origin:100px 140px}
+@keyframes fl{0%,100%{transform:skewY(-4deg) scaleX(1)}50%{transform:skewY(4deg) scaleX(.97)}}
+.bar{transform-box:fill-box;transform-origin:left center;animation:grow 7s ease-out infinite}
+@keyframes grow{0%{transform:scaleX(0)}22%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.aura{animation:au 2.4s ease-in-out infinite}
+@keyframes au{0%,100%{opacity:.25}50%{opacity:.9}}
+</style>
+<defs>
+<radialGradient id="parch" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#f8ebc8"/><stop offset=".75" stop-color="#eed9a4"/><stop offset="1" stop-color="#d2ae6c"/></radialGradient>
+<filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="4" seed="5"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .30  0 0 0 0 .12  0 0 0 .5 -.12"/><feComposite operator="in" in2="SourceGraphic"/></filter>
+</defs>
+<rect width="1200" height="300" rx="14" fill="#5a3a1e"/>
+<rect x="2" y="2" width="1196" height="296" rx="12" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="8" y="8" width="1184" height="284" rx="8" fill="url(#parch)"/>
+<rect x="8" y="8" width="1184" height="284" rx="8" filter="url(#paper)"/>
+<rect x="15" y="15" width="1170" height="270" rx="5" fill="none" stroke="#3b2a1a" stroke-opacity=".45" stroke-width="1.2"/>
+<g fill="#f2c14e" stroke="#3b2a1a" stroke-width="1"><circle cx="8" cy="8" r="3.5"/><circle cx="1192" cy="8" r="3.5"/><circle cx="8" cy="292" r="3.5"/><circle cx="1192" cy="292" r="3.5"/></g><path d="M92 26 V282" stroke="#8b5a2b" stroke-width="9" stroke-linecap="round"/><path d="M92 26 V282" stroke="#3b2a1a" stroke-width="1" opacity=".4"/>
+<circle cx="92" cy="24" r="8" fill="#f2c14e" stroke="#3b2a1a" stroke-width="2"/>
+<g class="flag">
+<path d="M98 42 H410 q-14 48 0 98 q14 48 0 98 H98 Z" fill="#151515" stroke="#3b2a1a" stroke-width="2"/>
+<g stroke="#f5f0e0" stroke-width="15" stroke-linecap="round"><path d="M170 80 L338 204 M338 80 L170 204"/></g>
+<g fill="#f5f0e0"><circle cx="166" cy="72" r="10"/><circle cx="160" cy="86" r="10"/><circle cx="342" cy="72" r="10"/><circle cx="348" cy="86" r="10"/>
+<circle cx="166" cy="212" r="10"/><circle cx="160" cy="198" r="10"/><circle cx="342" cy="212" r="10"/><circle cx="348" cy="198" r="10"/></g>
+<circle cx="254" cy="136" r="50" fill="#f5f0e0"/><rect x="226" y="166" width="56" height="34" rx="9" fill="#f5f0e0"/>
+<path d="M240 184 v14 M254 184 v16 M268 184 v14" stroke="#151515" stroke-width="3"/>
+<circle cx="234" cy="140" r="13" fill="#151515"/><circle cx="274" cy="140" r="13" fill="#151515"/>
+<path d="M254 154 l-6 12 h12 Z" fill="#151515"/>
+<g fill="none" stroke="#f2c14e" stroke-width="3.5"><circle cx="234" cy="140" r="18"/><circle cx="274" cy="140" r="18"/><path d="M252 140 h4 M216 138 l-12 -6 M292 138 l12 -6"/></g>
+<g transform="translate(254 92) scale(1.45)"><ellipse cx="0" cy="10" rx="44" ry="11" fill="#f2c14e" stroke="#8a5a12" stroke-width="1.5"/>
+<path d="M-26 9 Q-24 -24 0 -24 Q24 -24 26 9 Q0 16 -26 9 Z" fill="#f7d06a" stroke="#8a5a12" stroke-width="1.5"/>
+<path d="M-26 2 Q0 10 26 2 L26 9 Q0 16 -26 9 Z" fill="#e63946"/>
+<path d="M-18 -12 q18 -6 36 0 M-22 -4 q22 -6 44 0" fill="none" stroke="#c9952c" stroke-width="1"/></g>
+</g>
+<text x="470" y="62" font-size="30" text-anchor="start" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#3b2a1a" stroke="#3b2a1a" stroke-width="7.8">THE R&amp;D&amp;I PIRATES</text><text x="470" y="62" font-size="30" text-anchor="start" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#fff8e1" stroke="#fff8e1" stroke-width="3.6">THE R&amp;D&amp;I PIRATES</text><text x="470" y="62" font-size="30" text-anchor="start" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#e63946">THE R&amp;D&amp;I PIRATES</text>
+<text x="470" y="86" font-size="14" font-style="italic" fill="#6b4a22">our flag flies over every process we automate · haki report below</text>
+<text x="470" y="118" font-size="17" font-weight="700" fill="#3b2a1a">Observation Haki</text><text x="470" y="133" font-size="12" font-style="italic" fill="#6b4a22">data analysis · machine learning</text><rect x="700" y="104" width="450" height="20" rx="10" fill="#d9c08a" stroke="#3b2a1a" stroke-width="1.5"/><rect class="bar" style="animation-delay:0.00s" x="702" y="106" width="410" height="16" rx="8" fill="#e63946"/><path class="aura" style="animation-delay:0.0s" d="M1120 104 l4 7 l8 3 l-8 3 l-4 7 l-4 -7 l-8 -3 l8 -3 Z" fill="#e63946" stroke="#3b2a1a" stroke-width="1"/><text x="470" y="160" font-size="17" font-weight="700" fill="#3b2a1a">Armament Haki</text><text x="470" y="175" font-size="12" font-style="italic" fill="#6b4a22">software · data engineering</text><rect x="700" y="146" width="450" height="20" rx="10" fill="#d9c08a" stroke="#3b2a1a" stroke-width="1.5"/><rect class="bar" style="animation-delay:0.25s" x="702" y="148" width="384" height="16" rx="8" fill="#ff9f1c"/><path class="aura" style="animation-delay:0.4s" d="M1094 146 l4 7 l8 3 l-8 3 l-4 7 l-4 -7 l-8 -3 l8 -3 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width="1"/><text x="470" y="202" font-size="17" font-weight="700" fill="#3b2a1a">Conqueror's Haki</text><text x="470" y="217" font-size="12" font-style="italic" fill="#6b4a22">leading automation projects</text><rect x="700" y="188" width="450" height="20" rx="10" fill="#d9c08a" stroke="#3b2a1a" stroke-width="1.5"/><rect class="bar" style="animation-delay:0.50s" x="702" y="190" width="348" height="16" rx="8" fill="#f2c14e"/><path class="aura" style="animation-delay:0.8s" d="M1058 188 l4 7 l8 3 l-8 3 l-4 7 l-4 -7 l-8 -3 l8 -3 Z" fill="#f2c14e" stroke="#3b2a1a" stroke-width="1"/><text x="470" y="244" font-size="17" font-weight="700" fill="#3b2a1a">Future Sight</text><text x="470" y="259" font-size="12" font-style="italic" fill="#6b4a22">forecasting · optimization</text><rect x="700" y="230" width="450" height="20" rx="10" fill="#d9c08a" stroke="#3b2a1a" stroke-width="1.5"/><rect class="bar" style="animation-delay:0.75s" x="702" y="232" width="392" height="16" rx="8" fill="#2ec4c6"/><path class="aura" style="animation-delay:1.2s" d="M1102 230 l4 7 l8 3 l-8 3 l-4 7 l-4 -7 l-8 -3 l8 -3 Z" fill="#2ec4c6" stroke="#3b2a1a" stroke-width="1"/>
+</svg>

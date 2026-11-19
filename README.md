@@ -5,19 +5,19 @@
 
 <p align="center">
   <a href="https://github.com/sonyrp">
-    <img src="https://readme-typing-svg.demolab.com?font=Pirata+One&size=30&pause=1200&color=F4C430&center=true&vCenter=true&width=700&height=50&lines=Setting+sail+on+the+Grand+Line+of+Data...;Data+%26+AI+Engineer+%40+Integra+S.A.;Navigating+electric+buses+with+AI;From+physics+to+artificial+intelligence;Automating+the+boring%2C+exploring+the+new;I'm+gonna+be+Queen+of+the+Pipelines!" alt="Typing SVG"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Pirata+One&size=32&pause=1200&color=E63946&center=true&vCenter=true&width=700&height=50&lines=Setting+sail+on+the+Grand+Line+of+Data...;Data+%26+AI+Engineer+%40+Integra+S.A.;Navigating+electric+buses+with+AI;From+physics+to+artificial+intelligence;Automating+the+boring%2C+exploring+the+new;I'm+gonna+be+Queen+of+the+Pipelines!" alt="Typing SVG"/>
   </a>
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/sonia-restrepo-perez">
-    <img src="https://img.shields.io/badge/LinkedIn-Join%20my%20crew-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+    <img src="https://img.shields.io/badge/LinkedIn-Join%20my%20crew-C0392B?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=3B2A1A"/>
   </a>
-  <img src="https://img.shields.io/badge/Data%20%26%20AI%20Engineer-Integra%20S.A.%20%7C%20R%26D%26I-C0392B?style=for-the-badge&logo=anchor&logoColor=white"/>
-  <img src="https://komarev.com/ghpvc/?username=sonyrp&label=Nakama%20aboard&color=F4C430&style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Data%20%26%20AI%20Engineer-Integra%20S.A.%20%7C%20R%26D%26I-F2C14E?style=for-the-badge&logo=anchor&logoColor=white&labelColor=3B2A1A"/>
+  <img src="https://komarev.com/ghpvc/?username=sonyrp&label=Nakama%20aboard&color=C0392B&style=for-the-badge"/>
 </p>
 
-<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+<p align="center"><img src="assets/divider-hat.svg" width="100%" alt=""/></p>
 
 ## 🏴‍☠️ Captain's log
 
@@ -54,7 +54,7 @@ class Captain:
   </tr>
 </table>
 
-<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+<p align="center"><img src="assets/divider-logpose.svg" width="100%" alt=""/></p>
 
 ## 🗺️ The map of my voyage
 
@@ -62,7 +62,7 @@ class Captain:
   <img src="assets/grand-line-map.svg" width="100%" alt="Treasure map of my journey: UTP Island (Physics Engineering), Reverse Mountain (from physics to AI), Integra Island (R&D&I), M.Sc. Archipelago, Megabús Island (AI charging for electric buses) and the treasure: an open-source release"/>
 </p>
 
-<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+<p align="center"><img src="assets/divider-skull.svg" width="100%" alt=""/></p>
 
 ## 🍇 Devil Fruit powers
 
@@ -72,7 +72,7 @@ class Captain:
 
 <p align="center"><sub>Known weakness: the sea of undocumented legacy code 🌊</sub></p>
 
-<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+<p align="center"><img src="assets/divider-meat.svg" width="100%" alt=""/></p>
 
 ## ⚡ Current arc: Megabús Island
 
@@ -90,9 +90,13 @@ Charging an electric bus sounds simple, but doing it at the lowest cost, protect
 - 🧭 **Dual-horizon architecture**: 24 h planning + real-time adjustment with IoT data (an Eternal Pose and a Log Pose)
 - 💰 The treasure: it will be released as **open source (MIT)** so other transit systems in the country can adopt it
 
-<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+<p align="center"><img src="assets/divider-helm.svg" width="100%" alt=""/></p>
 
 ## ⚓ The crew
+
+<p align="center">
+  <img src="assets/crew-flag.svg" width="100%" alt="The Jolly Roger of the R&D&I Pirates: a skull with round glasses and a straw hat. Haki report: Observation (data analysis, machine learning), Armament (software, data engineering), Conqueror's (leading automation projects), Future Sight (forecasting, optimization)."/>
+</p>
 
 <table align="center">
   <tr>
@@ -121,30 +125,33 @@ Charging an electric bus sounds simple, but doing it at the lowest cost, protect
   </tr>
 </table>
 
-<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+<p align="center"><img src="assets/divider-swords.svg" width="100%" alt=""/></p>
 
 ## 💰 Treasures found so far
 
 <p align="center">
   <a href="https://github.com/sonyrp/phishing-detector">
-    <img src="https://img.shields.io/badge/%F0%9F%8E%A3%20phishing--detector-Open%20the%20chest-C0392B?style=for-the-badge&labelColor=0B1D33"/>
+    <img src="assets/treasure-chest.svg" width="100%" alt="Treasure Nº 1: phishing-detector. Hunts phishing emails and messages across the seas using NLP and Machine Learning. Python, NLP + ML, Flask web app. Click to open the chest."/>
   </a>
-  <img src="https://img.shields.io/badge/Python-NLP%20%2B%20ML-F4C430?style=for-the-badge&logo=python&logoColor=white&labelColor=12355B"/>
-  <img src="https://img.shields.io/badge/Flask-Web%20app-F4C430?style=for-the-badge&logo=flask&logoColor=white&labelColor=12355B"/>
 </p>
 
-> 🎣 **phishing-detector** — Hunts phishing emails and messages across the seas using NLP and Machine Learning.<br>
-> 🏝️ *More AI and automation treasures on the next islands...*
+<p align="center"><img src="assets/divider-chest.svg" width="100%" alt=""/></p>
 
-<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+## 📰 News Coo delivery
+
+<p align="center">
+  <img src="assets/news-coo.svg" width="100%" alt="The Grand Line Gazette: 'Data Navigator' strikes again! Phishing fleet sunk by an NLP + ML detector. Megabús electric fleet charges smarter with evolutionary algorithms. Bounty on the rise."/>
+</p>
+
+<p align="center"><img src="assets/divider-logpose.svg" width="100%" alt=""/></p>
 
 ## 📜 Ship's logbook
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=sonyrp&theme=dark&hide_border=true&background=0B1D33&ring=F4C430&fire=E63946&currStreakNum=F1DFB5&sideNums=F1DFB5&currStreakLabel=F4C430&sideLabels=F4C430&dates=9FB3C8&stroke=1B6CA8"/>
+  <img src="https://streak-stats.demolab.com?user=sonyrp&theme=default&background=F6E7C1&border=5A3A1E&ring=C0392B&fire=E8612D&currStreakNum=3B2A1A&sideNums=3B2A1A&currStreakLabel=A12A1E&sideLabels=A12A1E&dates=6B4A22&stroke=5A3A1E"/>
 </p>
 
-<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+<p align="center"><img src="assets/divider-anchor.svg" width="100%" alt=""/></p>
 
 ## 🍖 Life on deck
 
@@ -161,7 +168,7 @@ Charging an electric bus sounds simple, but doing it at the lowest cost, protect
   <img src="assets/poneglyph.svg" width="100%" alt="Translated from the Poneglyph of R&D&I: 'When do you think people die? When they are forgotten.' Dr. Hiriluk (so I document my code)"/>
 </p>
 
-<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+<p align="center"><img src="assets/divider-meat.svg" width="100%" alt=""/></p>
 
 ## ⛵ The Grand Line logbook
 
@@ -169,7 +176,7 @@ Charging an electric bus sounds simple, but doing it at the lowest cost, protect
   <img src="https://raw.githubusercontent.com/sonyrp/sonyrp/output/contribution-voyage.svg" width="100%" alt="My contribution calendar as a sea chart: a pirate ship sails the year plundering every contribution"/>
 </p>
 
-<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+<p align="center"><img src="assets/divider-hat.svg" width="100%" alt=""/></p>
 
 ## 🐌 Den Den Mushi
 

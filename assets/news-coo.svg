@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+<style>text{font-family:Georgia,'Times New Roman',serif}.mono{font-family:Consolas,'Courier New',monospace}
+.paper{animation:pp 6s ease-in-out infinite;transform-origin:440px 160px}
+@keyframes pp{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(-.6deg)}}
+.bird{animation:fly 3s ease-in-out infinite}
+@keyframes fly{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.wing{animation:flap .5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes flap{0%,100%{transform:scaleY(1)}50%{transform:scaleY(-.5)}}
+.extra{animation:ex 1.6s steps(1) infinite}
+@keyframes ex{0%{opacity:1}60%{opacity:.25}}
+.stamp{animation:st 6s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes st{0%,12%{transform:scale(3) rotate(-14deg);opacity:0}18%,100%{transform:scale(1) rotate(-14deg);opacity:.85}}
+</style>
+<defs>
+<radialGradient id="parch" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#f8ebc8"/><stop offset=".75" stop-color="#eed9a4"/><stop offset="1" stop-color="#d2ae6c"/></radialGradient>
+<filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="4" seed="5"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .30  0 0 0 0 .12  0 0 0 .5 -.12"/><feComposite operator="in" in2="SourceGraphic"/></filter>
+</defs>
+<rect width="1200" height="320" rx="14" fill="#5a3a1e"/>
+<rect x="2" y="2" width="1196" height="316" rx="12" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="8" y="8" width="1184" height="304" rx="8" fill="url(#parch)"/>
+<rect x="8" y="8" width="1184" height="304" rx="8" filter="url(#paper)"/>
+<rect x="15" y="15" width="1170" height="290" rx="5" fill="none" stroke="#3b2a1a" stroke-opacity=".45" stroke-width="1.2"/>
+<g fill="#f2c14e" stroke="#3b2a1a" stroke-width="1"><circle cx="8" cy="8" r="3.5"/><circle cx="1192" cy="8" r="3.5"/><circle cx="8" cy="312" r="3.5"/><circle cx="1192" cy="312" r="3.5"/></g><g class="paper">
+<rect x="66" y="40" width="760" height="248" fill="#3b2a1a" opacity=".25" transform="translate(6 6)"/>
+<rect x="60" y="34" width="760" height="248" fill="#fdf8ea" stroke="#3b2a1a" stroke-width="2"/>
+<text x="440" y="78" text-anchor="middle" font-size="36" font-weight="700" fill="#3b2a1a" letter-spacing="2">THE GRAND LINE GAZETTE</text>
+<path d="M76 88 H804 M76 92 H804 M76 110 H804" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="440" y="105" text-anchor="middle" font-size="10.5" fill="#3b2a1a" letter-spacing="2.5">MORNING EDITION · DELIVERED BY NEWS COO · PRICE: 100 BERRIES</text>
+<text x="440" y="150" text-anchor="middle" font-size="29" font-weight="900" fill="#3b2a1a" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" textLength="700" lengthAdjust="spacingAndGlyphs">“DATA NAVIGATOR” STRIKES AGAIN!</text>
+<path d="M76 164 H804" stroke="#3b2a1a" stroke-width="1"/>
+<text x="84" y="192" font-size="14" font-weight="700" fill="#3b2a1a">PHISHING FLEET SUNK</text><text x="84" y="212" font-size="13" fill="#3b2a1a">A whole armada of fake emails</text><text x="84" y="229" font-size="13" fill="#3b2a1a">went down after running into</text><text x="84" y="246" font-size="13" fill="#3b2a1a">an NLP + ML detector.</text><text x="329" y="192" font-size="14" font-weight="700" fill="#3b2a1a">BUSES CHARGE SMARTER</text><text x="329" y="212" font-size="13" fill="#3b2a1a">The Megabús electric fleet now</text><text x="329" y="229" font-size="13" fill="#3b2a1a">refuels under evolutionary</text><text x="329" y="246" font-size="13" fill="#3b2a1a">algorithms. Grid relieved.</text><path d="M315 178 V262" stroke="#3b2a1a" stroke-width="1"/><text x="574" y="192" font-size="14" font-weight="700" fill="#3b2a1a">BOUNTY ON THE RISE</text><text x="574" y="212" font-size="13" fill="#3b2a1a">Sources say she keeps</text><text x="574" y="229" font-size="13" fill="#3b2a1a">automating the boring.</text><text x="574" y="246" font-size="13" fill="#3b2a1a">Marines can't keep up.</text><path d="M560 178 V262" stroke="#3b2a1a" stroke-width="1"/>
+<g class="stamp"><rect x="668" y="226" width="130" height="38" rx="4" fill="none" stroke="#c0392b" stroke-width="3.5"/>
+<text x="733" y="252" text-anchor="middle" font-size="19" font-weight="900" fill="#c0392b" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">EXTRA!</text></g>
+</g>
+<!-- News Coo -->
+<g class="bird"><g transform="translate(1000 150)">
+<path class="wing" d="M-20 -6 Q-70 -70 -120 -40 Q-80 -30 -60 -4 Z" fill="#fff" stroke="#3b2a1a" stroke-width="2.5"/>
+<path class="wing" d="M24 -6 Q74 -70 124 -40 Q84 -30 64 -4 Z" fill="#fff" stroke="#3b2a1a" stroke-width="2.5"/>
+<ellipse cx="0" cy="14" rx="44" ry="34" fill="#fff" stroke="#3b2a1a" stroke-width="2.5"/>
+<path d="M-30 42 l-10 22 l16 -8 l6 12 l6 -22 Z" fill="#fff" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="34" cy="-26" r="24" fill="#fff" stroke="#3b2a1a" stroke-width="2.5"/>
+<path d="M12 -38 Q34 -62 58 -38 Z" fill="#e63946" stroke="#3b2a1a" stroke-width="2"/><path d="M52 -40 h22 q4 4 -2 6 h-18 Z" fill="#e63946" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="42" cy="-26" r="3.6" fill="#3b2a1a"/>
+<path d="M56 -24 l30 6 l-30 8 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width="2"/>
+<path d="M-34 -8 L26 40" stroke="#8b5a2b" stroke-width="5"/>
+<rect x="6" y="26" width="46" height="36" rx="5" fill="#8b5a2b" stroke="#3b2a1a" stroke-width="2"/><rect x="14" y="20" width="30" height="14" fill="#fdf8ea" stroke="#3b2a1a" stroke-width="1.5"/>
+<path d="M18 26 h22 M18 30 h16" stroke="#3b2a1a" stroke-width="1"/><circle cx="29" cy="46" r="4" fill="#f2c14e" stroke="#3b2a1a" stroke-width="1.5"/>
+</g></g>
+<text class="extra" x="1000" y="268" text-anchor="middle" font-size="20" font-weight="900" fill="#c0392b" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" letter-spacing="2">COO! COO! FRESH NEWS!</text>
+</svg>

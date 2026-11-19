@@ -21,8 +21,18 @@ TOKEN = os.environ.get("GITHUB_TOKEN")
 
 LEVELS = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2,
           "THIRD_QUARTILE": 3, "FOURTH_QUARTILE": 4}
-TILE = {1: "#2a7fb8", 2: "#4fb3a5", 3: "#f4a261", 4: "#f4c430"}
+TILE = {1: "#f2c14e", 2: "#ff9f1c", 3: "#e8612d", 4: "#c0392b"}
 CELL, PITCH, W = 14, 18, 1100
+FRAME = """<defs>
+<radialGradient id="parch" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#f8ebc8"/><stop offset=".75" stop-color="#eed9a4"/><stop offset="1" stop-color="#d2ae6c"/></radialGradient>
+<filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="4" seed="5"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .30  0 0 0 0 .12  0 0 0 .5 -.12"/><feComposite operator="in" in2="SourceGraphic"/></filter>
+</defs>
+<rect width="{w}" height="{h}" rx="14" fill="#5a3a1e"/>
+<rect x="2" y="2" width="{w4}" height="{h4}" rx="12" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="8" y="8" width="{w16}" height="{h16}" rx="8" fill="url(#parch)"/>
+<rect x="8" y="8" width="{w16}" height="{h16}" rx="8" filter="url(#paper)"/>
+<rect x="15" y="15" width="{w30}" height="{h30}" rx="5" fill="none" stroke="#3b2a1a" stroke-opacity=".45" stroke-width="1.2"/>
+<g fill="#f2c14e" stroke="#3b2a1a" stroke-width="1"><circle cx="8" cy="8" r="3.5"/><circle cx="{w8}" cy="8" r="3.5"/><circle cx="8" cy="{h8}" r="3.5"/><circle cx="{w8}" cy="{h8}" r="3.5"/></g>"""
 Y0 = 104
 
 
@@ -94,7 +104,6 @@ def build(days, total):
     o = []
     o.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">')
     o.append(f"""<defs>
-<linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1d33"/><stop offset="1" stop-color="#0d2b4a"/></linearGradient>
 <clipPath id="frame"><rect width="{W}" height="{H}" rx="14"/></clipPath>
 <style>
 text{{font-family:Georgia,'Times New Roman',serif}}
@@ -103,23 +112,19 @@ text{{font-family:Georgia,'Times New Roman',serif}}
 .x{{transform-box:fill-box;transform-origin:center;animation:pop {T}s linear infinite}}
 @keyframes pop{{0%{{transform:scale(0)}}2%{{transform:scale(1.7)}}4%,100%{{transform:scale(1)}}}}
 .tw{{animation:tw 4s ease-in-out infinite}}
-@keyframes tw{{0%,100%{{opacity:1}}50%{{opacity:.45}}}}
+@keyframes tw{{0%,100%{{opacity:1}}50%{{opacity:.6}}}}
 .coin{{animation:coin 2.2s ease-in-out infinite}}
 @keyframes coin{{0%,100%{{opacity:.25}}50%{{opacity:.95}}}}
 .bob{{animation:bob 1.6s ease-in-out infinite}}
 @keyframes bob{{0%,100%{{transform:rotate(-5deg)}}50%{{transform:rotate(5deg) translateY(-1.5px)}}}}
-.wv{{animation:wv 8s linear infinite}}
-@keyframes wv{{to{{transform:translateX(-200px)}}}}
 </style></defs>""")
     o.append('<g clip-path="url(#frame)">')
-    o.append(f'<rect width="{W}" height="{H}" fill="url(#sea)"/>')
-    wave = "q50 -10 100 0 " + "t100 0 " * 13
-    o.append(f'<g class="wv"><path d="M0 {H - 12} {wave}V{H} H0 Z" fill="#12507f" opacity=".7"/></g>')
+    o.append(FRAME.format(w=W, h=H, w4=W - 4, h4=H - 4, w16=W - 16, h16=H - 16, w30=W - 30, h30=H - 30, w8=W - 8, h8=H - 8))
 
-    o.append(f'<text x="{x0:.0f}" y="44" font-size="23" font-weight="700" fill="#f4c430" letter-spacing="3">THE GRAND LINE LOGBOOK</text>')
-    o.append(f'<text x="{x0:.0f}" y="65" font-size="13" font-style="italic" fill="#f1dfb5">every contribution is a treasure, and my ship plunders them all</text>')
-    o.append(f'<text x="{x0 + grid_w:.0f}" y="48" text-anchor="end" font-size="19" font-weight="700" fill="#f1dfb5">'
-             f'<tspan fill="#f4c430">{total:,}</tspan> treasures in the last year</text>')
+    o.append(f'<text x="{x0:.0f}" y="44" font-size="23" font-weight="700" fill="#a12a1e" letter-spacing="3">THE GRAND LINE LOGBOOK</text>')
+    o.append(f'<text x="{x0:.0f}" y="65" font-size="13" font-style="italic" fill="#3b2a1a">every contribution is a treasure, and my ship plunders them all</text>')
+    o.append(f'<text x="{x0 + grid_w:.0f}" y="48" text-anchor="end" font-size="19" font-weight="700" fill="#3b2a1a">'
+             f'<tspan fill="#c0392b">{total:,}</tspan> treasures in the last year</text>')
 
     # month labels
     last_month, last_col = None, -9
@@ -127,7 +132,7 @@ text{{font-family:Georgia,'Times New Roman',serif}}
         top = min((d for cc, _, d, _ in cells if cc == c), default=None)
         if top and top.month != last_month:
             if c - last_col >= 3:
-                o.append(f'<text x="{x0 + c * PITCH:.0f}" y="{Y0 - 9}" font-size="11" fill="#9fb3c8" letter-spacing="1">{top.strftime("%b").upper()}</text>')
+                o.append(f'<text x="{x0 + c * PITCH:.0f}" y="{Y0 - 9}" font-size="11" font-weight="700" fill="#6b4a22" letter-spacing="1">{top.strftime("%b").upper()}</text>')
                 last_col = c
             last_month = top.month
 
@@ -136,30 +141,30 @@ text{{font-family:Georgia,'Times New Roman',serif}}
         x, y = x0 + c * PITCH, Y0 + r * PITCH
         if not lv:
             tw = f' class="tw" style="animation-delay:{rnd.uniform(0, 4):.1f}s"' if rnd.random() < .12 else ""
-            o.append(f'<rect{tw} x="{x:.1f}" y="{y}" width="{CELL}" height="{CELL}" rx="3" fill="#12355b"/>')
+            o.append(f'<rect{tw} x="{x:.1f}" y="{y}" width="{CELL}" height="{CELL}" rx="3" fill="#dcc48d"/>')
             continue
         delay = f"{T * dist[loot[(c, r)]] / length:.2f}s"
         cx, cy = x + CELL / 2, y + CELL / 2
         shine = (f'<circle class="coin" cx="{cx:.1f}" cy="{cy}" r="3" fill="#fff8e1" style="animation-delay:{rnd.uniform(0, 2):.1f}s"/>'
                  if lv >= 3 else "")
         o.append(
-            f'<rect x="{x:.1f}" y="{y}" width="{CELL}" height="{CELL}" rx="3" fill="#0e2a47"/>'
+            f'<rect x="{x:.1f}" y="{y}" width="{CELL}" height="{CELL}" rx="3" fill="#f3e3b8" stroke="#c9a868" stroke-width="1"/>'
             f'<path class="x" style="animation-delay:{delay}" d="M{cx - 3.5:.1f} {cy - 3.5}l7 7m0 -7l-7 7" stroke="#e63946" stroke-width="2" stroke-linecap="round"/>'
             f'<g class="loot" style="animation-delay:{delay}"><rect x="{x:.1f}" y="{y}" width="{CELL}" height="{CELL}" rx="3" fill="{TILE[lv]}"/>{shine}</g>')
 
     # legend
     lx, ly = x0 + grid_w - 5 * PITCH - 62, Y0 + 7 * PITCH + 12
-    o.append(f'<text x="{lx - 8:.0f}" y="{ly + 11}" text-anchor="end" font-size="11" font-style="italic" fill="#9fb3c8">calm sea</text>')
-    for i, col in enumerate(["#12355b", TILE[1], TILE[2], TILE[3], TILE[4]]):
+    o.append(f'<text x="{lx - 8:.0f}" y="{ly + 11}" text-anchor="end" font-size="11" font-style="italic" font-weight="700" fill="#6b4a22">calm sea</text>')
+    for i, col in enumerate(["#dcc48d", TILE[1], TILE[2], TILE[3], TILE[4]]):
         o.append(f'<rect x="{lx + i * PITCH:.1f}" y="{ly}" width="{CELL}" height="{CELL}" rx="3" fill="{col}"/>')
-    o.append(f'<text x="{lx + 5 * PITCH + 4:.0f}" y="{ly + 11}" font-size="11" font-style="italic" fill="#9fb3c8">treasure</text>')
+    o.append(f'<text x="{lx + 5 * PITCH + 4:.0f}" y="{ly + 11}" font-size="11" font-style="italic" font-weight="700" fill="#6b4a22">treasure</text>')
     o.append(f'<path d="M{x0:.0f} {ly + 3}l8 8m0 -8l-8 8" stroke="#e63946" stroke-width="2" stroke-linecap="round"/>')
-    o.append(f'<text x="{x0 + 14:.0f}" y="{ly + 11}" font-size="11" font-style="italic" fill="#9fb3c8">already plundered</text>')
+    o.append(f'<text x="{x0 + 14:.0f}" y="{ly + 11}" font-size="11" font-style="italic" font-weight="700" fill="#6b4a22">already plundered</text>')
 
     # the ship
     path = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in pts)
     o.append(f"""<g><g class="bob" transform="translate(0 2)">
-<path d="M-12 0 h24 q-2 8 -8 9 h-9 q-5 -1 -7 -9 Z" fill="#5a3a1e" stroke="#2b1a0c" stroke-width="1"/>
+<path d="M-12 0 h24 q-2 8 -8 9 h-9 q-5 -1 -7 -9 Z" fill="#8b5a2b" stroke="#2b1a0c" stroke-width="1"/>
 <path d="M-10 3 h20" stroke="#f4c430" stroke-width="1.2"/>
 <path d="M0 0 V-23" stroke="#2b1a0c" stroke-width="1.6"/>
 <path d="M1 -21 q12 4 10 18 h-10 Z M-1 -18 q-9 4 -8 15 h8 Z" fill="#fbf1d3" stroke="#2b1a0c" stroke-width="1"/>

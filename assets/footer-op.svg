@@ -1,48 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="170" viewBox="0 0 1200 170">
-  <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0b1d33"/>
-      <stop offset="0.5" stop-color="#1d3f6e"/>
-      <stop offset="0.8" stop-color="#c8553d"/>
-      <stop offset="1" stop-color="#f4a261"/>
-    </linearGradient>
-    <clipPath id="frame"><rect width="1200" height="170" rx="14"/></clipPath>
-    <style>
-      .s{fill:#fff;animation:tw 3s ease-in-out infinite}
-      .s2{animation-delay:1s}.s3{animation-delay:2s}
-      @keyframes tw{0%,100%{opacity:.15}50%{opacity:.95}}
-      .w1{animation:wv 7s linear infinite}
-      .w2{animation:wv 11s linear infinite reverse}
-      @keyframes wv{to{transform:translateX(-200px)}}
-      .sail{animation:go 38s linear -9s infinite}
-      @keyframes go{from{transform:translateX(-80px)}to{transform:translateX(1290px)}}
-      .bob{animation:bob 3s ease-in-out infinite}
-      @keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-3px) rotate(3deg)}}
-    </style>
-  </defs>
-  <g clip-path="url(#frame)">
-    <rect width="1200" height="170" fill="url(#sky)"/>
-    <circle class="s" cx="80" cy="24" r="1.4"/><circle class="s s2" cx="260" cy="48" r="1.1"/>
-    <circle class="s s3" cx="420" cy="20" r="1.5"/><circle class="s" cx="780" cy="22" r="1.3"/>
-    <circle class="s s2" cx="950" cy="50" r="1.1"/><circle class="s s3" cx="1120" cy="26" r="1.5"/>
-
-    <text x="600" y="62" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#f4c430" letter-spacing="3">THE VOYAGE CONTINUES...</text>
-    <text x="600" y="90" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="15" fill="#fff8e1" letter-spacing="2">see you on the next island, nakama  ✦  thanks for coming aboard</text>
-
-    <g class="w2"><path d="M0 122 q50 -12 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V170 H0 Z" fill="#1b6ca8"/></g>
-
-    <g class="sail">
-      <g transform="translate(0 128)">
-        <g class="bob"><g transform="scale(.8)">
-          <path d="M-22 0 h44 q-4 13 -13 15 h-20 q-8 -2 -11 -15 Z" fill="#5a3a1e" stroke="#2b1a0c" stroke-width="1.2"/>
-          <path d="M0 0 V-42" stroke="#2b1a0c" stroke-width="2.2"/>
-          <path d="M2 -38 q20 8 17 32 h-17 Z" fill="#fbf1d3" stroke="#2b1a0c" stroke-width="1.2"/>
-          <path d="M-2 -32 q-15 6 -14 26 h14 Z" fill="#fbf1d3" stroke="#2b1a0c" stroke-width="1.2"/>
-          <path d="M0 -42 h13 l-3 4 l3 4 h-13 Z" fill="#111"/>
-        </g></g>
-      </g>
-    </g>
-
-    <g class="w1"><path d="M0 142 q50 -14 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V170 H0 Z" fill="#0b2f52"/></g>
-  </g>
+<style>text{font-family:Georgia,'Times New Roman',serif}.mono{font-family:Consolas,'Courier New',monospace}
+.w1{animation:wv 7s linear infinite}.w2{animation:wv 11s linear infinite reverse}
+@keyframes wv{to{transform:translateX(-200px)}}
+.sail{animation:go 38s linear -9s infinite}
+@keyframes go{from{transform:translateX(-80px)}to{transform:translateX(1290px)}}
+.bob{animation:bob 3s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-3px) rotate(3deg)}}
+.rays{animation:spin 40s linear infinite;transform-origin:600px 124px}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9a3c"/><stop offset=".7" stop-color="#ffd166"/><stop offset="1" stop-color="#fff1b8"/></linearGradient>
+<clipPath id="frame"><rect width="1200" height="170" rx="14"/></clipPath></defs>
+<g clip-path="url(#frame)">
+<rect width="1200" height="170" fill="url(#sky)"/>
+<g class="rays" fill="#fff" opacity=".22"><path d="M600 -40 l16 164 h-32 Z" transform="rotate(0 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(20 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(40 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(60 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(80 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(100 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(120 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(140 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(160 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(180 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(200 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(220 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(240 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(260 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(280 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(300 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(320 600 124)"/><path d="M600 -40 l16 164 h-32 Z" transform="rotate(340 600 124)"/></g>
+<circle cx="600" cy="124" r="58" fill="#e63946" stroke="#3b2a1a" stroke-width="2.5"/>
+<text x="600" y="62" font-size="32" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#3b2a1a" stroke="#3b2a1a" stroke-width="8.3">THE VOYAGE CONTINUES...</text><text x="600" y="62" font-size="32" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#fff8e1" stroke="#fff8e1" stroke-width="3.8">THE VOYAGE CONTINUES...</text><text x="600" y="62" font-size="32" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#f2c14e">THE VOYAGE CONTINUES...</text>
+<text class="mono" x="600" y="94" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a" letter-spacing="1.5">see you on the next island, nakama  ✦  thanks for coming aboard</text>
+<g class="w2"><path d="M0 122 q50 -12 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V170 H0 Z" fill="#17a2b8" /></g>
+<g class="sail"><g transform="translate(0 128)"><g class="bob"><g transform="scale(.8)"><path d="M-22 0 h44 q-4 13 -13 15 h-20 q-8 -2 -11 -15 Z" fill="#8b5a2b" stroke="#2b1a0c" stroke-width="1.2"/>
+<path d="M0 0 V-42" stroke="#2b1a0c" stroke-width="2.2"/>
+<path d="M2 -38 q20 8 17 32 h-17 Z M-2 -32 q-15 6 -14 26 h14 Z" fill="#fffaf0" stroke="#2b1a0c" stroke-width="1.2"/>
+<path d="M0 -42 h13 l-3 4 l3 4 h-13 Z" fill="#111"/></g></g></g></g>
+<g class="w1"><path d="M0 142 q50 -14 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V170 H0 Z" fill="#0e7c96" /></g>
+</g>
+<rect x="1.5" y="1.5" width="1197" height="167" rx="13" fill="none" stroke="#3b2a1a" stroke-width="3"/>
 </svg>

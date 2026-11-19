@@ -20,20 +20,29 @@
       .shake{animation:sh .25s linear infinite}
       @keyframes sh{0%,100%{transform:translate(0,0)}25%{transform:translate(1px,-1px)}75%{transform:translate(-1px,1px)}}
       .btn{animation:glow 2s ease-in-out infinite}
-      @keyframes glow{0%,100%{stroke-opacity:.4}50%{stroke-opacity:1}}
+      @keyframes glow{0%,100%{fill:#c0392b}50%{fill:#e63946}}
       .rx{animation:bobr 1s ease-in-out infinite}
       @keyframes bobr{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
     </style>
   </defs>
 
   <g clip-path="url(#frame)">
-    <rect width="1200" height="250" fill="url(#bg)"/>
-    <rect x="1" y="1" width="1198" height="248" rx="14" fill="none" stroke="#f4c430" stroke-opacity=".35" stroke-width="2"/>
+    <defs>
+<radialGradient id="parch" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#f8ebc8"/><stop offset=".75" stop-color="#eed9a4"/><stop offset="1" stop-color="#d2ae6c"/></radialGradient>
+<filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="4" seed="5"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .30  0 0 0 0 .12  0 0 0 .5 -.12"/><feComposite operator="in" in2="SourceGraphic"/></filter>
+</defs>
+<rect width="1200" height="250" rx="14" fill="#5a3a1e"/>
+<rect x="2" y="2" width="1196" height="246" rx="12" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="8" y="8" width="1184" height="234" rx="8" fill="url(#parch)"/>
+<rect x="8" y="8" width="1184" height="234" rx="8" filter="url(#paper)"/>
+<rect x="15" y="15" width="1170" height="220" rx="5" fill="none" stroke="#3b2a1a" stroke-opacity=".45" stroke-width="1.2"/>
+<g fill="#f2c14e" stroke="#3b2a1a" stroke-width="1"><circle cx="8" cy="8" r="3.5"/><circle cx="1192" cy="8" r="3.5"/><circle cx="8" cy="242" r="3.5"/><circle cx="1192" cy="242" r="3.5"/></g>
+    
 
-    <ellipse cx="250" cy="206" rx="170" ry="12" fill="#000" opacity=".3"/>
+    <ellipse cx="250" cy="206" rx="170" ry="12" fill="#3b2a1a" opacity=".25"/>
 
     <!-- sound waves -->
-    <g fill="none" stroke="#f4c430" stroke-width="4" stroke-linecap="round">
+    <g fill="none" stroke="#e63946" stroke-width="5" stroke-linecap="round">
       <path class="arc" d="M82 96 q-14 22 0 44"/>
       <path class="arc a2" d="M62 82 q-24 36 0 72"/>
       <path class="arc a3" d="M42 68 q-34 50 0 100"/>
@@ -65,16 +74,16 @@
     </g>
 
     <!-- ringing -->
-    <g class="shake" font-size="34" font-weight="700" fill="#f4c430" font-style="italic">
+    <g class="shake" font-size="34" font-weight="700" fill="#e63946" font-style="italic">
       <text class="pu" x="470" y="76">puru</text>
       <text class="pu p2" x="570" y="76">puru</text>
       <text class="pu p3" x="670" y="76">puru</text>
       <text class="pu p4" x="770" y="76">puru...</text>
     </g>
-    <text x="470" y="124" font-size="28" font-weight="700" fill="#fff8e1">Got a quest for my crew?</text>
-    <text x="470" y="154" font-size="18" font-style="italic" fill="#f1dfb5">Pick up the Den Den Mushi, I always answer a fellow nakama.</text>
-    <rect class="btn" x="470" y="174" width="420" height="42" rx="21" fill="#0A66C2" stroke="#f4c430" stroke-width="3"/>
+    <text x="470" y="124" font-size="28" font-weight="700" fill="#3b2a1a">Got a quest for my crew?</text>
+    <text x="470" y="154" font-size="18" font-style="italic" fill="#3b2a1a">Pick up the Den Den Mushi, I always answer a fellow nakama.</text>
+    <rect class="btn" x="470" y="174" width="420" height="42" rx="21" fill="#c0392b" stroke="#3b2a1a" stroke-width="3"/>
     <text class="mono" x="680" y="201" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">linkedin.com/in/sonia-restrepo-perez</text>
-    <text x="910" y="201" font-size="14" font-style="italic" fill="#9fb3c8">click to call ⟶</text>
+    <text x="910" y="201" font-size="14" font-style="italic" font-weight="700" fill="#6b4a22">click to call ⟶</text>
   </g>
 </svg>
