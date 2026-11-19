@@ -21,19 +21,17 @@
 
 ## 🏴‍☠️ Captain's log
 
-<p align="center">
-  <img src="assets/captain-log.svg" width="100%" alt="The legend: Data. Insight. Automation. Legend tells of a treasure hidden at the end of the Grand Line of Data: a world where machines do the boring work and people are free to create. 'It is real. Come and find it.' And so dreamers everywhere set sail. The Great Age of AI had begun! The captain: one of them was a Physics Engineer from Pereira, Colombia, who learned to read the universe through equations, and now uses that to teach machines how to think. She sails as a Data & AI Engineer with the R&D&I crew of Integra S.A.: building software, charting data architectures and bringing artificial intelligence aboard. Her dream: let machines do the repetitive work, so people can do the creative work. Captain Sonia Restrepo, the Data Navigator."/>
-</p>
-
 <table>
   <tr>
-    <td width="36%" align="center" valign="top">
+    <td width="40%" align="center" valign="top">
       <img src="https://raw.githubusercontent.com/sonyrp/sonyrp/output/wanted.svg" width="100%" alt="WANTED: Sonia Restrepo, the Data Navigator. The bounty grows with every contribution."/>
       <br><sub>Live bounty: ฿1,000,000,000 + ฿10,000,000 per contribution in the last year, updated daily</sub>
     </td>
-    <td valign="top">
-
-📍 **Home sea:** Pereira, Colombia &nbsp;·&nbsp; 🎓 **Training:** Physics Engineering + M.Sc. in Systems and Computer Engineering (UTP)
+    <td width="60%" align="center" valign="top">
+      <img src="assets/captain-log.svg" width="100%" alt="The legend: Data. Insight. Automation. Legend tells of a treasure hidden at the end of the Grand Line of Data: a world where machines do the boring work and people are free to create. 'It is real. Come and find it.' And so dreamers everywhere set sail. The Great Age of AI had begun! The captain: one of them was a Physics Engineer from Pereira, Colombia, who learned to read the universe through equations and now teaches machines how to think. She sails as a Data & AI Engineer with the R&D&I crew of Integra S.A.: building software, charting data architectures and bringing AI aboard. Her dream: let machines do the repetitive work, so people can do the creative work. Captain Sonia Restrepo, the Data Navigator."/>
+    </td>
+  </tr>
+</table>
 
 ```python
 class Captain:
@@ -50,10 +48,6 @@ class Captain:
     def set_sail(self):
         return "Vibecoding at full sail ⛵"
 ```
-
-</td>
-  </tr>
-</table>
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/divider-logpose-dark.svg"/><img src="assets/divider-logpose.svg" width="100%" alt=""/></picture></p>
 

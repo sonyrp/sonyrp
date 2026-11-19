@@ -1,61 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="556" viewBox="0 0 600 556">
 <style>text{font-family:Georgia,'Times New Roman',serif}.mono{font-family:Consolas,'Courier New',monospace}
 .r{animation:rv 1.2s ease-out backwards}
 @keyframes rv{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .pulse{animation:pl 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 @keyframes pl{0%,30%,100%{transform:scale(1)}12%{transform:scale(1.14) rotate(-2deg)}}
-.flame{animation:fm .45s ease-in-out infinite alternate;transform-origin:78px 508px}
+.flame{animation:fm .45s ease-in-out infinite alternate;transform-origin:40px 500px}
 @keyframes fm{from{transform:scale(1,1) rotate(-3deg)}to{transform:scale(.88,1.14) rotate(3deg)}}
 .halo{animation:hl 2.2s ease-in-out infinite}
-@keyframes hl{0%,100%{opacity:.25}50%{opacity:.5}}
-.quill{animation:ql 1.8s ease-in-out infinite;transform-origin:1118px 566px}
-@keyframes ql{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg) translate(5px,0)}}
-.quote{animation:qc 5s ease-in-out infinite}
-@keyframes qc{0%,100%{fill:#a12a1e}50%{fill:#e63946}}
+@keyframes hl{0%,100%{opacity:.18}50%{opacity:.4}}
+.quill{animation:ql 1.8s ease-in-out infinite;transform-origin:548px 536px}
+@keyframes ql{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg) translate(4px,0)}}
+.quote{animation:qc 4s ease-in-out infinite}
+@keyframes qc{0%,100%{fill:#6fe3dc}50%{fill:#ffd23f}}
 .spk{animation:spk 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 @keyframes spk{0%,100%{transform:scale(0)}50%{transform:scale(1)}}
 .twist{animation:tw 1.2s linear infinite}@keyframes tw{to{stroke-dashoffset:-10}}
 </style>
-<defs>
-<radialGradient id="parch" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#f8ebc8"/><stop offset=".75" stop-color="#eed9a4"/><stop offset="1" stop-color="#d2ae6c"/></radialGradient>
-<filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="4" seed="5"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .30  0 0 0 0 .12  0 0 0 .5 -.12"/><feComposite operator="in" in2="SourceGraphic"/></filter>
-</defs>
-<rect width="1200" height="600" rx="14" fill="#5a3a1e"/>
-<rect x="2" y="2" width="1196" height="596" rx="12" fill="none" stroke="#8b5a2b" stroke-width="2"/>
-<rect x="8" y="8" width="1184" height="584" rx="8" fill="url(#parch)"/>
-<rect x="8" y="8" width="1184" height="584" rx="8" filter="url(#paper)"/>
-<rect x="15" y="15" width="1170" height="570" rx="5" fill="none" stroke="#3b2a1a" stroke-opacity=".45" stroke-width="1.2"/>
-<g fill="#f2c14e" stroke="#3b2a1a" stroke-width="1"><circle cx="8" cy="8" r="3.5"/><circle cx="1192" cy="8" r="3.5"/><circle cx="8" cy="592" r="3.5"/><circle cx="1192" cy="592" r="3.5"/></g><path class="spk" style="animation-delay:0s" d="M120 88 l2.500 5.500 l5.500 2.500 l-5.500 2.500 l-2.500 5.500 l-2.500 -5.500 l-5.500 -2.500 l5.500 -2.500 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/><path class="spk" style="animation-delay:0.9s" d="M1085 92 l2.500 5.500 l5.500 2.500 l-5.500 2.500 l-2.500 5.500 l-2.500 -5.500 l-5.500 -2.500 l5.500 -2.500 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/><path class="spk" style="animation-delay:1.6s" d="M395 224 l2.500 5.500 l5.500 2.500 l-5.500 2.500 l-2.500 5.500 l-2.500 -5.500 l-5.500 -2.500 l5.500 -2.500 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/><path class="spk" style="animation-delay:0.4s" d="M805 224 l2.500 5.500 l5.500 2.500 l-5.500 2.500 l-2.500 5.500 l-2.500 -5.500 l-5.500 -2.500 l5.500 -2.500 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/><path class="spk" style="animation-delay:1.2s" d="M1120 322 l2.500 5.500 l5.500 2.500 l-5.500 2.500 l-2.500 5.500 l-2.500 -5.500 l-5.500 -2.500 l5.500 -2.500 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/><path class="spk" style="animation-delay:2s" d="M84 322 l2.500 5.500 l5.500 2.500 l-5.500 2.500 l-2.500 5.500 l-2.500 -5.500 l-5.500 -2.500 l5.500 -2.500 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".8"/>
-<text class="r" x="600" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#a12a1e" letter-spacing="8">THE LEGEND</text>
-<g class="r" style="animation-delay:0.0s"><g class="pulse" style="animation-delay:2.0s"><text x="270" y="112" font-size="36" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#3b2a1a" stroke="#3b2a1a" stroke-width="9.4">DATA.</text><text x="270" y="112" font-size="36" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#fff8e1" stroke="#fff8e1" stroke-width="4.3">DATA.</text><text x="270" y="112" font-size="36" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#e63946">DATA.</text></g></g><g class="r" style="animation-delay:0.5s"><g class="pulse" style="animation-delay:2.8s"><text x="600" y="112" font-size="36" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#3b2a1a" stroke="#3b2a1a" stroke-width="9.4">INSIGHT.</text><text x="600" y="112" font-size="36" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#fff8e1" stroke="#fff8e1" stroke-width="4.3">INSIGHT.</text><text x="600" y="112" font-size="36" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#ff9f1c">INSIGHT.</text></g></g><g class="r" style="animation-delay:1.0s"><g class="pulse" style="animation-delay:3.6s"><text x="950" y="112" font-size="36" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#3b2a1a" stroke="#3b2a1a" stroke-width="9.4">AUTOMATION.</text><text x="950" y="112" font-size="36" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#fff8e1" stroke="#fff8e1" stroke-width="4.3">AUTOMATION.</text><text x="950" y="112" font-size="36" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#e63946">AUTOMATION.</text></g></g>
-<g class="r" style="animation-delay:1.8s"><text class="" x="600" y="160" text-anchor="middle" font-size="21" fill="#3b2a1a" font-style="italic">Legend tells of a treasure hidden at the end of the Grand Line of Data:</text></g>
-<g class="r" style="animation-delay:2.3s"><text class="" x="600" y="190" text-anchor="middle" font-size="21" fill="#3b2a1a" font-style="italic">a world where machines do the boring work and people are free to create.</text></g>
-<g class="r" style="animation-delay:3.1s"><text class="quote" x="600" y="234" text-anchor="middle" font-size="27" fill="#a12a1e" font-style="italic" font-weight="700">“It is real. Come and find it.”</text></g>
-<g class="r" style="animation-delay:3.9s"><text class="" x="600" y="272" text-anchor="middle" font-size="21" fill="#3b2a1a" font-style="italic">And so dreamers everywhere set sail. The Great Age of AI had begun!</text></g>
-<g class="r" style="animation-delay:4.4s"><path d="M70 304 Q320 314 548 304 M652 304 Q880 294 1130 304" fill="none" stroke="#3b2a1a" stroke-width="7" stroke-linecap="round"/>
-<path d="M70 304 Q320 314 548 304 M652 304 Q880 294 1130 304" fill="none" stroke="#d2ae6c" stroke-width="4.500" stroke-linecap="round"/>
-<path class="twist" d="M70 304 Q320 314 548 304 M652 304 Q880 294 1130 304" fill="none" stroke="#8a5a12" stroke-width="4.500" stroke-dasharray="2 8"/>
-<g transform="translate(600 300) scale(.8)"><ellipse cx="0" cy="10" rx="44" ry="11" fill="#f2c14e" stroke="#8a5a12" stroke-width="1.5"/>
+<defs><linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a2f16"/><stop offset="1" stop-color="#2b1a0c"/></linearGradient>
+<clipPath id="frame"><rect width="600" height="556" rx="14"/></clipPath></defs>
+<g clip-path="url(#frame)"><rect width="600" height="556" fill="url(#wood)"/><path d="M0 70 H600" stroke="#1d1108" stroke-width="2" opacity=".55"/><path d="M0 140 H600" stroke="#1d1108" stroke-width="2" opacity=".55"/><path d="M0 210 H600" stroke="#1d1108" stroke-width="2" opacity=".55"/><path d="M0 280 H600" stroke="#1d1108" stroke-width="2" opacity=".55"/><path d="M0 350 H600" stroke="#1d1108" stroke-width="2" opacity=".55"/><path d="M0 420 H600" stroke="#1d1108" stroke-width="2" opacity=".55"/><path d="M0 490 H600" stroke="#1d1108" stroke-width="2" opacity=".55"/></g>
+<rect x="2" y="2" width="596" height="552" rx="12" fill="none" stroke="#ffd23f" stroke-width="3"/>
+<rect x="9" y="9" width="582" height="538" rx="7" fill="none" stroke="#ffd23f" stroke-opacity=".45" stroke-width="1.2"/>
+<path class="spk" style="animation-delay:0s" d="M40 33 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ffd23f"/><path class="spk" style="animation-delay:0.9s" d="M560 37 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ffd23f"/><path class="spk" style="animation-delay:1.6s" d="M92 183 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ffd23f"/><path class="spk" style="animation-delay:0.4s" d="M508 183 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ffd23f"/><path class="spk" style="animation-delay:1.2s" d="M566 293 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ffd23f"/><path class="spk" style="animation-delay:2s" d="M34 293 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ffd23f"/>
+<text class="r" x="300" y="38" text-anchor="middle" font-size="12" font-weight="700" fill="#ffd23f" letter-spacing="7">THE LEGEND</text>
+<g class="r" style="animation-delay:0.0s"><g class="pulse" style="animation-delay:2.0s"><text x="104" y="78" font-size="23" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#3b2a1a" stroke="#3b2a1a" stroke-width="6.0">DATA.</text><text x="104" y="78" font-size="23" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#fff8e1" stroke="#fff8e1" stroke-width="2.8">DATA.</text><text x="104" y="78" font-size="23" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#ffd23f">DATA.</text></g></g><g class="r" style="animation-delay:0.5s"><g class="pulse" style="animation-delay:2.8s"><text x="286" y="78" font-size="23" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#3b2a1a" stroke="#3b2a1a" stroke-width="6.0">INSIGHT.</text><text x="286" y="78" font-size="23" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#fff8e1" stroke="#fff8e1" stroke-width="2.8">INSIGHT.</text><text x="286" y="78" font-size="23" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#6fe3dc">INSIGHT.</text></g></g><g class="r" style="animation-delay:1.0s"><g class="pulse" style="animation-delay:3.6s"><text x="476" y="78" font-size="23" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#3b2a1a" stroke="#3b2a1a" stroke-width="6.0">AUTOMATION.</text><text x="476" y="78" font-size="23" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#fff8e1" stroke="#fff8e1" stroke-width="2.8">AUTOMATION.</text><text x="476" y="78" font-size="23" text-anchor="middle" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#ff8a6b">AUTOMATION.</text></g></g>
+<g class="r" style="animation-delay:1.8s"><text class="" x="300" y="114" text-anchor="middle" font-size="17.5" fill="#fdf3d0" font-style="italic">Legend tells of a treasure hidden at the end of</text></g>
+<g class="r" style="animation-delay:1.8s"><text class="" x="300" y="136" text-anchor="middle" font-size="17.5" fill="#fdf3d0" font-style="italic">the Grand Line of Data: a world where machines do</text></g>
+<g class="r" style="animation-delay:1.8s"><text class="" x="300" y="158" text-anchor="middle" font-size="17.5" fill="#fdf3d0" font-style="italic">the boring work and people are free to create.</text></g>
+<g class="r" style="animation-delay:2.8s"><text class="quote" x="300" y="196" text-anchor="middle" font-size="23" fill="#6fe3dc" font-style="italic" font-weight="700">“It is real. Come and find it.”</text></g>
+<g class="r" style="animation-delay:3.6s"><text class="" x="300" y="226" text-anchor="middle" font-size="17.5" fill="#fdf3d0" font-style="italic">And so dreamers everywhere set sail.</text></g>
+<g class="r" style="animation-delay:3.6s"><text class="" x="300" y="248" text-anchor="middle" font-size="17.5" fill="#ffd23f" font-style="italic" font-weight="700">The Great Age of AI had begun!</text></g>
+<g class="r" style="animation-delay:4.2s"><path d="M40 272 Q150 279 262 272 M338 272 Q450 265 560 272" fill="none" stroke="#1d1108" stroke-width="7" stroke-linecap="round"/>
+<path d="M40 272 Q150 279 262 272 M338 272 Q450 265 560 272" fill="none" stroke="#d2ae6c" stroke-width="4.500" stroke-linecap="round"/>
+<path class="twist" d="M40 272 Q150 279 262 272 M338 272 Q450 265 560 272" fill="none" stroke="#8a5a12" stroke-width="4.500" stroke-dasharray="2 8"/>
+<g transform="translate(300 270) scale(.72)"><ellipse cx="0" cy="10" rx="44" ry="11" fill="#f2c14e" stroke="#8a5a12" stroke-width="1.5"/>
 <path d="M-26 9 Q-24 -24 0 -24 Q24 -24 26 9 Q0 16 -26 9 Z" fill="#f7d06a" stroke="#8a5a12" stroke-width="1.5"/>
 <path d="M-26 2 Q0 10 26 2 L26 9 Q0 16 -26 9 Z" fill="#e63946"/>
 <path d="M-18 -12 q18 -6 36 0 M-22 -4 q22 -6 44 0" fill="none" stroke="#c9952c" stroke-width="1"/></g></g>
-<text class="r" style="animation-delay:4.8s" x="600" y="348" text-anchor="middle" font-size="13" font-weight="700" fill="#a12a1e" letter-spacing="8">THE CAPTAIN</text>
-<g class="r" style="animation-delay:5.2s"><text class="" x="600" y="384" text-anchor="middle" font-size="20" fill="#3b2a1a" >One of them was a <tspan font-weight="700">Physics Engineer</tspan> from Pereira, Colombia, who learned to read</text></g>
-<g class="r" style="animation-delay:5.2s"><text class="" x="600" y="411" text-anchor="middle" font-size="20" fill="#3b2a1a" >the universe through equations, and now uses that to teach machines how to think.</text></g>
-<g class="r" style="animation-delay:5.8s"><text class="" x="600" y="448" text-anchor="middle" font-size="20" fill="#3b2a1a" >She sails as a <tspan font-weight="700">Data &amp; AI Engineer</tspan> with the <tspan font-weight="700">R&amp;D&amp;I crew of Integra S.A.</tspan>: building software,</text></g>
-<g class="r" style="animation-delay:5.8s"><text class="" x="600" y="475" text-anchor="middle" font-size="20" fill="#3b2a1a" >charting data architectures and bringing artificial intelligence aboard.</text></g>
-<g class="r" style="animation-delay:6.4s"><text class="" x="600" y="516" text-anchor="middle" font-size="21" fill="#a12a1e" font-weight="700">Her dream: let machines do the repetitive work, so people can do the creative work.</text></g>
-<g class="r" style="animation-delay:7s"><text x="1090" y="566" text-anchor="end" font-size="20" font-style="italic" font-weight="700" fill="#3b2a1a">— Captain Sonia Restrepo, “the Data Navigator”</text>
-<path d="M660 574 q110 10 430 0" fill="none" stroke="#3b2a1a" stroke-width="1.5" stroke-linecap="round"/></g>
-<!-- quill -->
-<g class="quill"><path d="M1118 566 L1150 500 Q1176 470 1168 520 Q1160 548 1124 562 Z" fill="#fffaf0" stroke="#3b2a1a" stroke-width="2"/>
-<path d="M1118 566 L1162 492 M1140 530 l14 -4 M1146 518 l14 -6 M1134 542 l14 -2" fill="none" stroke="#3b2a1a" stroke-width="1.4"/>
-<path d="M1118 566 l5 -9" stroke="#3b2a1a" stroke-width="3.500" stroke-linecap="round"/></g>
-<!-- candle -->
-<circle class="halo" cx="78" cy="500" r="40" fill="#ffd23f"/>
-<rect x="66" y="518" width="24" height="46" rx="3" fill="#fffaf0" stroke="#3b2a1a" stroke-width="2"/>
-<path d="M66 530 q6 6 4 14 M84 518 q4 8 0 16" fill="none" stroke="#d9c08a" stroke-width="2"/>
-<path d="M56 564 h44 l-5 9 h-34 Z" fill="#f2c14e" stroke="#3b2a1a" stroke-width="2"/>
-<path d="M78 518 v-8" stroke="#3b2a1a" stroke-width="2"/>
-<g class="flame"><path d="M78 508 q-11 -14 0 -30 q11 16 0 30 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width="1.5"/><path d="M78 506 q-5 -8 0 -16 q5 8 0 16 Z" fill="#ffd23f"/></g>
+<text class="r" style="animation-delay:4.6s" x="300" y="304" text-anchor="middle" font-size="12" font-weight="700" fill="#ffd23f" letter-spacing="7">THE CAPTAIN</text>
+<g class="r" style="animation-delay:5s"><text class="" x="300" y="328" text-anchor="middle" font-size="17.5" fill="#fdf3d0" >One of them was a <tspan font-weight="700" fill="#ffb347">Physics Engineer</tspan> from Pereira,</text></g>
+<g class="r" style="animation-delay:5s"><text class="" x="300" y="350" text-anchor="middle" font-size="17.5" fill="#fdf3d0" >Colombia, who learned to read the universe through</text></g>
+<g class="r" style="animation-delay:5s"><text class="" x="300" y="372" text-anchor="middle" font-size="17.5" fill="#fdf3d0" >equations and now teaches machines how to think.</text></g>
+<g class="r" style="animation-delay:5.6s"><text class="" x="300" y="402" text-anchor="middle" font-size="17.5" fill="#fdf3d0" >She sails as a <tspan font-weight="700" fill="#ffb347">Data &amp; AI Engineer</tspan> with the <tspan font-weight="700" fill="#ffb347">R&amp;D&amp;I</tspan></text></g>
+<g class="r" style="animation-delay:5.6s"><text class="" x="300" y="424" text-anchor="middle" font-size="17.5" fill="#fdf3d0" ><tspan font-weight="700" fill="#ffb347">crew of Integra S.A.</tspan>: building software, charting data</text></g>
+<g class="r" style="animation-delay:5.6s"><text class="" x="300" y="446" text-anchor="middle" font-size="17.5" fill="#fdf3d0" >architectures and bringing AI aboard.</text></g>
+<g class="r" style="animation-delay:6.2s"><text class="" x="300" y="480" text-anchor="middle" font-size="18" fill="#ff8a6b" font-weight="700">Her dream: let machines do the repetitive work,</text></g>
+<g class="r" style="animation-delay:6.2s"><text class="" x="300" y="502" text-anchor="middle" font-size="18" fill="#ff8a6b" font-weight="700">so people can do the creative work.</text></g>
+<g class="r" style="animation-delay:6.8s"><text x="528" y="534" text-anchor="end" font-size="15.500" font-style="italic" font-weight="700" fill="#ffd23f">— Captain Sonia Restrepo, “the Data Navigator”</text></g>
+<g class="quill"><path d="M548 536 L566 498 Q582 480 577 510 Q572 526 552 534 Z" fill="#fffaf0" stroke="#1d1108" stroke-width="1.5"/>
+<path d="M548 536 L573 493 M560 516 l9 -3 M564 508 l9 -4" fill="none" stroke="#1d1108" stroke-width="1.1"/></g>
+<circle class="halo" cx="40" cy="494" r="30" fill="#ffd23f"/>
+<rect x="31" y="508" width="18" height="30" rx="2.500" fill="#fffaf0" stroke="#1d1108" stroke-width="1.5"/>
+<path d="M24 538 h32 l-4 7 h-24 Z" fill="#f2c14e" stroke="#1d1108" stroke-width="1.5"/>
+<path d="M40 508 v-6" stroke="#1d1108" stroke-width="1.6"/>
+<g class="flame"><path d="M40 500 q-8 -11 0 -23 q8 12 0 23 Z" fill="#ff9f1c" stroke="#1d1108" stroke-width="1.2"/><path d="M40 498 q-4 -6 0 -12 q4 6 0 12 Z" fill="#ffd23f"/></g>
 </svg>
