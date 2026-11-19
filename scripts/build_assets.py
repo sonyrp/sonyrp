@@ -820,8 +820,8 @@ def captain_code():
     style = """
 .r{animation:rv .6s ease-out backwards}
 @keyframes rv{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
-.out{animation:out 7s steps(1) infinite}
-@keyframes out{0%{opacity:0}18%,100%{opacity:1}}
+.cover{transform:translateX(330px);animation:type 7s steps(26) infinite}
+@keyframes type{0%,12%{transform:translateX(0)}55%,100%{transform:translateX(330px)}}
 .cur{animation:cur .9s steps(1) infinite}
 @keyframes cur{50%{opacity:0}}
 .w1{animation:wv 6s linear infinite}.w2{animation:wv 9s linear infinite reverse}
@@ -843,20 +843,23 @@ def captain_code():
 {lines}
 <!-- terminal -->
 <g clip-path="url(#term)">
-<rect x="742" y="68" width="424" height="336" fill="#f3e4b4" opacity=".55"/>
-<text class="mono" x="762" y="98" font-size="15" fill="{dim}">~/grand-line $ <tspan fill="{cream}">python</tspan></text>
-<text class="mono" x="762" y="130" font-size="16" fill="{teal}" font-weight="700">&gt;&gt;&gt; <tspan fill="{cream}" font-weight="400">Captain().set_sail()</tspan></text>
-<text class="mono out" x="762" y="162" font-size="16" font-weight="700" fill="#8f2f17">'Vibecoding at full sail'</text>
-<text class="mono" x="762" y="194" font-size="16" fill="{teal}" font-weight="700">&gt;&gt;&gt; <tspan class="cur" fill="{cream}">▌</tspan></text>
-<path class="spk" d="M1120 96 l2.500 6 l6 2.500 l-6 2.500 l-2.500 6 l-2.500 -6 l-6 -2.500 l6 -2.500 Z" fill="#8a6a3a"/>
-<path class="spk" style="animation-delay:1.2s" d="M1070 232 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#8a6a3a"/>
-<g stroke="{INK}" stroke-width="2" stroke-linecap="round"><path d="M820 226 v-10 M820 298 v10 M784 262 h-10 M856 262 h10 M795 237 l-7 -7 M845 237 l7 -7 M795 287 l-7 7 M845 287 l7 7"/></g>
-<circle cx="820" cy="262" r="22" fill="#e6c36a" stroke="{INK}" stroke-width="2"/>
-{wave(330, 10, "#dcc48d", "w2", 'stroke="#3b2a1a" stroke-width="2"', bottom=420)}
+<rect x="742" y="68" width="424" height="336" fill="#c8f1fb"/>
+<g fill="#fff"><circle cx="1010" cy="318" r="30"/><circle cx="1050" cy="306" r="38"/><circle cx="1100" cy="318" r="30"/><circle cx="1140" cy="312" r="28"/></g>
+<text class="mono" x="762" y="98" font-size="15" fill="#4a5a63">~/grand-line $ <tspan fill="{cream}">python</tspan></text>
+<text class="mono" x="762" y="130" font-size="16" fill="#0e7c96" font-weight="700">&gt;&gt;&gt; <tspan fill="{cream}" font-weight="400">Captain().set_sail()</tspan></text>
+<text class="mono" x="762" y="162" font-size="16" font-weight="700" fill="#c0392b">'Vibecoding at full sail'</text>
+<rect class="cover" x="760" y="144" width="340" height="26" fill="#c8f1fb"/>
+<text class="mono" x="762" y="194" font-size="16" fill="#0e7c96" font-weight="700">&gt;&gt;&gt; <tspan class="cur" fill="{cream}">▌</tspan></text>
+<path class="spk" d="M1120 96 l2.500 6 l6 2.500 l-6 2.500 l-2.500 6 l-2.500 -6 l-6 -2.500 l6 -2.500 Z" fill="#fff"/>
+<path class="spk" style="animation-delay:1.2s" d="M1070 232 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#fff"/>
+<g stroke="#ffb703" stroke-width="4" stroke-linecap="round"><path d="M820 226 v-10 M820 298 v10 M784 262 h-10 M856 262 h10 M795 237 l-7 -7 M845 237 l7 -7 M795 287 l-7 7 M845 287 l7 7"/></g>
+<circle cx="820" cy="262" r="22" fill="#ffd23f" stroke="#f39c12" stroke-width="3"/>
+{wave(330, 10, "#2ec4c6", "w2", bottom=420)}
 <g class="sail"><g transform="translate(0 340)"><g class="bob">{SMALL_SHIP}</g></g></g>
-{wave(350, 12, "#cdb173", "w1", 'stroke="#3b2a1a" stroke-width="2"', bottom=420)}
+{wave(350, 12, "#17a2b8", "w1", bottom=420)}
+<g class="w1"><path d="M0 352 q50 -12 100 0 {"t100 0 " * 13}" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/></g>
 </g>
-<rect x="742" y="68" width="424" height="336" rx="10" fill="none" stroke="{INK}" stroke-width="2.500"/>'''
+<rect x="742" y="68" width="424" height="336" rx="10" fill="none" stroke="{INK}" stroke-width="4"/>'''
     save("captain-code.svg", svg(w, h, style, body, framed=False))
 
 
