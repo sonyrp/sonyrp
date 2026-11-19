@@ -766,7 +766,7 @@ def captain_log():
 <path d="M24 538 h32 l-4 7 h-24 Z" fill="{STRAW}" stroke="#1d1108" stroke-width="1.5"/>
 <path d="M40 508 v-6" stroke="#1d1108" stroke-width="1.6"/>
 <g class="flame"><path d="M40 500 q-8 -11 0 -23 q8 12 0 23 Z" fill="#ff9f1c" stroke="#1d1108" stroke-width="1.2"/><path d="M40 498 q-4 -6 0 -12 q4 6 0 12 Z" fill="#ffd23f"/></g>'''
-    save("captain-log.svg", svg(w, h, style, body, framed=False))
+    save("captain-log-papyrus.svg", svg(w, h, style, body, framed=False))
 
 
 # ─────────────── captain.py: code card under the poster ───────────────
@@ -860,7 +860,7 @@ def captain_code():
 <g class="w1"><path d="M0 352 q50 -12 100 0 {"t100 0 " * 13}" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/></g>
 </g>
 <rect x="742" y="68" width="424" height="336" rx="10" fill="none" stroke="{INK}" stroke-width="4"/>'''
-    save("captain-code.svg", svg(w, h, style, body, framed=False))
+    save("captain-code-sea.svg", svg(w, h, style, body, framed=False))
 
 
 if __name__ == "__main__":
