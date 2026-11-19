@@ -31,23 +31,12 @@
       <img src="assets/captain-log.svg" width="100%" alt="The legend: Data. Insight. Automation. Legend tells of a treasure hidden at the end of the Grand Line of Data: a world where machines do the boring work and people are free to create. 'It is real. Come and find it.' And so dreamers everywhere set sail. The Great Age of AI had begun! The captain: one of them was a Physics Engineer from Pereira, Colombia, who learned to read the universe through equations and now teaches machines how to think. She sails as a Data & AI Engineer with the R&D&I crew of Integra S.A.: building software, charting data architectures and bringing AI aboard. Her dream: let machines do the repetitive work, so people can do the creative work. Captain Sonia Restrepo, the Data Navigator."/>
     </td>
   </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="assets/captain-code.svg" width="100%" alt="captain.py — class Captain: name = Sonia Restrepo; epithet = The Data Navigator; ship = R&D&I @ Integra S.A.; home_sea = Pereira, Colombia; origin = Physics Engineering, M.Sc. Systems & Computer Engineering; haki = Artificial Intelligence, Data Engineering, Process Automation, Optimization; dream = Bring AI from the lab into everyday business. set_sail() returns 'Vibecoding at full sail'."/>
+    </td>
+  </tr>
 </table>
-
-```python
-class Captain:
-    name      = "Sonia Restrepo"
-    epithet   = "The Data Navigator"
-    ship      = "R&D&I @ Integra S.A."
-    home_sea  = "Pereira, Colombia 🇨🇴"
-    origin    = ["Physics Engineering ⚛️",
-                 "M.Sc. Systems & Computer Engineering"]
-    haki      = ["Artificial Intelligence", "Data Engineering",
-                 "Process Automation", "Optimization"]
-    dream     = "Bring AI from the lab into everyday business"
-
-    def set_sail(self):
-        return "Vibecoding at full sail ⛵"
-```
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/divider-logpose-dark.svg"/><img src="assets/divider-logpose.svg" width="100%" alt=""/></picture></p>
 

@@ -759,7 +759,104 @@ def captain_log():
     save("captain-log.svg", svg(w, h, style, body, framed=False))
 
 
+# ─────────────── captain.py: code card under the poster ───────────────
+def captain_code():
+    import re
+    w, h = 1200, 436
+    gold, cream, teal, coral, amber, dim = "#ffd23f", "#fdf3d0", "#6fe3dc", "#ff8a6b", "#ffb347", "#a8875a"
+    code = [
+        'class Captain:',
+        '    name      = "Sonia Restrepo"',
+        '    epithet   = "The Data Navigator"',
+        '    ship      = "R&D&I @ Integra S.A."',
+        '    home_sea  = "Pereira, Colombia"',
+        '    origin    = ["Physics Engineering",',
+        '                 "M.Sc. Systems & Computer Engineering"]',
+        '    haki      = ["Artificial Intelligence", "Data Engineering",',
+        '                 "Process Automation", "Optimization"]',
+        '    dream     = "Bring AI from the lab into everyday business"',
+        '',
+        '    def set_sail(self):',
+        '        return "Vibecoding at full sail"',
+    ]
+
+    def esc(t):
+        return t.replace("&", "&amp;").replace("<", "&lt;")
+
+    def paint(src):
+        out = ""
+        for tok in re.findall(r'"[^"]*"|\w+|\s+|[^\w\s]', src):
+            if tok.startswith('"'):
+                col = gold
+            elif tok in ("class", "def", "return"):
+                col = coral
+            elif tok in ("Captain", "set_sail"):
+                col = teal
+            elif tok == "self":
+                col = amber
+            elif tok.strip() and not tok[0].isalnum() and tok[0] != "_":
+                col = dim
+            else:
+                col = cream
+            bold = ' font-weight="700"' if col in (coral, teal) else ""
+            out += f'<tspan fill="{col}"{bold}>{esc(tok)}</tspan>'
+        return out
+
+    lines = ""
+    for i, src in enumerate(code):
+        y = 86 + i * 26
+        lines += (f'<g class="r" style="animation-delay:{i * .12:.2f}s"><text class="mono" x="52" y="{y}" text-anchor="end" font-size="14" fill="{dim}" opacity=".7">{i + 1}</text>'
+                  f'<text class="mono" x="72" y="{y}" font-size="18" xml:space="preserve" style="white-space:pre">{paint(src)}</text></g>')
+    style = """
+.r{animation:rv .6s ease-out backwards}
+@keyframes rv{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+.cover{transform:translateX(330px);animation:type 7s steps(26) infinite}
+@keyframes type{0%,12%{transform:translateX(0)}55%,100%{transform:translateX(330px)}}
+.cur{animation:cur .9s steps(1) infinite}
+@keyframes cur{50%{opacity:0}}
+.w1{animation:wv 6s linear infinite}.w2{animation:wv 9s linear infinite reverse}
+@keyframes wv{to{transform:translateX(-200px)}}
+.sail{animation:sl 16s linear infinite}
+@keyframes sl{from{transform:translateX(700px)}to{transform:translateX(1190px)}}
+.bob{animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg) translateY(-2px)}}
+.spk{animation:spk 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spk{0%,100%{transform:scale(0)}50%{transform:scale(1)}}
+"""
+    planks = "".join(f'<path d="M0 {y} H{w}" stroke="#1d1108" stroke-width="2" opacity=".5"/>' for y in range(96, h, 70))
+    body = f'''<defs><linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a2f16"/><stop offset="1" stop-color="#2b1a0c"/></linearGradient>
+<clipPath id="frame"><rect width="{w}" height="{h}" rx="14"/></clipPath>
+<clipPath id="term"><rect x="742" y="64" width="424" height="340" rx="10"/></clipPath></defs>
+<g clip-path="url(#frame)"><rect width="{w}" height="{h}" fill="url(#wood)"/>{planks}
+<rect width="{w}" height="46" fill="#1d1108"/><path d="M0 46 H{w}" stroke="{gold}" stroke-width="1.5" opacity=".6"/></g>
+<rect x="2" y="2" width="{w - 4}" height="{h - 4}" rx="12" fill="none" stroke="{gold}" stroke-width="3"/>
+<circle cx="30" cy="24" r="7" fill="{coral}"/><circle cx="54" cy="24" r="7" fill="{gold}"/><circle cx="78" cy="24" r="7" fill="{teal}"/>
+<path d="M104 46 V14 q0 -6 6 -6 h150 q6 0 6 6 V46 Z" fill="#4a2f16" stroke="{gold}" stroke-width="1.5"/>
+<text class="mono" x="186" y="33" text-anchor="middle" font-size="16" font-weight="700" fill="{gold}">captain.py</text>
+<text x="{w - 26}" y="30" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="{dim}" letter-spacing="2">THE CAPTAIN, IN PYTHON</text>
+<path d="M62 60 V{h - 22}" stroke="{dim}" stroke-width="1" opacity=".5"/>
+{lines}
+<!-- terminal -->
+<g clip-path="url(#term)">
+<rect x="742" y="64" width="424" height="340" fill="#160c05"/>
+<text class="mono" x="762" y="98" font-size="15" fill="{dim}">~/grand-line $ <tspan fill="{cream}">python</tspan></text>
+<text class="mono" x="762" y="130" font-size="16" fill="{teal}" font-weight="700">&gt;&gt;&gt; <tspan fill="{cream}" font-weight="400">Captain().set_sail()</tspan></text>
+<text class="mono" x="762" y="162" font-size="16" font-weight="700" fill="{gold}">'Vibecoding at full sail'</text>
+<rect class="cover" x="760" y="144" width="340" height="26" fill="#160c05"/>
+<text class="mono" x="762" y="194" font-size="16" fill="{teal}" font-weight="700">&gt;&gt;&gt; <tspan class="cur" fill="{cream}">▌</tspan></text>
+<path class="spk" d="M1120 96 l2.500 6 l6 2.500 l-6 2.500 l-2.500 6 l-2.500 -6 l-6 -2.500 l6 -2.500 Z" fill="{gold}"/>
+<path class="spk" style="animation-delay:1.2s" d="M1070 232 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="{gold}"/>
+<circle cx="820" cy="262" r="22" fill="{gold}" opacity=".9"/>
+{wave(330, 10, "#1f8f96", "w2", 'opacity=".9"', bottom=420)}
+<g class="sail"><g transform="translate(0 340)"><g class="bob">{SMALL_SHIP}</g></g></g>
+{wave(350, 12, "#14707a", "w1", bottom=420)}
+</g>
+<rect x="742" y="64" width="424" height="340" rx="10" fill="none" stroke="{gold}" stroke-opacity=".7" stroke-width="1.5"/>'''
+    save("captain-code.svg", svg(w, h, style, body, framed=False))
+
+
 if __name__ == "__main__":
+    captain_code()
     captain_log()
     header(); footer(); current_arc(); crew_flag(); news(); chest(); poneglyph(); dividers()
     crew_fruits(); sagas()
