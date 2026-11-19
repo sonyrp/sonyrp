@@ -66,15 +66,19 @@ class Captain:
 
 ## 🍇 Devil Fruit powers
 
-| 🤖 **Ai-Ai no Mi** | 🗄️ **Data-Data no Mi** | ⚙️ **Auto-Auto no Mi** | ✨ **Vibe-Vibe no Mi** |
-|:---:|:---:|:---:|:---:|
-| Integrating AI into real business processes | Designing data architectures and pipelines | Eliminating manual, repetitive tasks | Prototypes at the speed of an idea, coding alongside AI |
+<p align="center">
+  <img src="assets/devil-fruits.svg" width="100%" alt="My four Devil Fruits. Ai-Ai no Mi: integrating AI into real business processes. Data-Data no Mi: designing data architectures and pipelines. Auto-Auto no Mi: eliminating manual, repetitive tasks. Vibe-Vibe no Mi: prototypes at the speed of an idea, coding alongside AI."/>
+</p>
 
 <p align="center"><sub>Known weakness: the sea of undocumented legacy code 🌊</sub></p>
 
 <p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
 
 ## ⚡ Current arc: Megabús Island
+
+<p align="center">
+  <img src="assets/current-arc.svg" width="100%" alt="Current arc: Megabús Island. An electric bus charging at the dock while the optimizer hunts the Pareto front between energy cost and battery wear."/>
+</p>
 
 > **Intelligent battery-charging optimization system for the SITM Megabús electric fleet**
 > *Master's research funded by Colombia's Ministry of Science, Minciencias (Becas para el Cambio) · R&D&I Integra S.A. × UTP*
@@ -153,17 +157,26 @@ Charging an electric bus sounds simple, but doing it at the lowest cost, protect
   </tr>
 </table>
 
-<p align="center"><i>"When do you think people die? ... When they are forgotten." — Dr. Hiriluk</i><br><sub>So I document my code.</sub></p>
+<p align="center">
+  <img src="assets/poneglyph.svg" width="100%" alt="Translated from the Poneglyph of R&D&I: 'When do you think people die? When they are forgotten.' Dr. Hiriluk (so I document my code)"/>
+</p>
 
 <p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
 
-## 🐉 The Sea King that eats my contributions
+## ⛵ The Grand Line logbook
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sonyrp/sonyrp/output/github-snake-dark.svg"/>
-    <img alt="A sea king swimming through my contribution graph" src="https://raw.githubusercontent.com/sonyrp/sonyrp/output/github-snake.svg"/>
-  </picture>
+  <img src="https://raw.githubusercontent.com/sonyrp/sonyrp/output/contribution-voyage.svg" width="100%" alt="My contribution calendar as a sea chart: a pirate ship sails the year plundering every contribution"/>
+</p>
+
+<p align="center"><img src="assets/wave.svg" width="100%" alt=""/></p>
+
+## 🐌 Den Den Mushi
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/sonia-restrepo-perez">
+    <img src="assets/den-den-mushi.svg" width="100%" alt="Puru puru puru... Got a quest for my crew? Call me on LinkedIn: linkedin.com/in/sonia-restrepo-perez"/>
+  </a>
 </p>
 
 <!-- ═══════════════════  FOOTER  ═══════════════════ -->

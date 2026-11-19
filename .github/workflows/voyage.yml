@@ -1,4 +1,4 @@
-name: Contribution snake
+name: Contribution voyage
 
 on:
   schedule:
@@ -15,13 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Generate the snake
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg?color_snake=#c0392b&color_dots=#ebedf0,#a8dadc,#457b9d,#f4a261,#f4c430
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=#e63946&color_dots=#161b22,#12355b,#1b6ca8,#f4a261,#f4c430
+      - uses: actions/checkout@v4
+
+      - name: Chart the contribution sea
+        run: python3 scripts/contribution_voyage.py "${{ github.repository_owner }}" dist/contribution-voyage.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to the output branch
         uses: crazy-max/ghaction-github-pages@v4

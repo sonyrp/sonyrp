@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1d33"/><stop offset="1" stop-color="#12355b"/></linearGradient>
+<linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a33a2e"/><stop offset="1" stop-color="#6e2018"/></linearGradient>
+<clipPath id="frame"><rect width="1200" height="250" rx="14"/></clipPath>
+<style>
+text{font-family:Georgia,'Times New Roman',serif}
+.g{fill:none;stroke:#f6c9a0;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;animation:scan 6s ease-in-out infinite}
+@keyframes scan{0%,100%{stroke:#c98a6c;opacity:.55}8%{stroke:#fff3c4;opacity:1}20%{stroke:#c98a6c;opacity:.55}}
+.beam{animation:beam 6s linear infinite}
+@keyframes beam{0%{transform:translateX(0);opacity:0}5%{opacity:.5}62%{opacity:.5}68%,100%{transform:translateX(408px);opacity:0}}
+.r{animation:rv 12s ease-in-out infinite;opacity:0}
+.r2{animation-delay:1.2s}.r3{animation-delay:2.6s}.r4{animation-delay:3.6s}
+@keyframes rv{0%{opacity:0;transform:translateY(8px)}8%,80%{opacity:1;transform:none}90%,100%{opacity:0}}
+</style></defs>
+<g clip-path="url(#frame)">
+<rect width="1200" height="250" fill="url(#bg)"/>
+<rect x="1" y="1" width="1198" height="248" rx="14" fill="none" stroke="#f4c430" stroke-opacity=".35" stroke-width="2"/>
+<path d="M40 25 h440 v194 h-440 Z" fill="url(#stone)" stroke="#3d0f0a" stroke-width="3"/>
+<path d="M40 25 h440 l-8 8 h-424 Z" fill="#fff" opacity=".12"/>
+<path d="M40 219 h440 l-8 -8 h-424 Z" fill="#000" opacity=".25"/>
+<path class="g" style="animation-delay:0.00s" d="M62 65Q73 54 73 65 M73 54Q73 54 62 43 M73 43L62 43"/>
+<path class="g" style="animation-delay:0.05s" d="M73 99L73 77 M62 99L84 88 M73 88Q73 88 62 77"/>
+<path class="g" style="animation-delay:0.10s" d="M73 122L62 133 M62 133Q73 122 62 111 M73 111L84 122"/>
+<path class="g" style="animation-delay:0.15s" d="M73 167Q73 156 62 167 M62 156Q73 156 62 145 M73 145L62 145 M73 156Q73 156 62 145"/>
+<path class="g" style="animation-delay:0.20s" d="M73 190L84 179 M81 179a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M62 190L62 179"/>
+<path class="g" style="animation-delay:0.32s" d="M118 65L96 43 M96 54L118 54 M96 65L118 43 M96 65L96 43"/>
+<path class="g" style="animation-delay:0.37s" d="M104 77a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M107 77L107 99 M107 88L96 99 M93 88a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:0.42s" d="M118 111Q107 122 107 122 M104 122a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M118 133L107 111 M107 122L96 122"/>
+<path class="g" style="animation-delay:0.47s" d="M118 145L118 167 M104 167a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M107 167L107 156 M96 167Q107 156 107 156"/>
+<path class="g" style="animation-delay:0.52s" d="M107 190L118 201 M96 190L107 190 M107 201L96 201"/>
+<path class="g" style="animation-delay:0.64s" d="M141 43Q141 54 152 65 M130 65L130 43 M149 54a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M127 54a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:0.69s" d="M152 99L152 88 M141 88Q141 88 130 77 M130 88L152 88 M141 99L152 88"/>
+<path class="g" style="animation-delay:0.74s" d="M127 133a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M149 111a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M138 122a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M130 111Q141 122 141 133"/>
+<path class="g" style="animation-delay:0.79s" d="M152 145L141 145 M152 156L141 145 M127 156a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:0.84s" d="M141 201Q141 190 141 190 M152 179Q141 190 141 179 M130 179L152 201 M152 190L152 201"/>
+<path class="g" style="animation-delay:0.96s" d="M186 43L186 65 M186 54Q175 54 175 65 M164 43L164 65 M186 65L164 54"/>
+<path class="g" style="animation-delay:1.01s" d="M164 88Q175 88 164 99 M186 77L164 88 M164 77Q175 88 186 88"/>
+<path class="g" style="animation-delay:1.06s" d="M172 133a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M175 133L164 133 M175 133L175 122"/>
+<path class="g" style="animation-delay:1.11s" d="M161 145a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M175 156L164 167 M186 167L175 145 M186 167L175 145"/>
+<path class="g" style="animation-delay:1.16s" d="M175 201L186 190 M186 179L186 190 M175 179L164 190 M164 179L164 190"/>
+<path class="g" style="animation-delay:1.28s" d="M220 65L198 43 M206 43a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M209 54L220 43 M195 43a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:1.33s" d="M195 99a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M209 77L198 99 M206 77a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M198 88L220 77"/>
+<path class="g" style="animation-delay:1.38s" d="M198 111Q209 122 209 133 M217 133a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M209 133L209 111"/>
+<path class="g" style="animation-delay:1.43s" d="M220 145Q209 156 209 156 M220 145Q209 156 220 167 M198 167L220 156 M198 167L209 145"/>
+<path class="g" style="animation-delay:1.48s" d="M220 201Q209 190 220 179 M220 201Q209 190 198 190 M220 190L209 190"/>
+<path class="g" style="animation-delay:1.60s" d="M251 43a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M251 43a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M254 54Q243 54 232 43"/>
+<path class="g" style="animation-delay:1.65s" d="M254 88L254 77 M254 77L254 99 M254 88L243 77"/>
+<path class="g" style="animation-delay:1.70s" d="M243 133L243 111 M229 122a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M232 122L243 133"/>
+<path class="g" style="animation-delay:1.75s" d="M240 156a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M254 145Q243 156 243 145 M251 156a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M243 167Q243 156 232 145"/>
+<path class="g" style="animation-delay:1.80s" d="M232 179L243 179 M254 179Q243 190 243 179 M232 201L254 190"/>
+<path class="g" style="animation-delay:1.92s" d="M266 43L277 43 M266 65L288 43 M274 43a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:1.97s" d="M288 77Q277 88 266 99 M288 99L277 77 M266 99L277 99"/>
+<path class="g" style="animation-delay:2.02s" d="M263 133a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M277 122L266 122 M277 133L266 111"/>
+<path class="g" style="animation-delay:2.07s" d="M277 145L288 156 M277 156L277 145 M266 167L277 156"/>
+<path class="g" style="animation-delay:2.12s" d="M288 179L266 190 M288 190L277 179 M277 201L266 201 M274 201a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:2.24s" d="M311 54Q311 54 300 65 M322 54Q311 54 300 65 M311 54L322 54 M322 43Q311 54 311 43"/>
+<path class="g" style="animation-delay:2.29s" d="M300 88L322 77 M322 99Q311 88 311 77 M322 88Q311 88 322 77"/>
+<path class="g" style="animation-delay:2.34s" d="M319 111a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M300 111L322 122 M322 122L311 122 M300 122L300 111"/>
+<path class="g" style="animation-delay:2.39s" d="M300 145L311 145 M322 145L322 156 M300 167L322 156 M300 156L311 167"/>
+<path class="g" style="animation-delay:2.44s" d="M311 179L322 201 M311 179L300 201 M300 179L311 190 M311 190Q311 190 311 179"/>
+<path class="g" style="animation-delay:2.56s" d="M345 54L334 43 M345 43Q345 54 356 54 M345 54L334 65"/>
+<path class="g" style="animation-delay:2.61s" d="M356 99L334 77 M356 99Q345 88 356 88 M334 77L356 99 M334 99L356 99"/>
+<path class="g" style="animation-delay:2.66s" d="M345 133L356 122 M334 133L334 122 M334 133L356 111 M356 133L334 133"/>
+<path class="g" style="animation-delay:2.71s" d="M334 145L356 167 M334 167Q345 156 356 156 M334 145L345 156"/>
+<path class="g" style="animation-delay:2.76s" d="M356 179Q345 190 334 179 M345 179L334 179 M342 190a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M331 201a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:2.88s" d="M379 43L368 65 M379 43Q379 54 390 43 M387 54a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:2.93s" d="M368 77L390 99 M379 99L390 99 M368 77L379 77 M365 88a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:2.98s" d="M390 122L368 122 M368 122L368 111 M379 111L379 133"/>
+<path class="g" style="animation-delay:3.03s" d="M390 145Q379 156 379 156 M368 145Q379 156 379 156 M390 156L379 167 M376 145a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:3.08s" d="M376 190a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M368 190Q379 190 379 179 M376 190a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<path class="g" style="animation-delay:3.20s" d="M424 54L424 43 M413 43Q413 54 402 54 M424 65Q413 54 413 43"/>
+<path class="g" style="animation-delay:3.25s" d="M424 88L413 77 M413 88L424 77 M402 88L413 77 M424 99Q413 88 402 77"/>
+<path class="g" style="animation-delay:3.30s" d="M421 133a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M413 122L413 111 M413 111L424 122"/>
+<path class="g" style="animation-delay:3.35s" d="M424 145Q413 156 413 145 M399 167a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M402 156Q413 156 402 167 M413 156L424 145"/>
+<path class="g" style="animation-delay:3.40s" d="M424 201L413 179 M402 179L402 190 M424 190Q413 190 413 179 M413 190Q413 190 402 179"/>
+<path class="g" style="animation-delay:3.52s" d="M455 43a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M436 65L436 54 M447 65Q447 54 458 65 M436 43L447 65"/>
+<path class="g" style="animation-delay:3.57s" d="M444 99a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M447 88L447 99 M458 88L447 88"/>
+<path class="g" style="animation-delay:3.62s" d="M436 122L447 111 M436 133L458 111 M436 133L458 133"/>
+<path class="g" style="animation-delay:3.67s" d="M447 156Q447 156 436 167 M436 156L447 145 M444 156a3 3 0 1 0 6 0a3 3 0 1 0 -6 0 M458 167Q447 156 447 167"/>
+<path class="g" style="animation-delay:3.72s" d="M436 190L436 201 M447 201L458 190 M458 190L447 201 M444 179a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+<rect class="beam" x="50" y="29" width="10" height="186" fill="#fff3c4"/>
+<text class="r" x="524" y="60" font-size="13" font-weight="700" fill="#f4c430" letter-spacing="5">TRANSLATED FROM THE PONEGLYPH OF R&amp;D&amp;I</text>
+<text class="r r2" x="524" y="110" font-size="32" font-style="italic" fill="#fff8e1">“When do you think people die?</text>
+<text class="r r3" x="524" y="152" font-size="32" font-style="italic" fill="#fff8e1">…When they are forgotten.”</text>
+<text class="r r4" x="524" y="196" font-size="17" fill="#f1dfb5">— Dr. Hiriluk  <tspan fill="#9fb3c8" font-style="italic">(so I document my code)</tspan></text>
+</g></svg>
