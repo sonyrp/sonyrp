@@ -108,7 +108,7 @@ Charging an electric bus sounds simple, but doing it at the lowest cost, protect
 </p>
 
 <p align="center">
-  <img src="assets/crew-board.svg" width="100%" alt="The crew's wanted board. Swordsmen: Python, PyTorch, TensorFlow, scikit-learn, MATLAB, LaTeX. Shipwrights: FastAPI, Flask, Docker, Linux, Git, GitHub Actions. Navigators: Claude, Claude Code, ChatGPT, Hugging Face, LangChain, n8n. Also aboard: Anaconda, Jupyter, VS Code, Power Automate."/>
+  <img src="assets/crew-fruits.svg" width="100%" alt="Devil Fruit encyclopedia of my crew. Zoan (languages and data science): Python, PyTorch, TensorFlow, scikit-learn, MATLAB, LaTeX. Paramecia (development and tools): FastAPI, Flask, Docker, Linux, Git, GitHub Actions. Logia (AI and automation): Claude, Claude Code, ChatGPT, Hugging Face, LangChain, n8n. Also aboard: Anaconda, Jupyter, VS Code, Power Automate."/>
 </p>
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/divider-swords-dark.svg"/><img src="assets/divider-swords.svg" width="100%" alt=""/></picture></p>

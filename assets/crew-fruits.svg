@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="580" viewBox="0 0 1200 580">
+<style>text{font-family:Georgia,'Times New Roman',serif}.mono{font-family:Consolas,'Courier New',monospace}
+.fl{animation:fl 4s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-5px) rotate(5deg)}}
+.sp{animation:sp 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes sp{0%,100%{transform:scale(0)}50%{transform:scale(1)}}
+</style>
+<defs>
+<radialGradient id="parch" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#f8ebc8"/><stop offset=".75" stop-color="#eed9a4"/><stop offset="1" stop-color="#d2ae6c"/></radialGradient>
+<filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="4" seed="5"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .30  0 0 0 0 .12  0 0 0 .5 -.12"/><feComposite operator="in" in2="SourceGraphic"/></filter>
+</defs>
+<rect width="1200" height="580" rx="14" fill="#5a3a1e"/>
+<rect x="2" y="2" width="1196" height="576" rx="12" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="8" y="8" width="1184" height="564" rx="8" fill="url(#parch)"/>
+<rect x="8" y="8" width="1184" height="564" rx="8" filter="url(#paper)"/>
+<rect x="15" y="15" width="1170" height="550" rx="5" fill="none" stroke="#3b2a1a" stroke-opacity=".45" stroke-width="1.2"/>
+<g fill="#f2c14e" stroke="#3b2a1a" stroke-width="1"><circle cx="8" cy="8" r="3.5"/><circle cx="1192" cy="8" r="3.5"/><circle cx="8" cy="572" r="3.5"/><circle cx="1192" cy="572" r="3.5"/></g><defs><radialGradient id="shade" cx=".32" cy=".28" r=".85"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".32"/></radialGradient><g id="sw" fill="none" stroke-width="3" stroke-linecap="round"><path d="M-28 -20 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0"/><path d="M8 -30 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0"/><path d="M30 -4 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0"/><path d="M-8 2 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0"/><path d="M-36 14 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0"/><path d="M14 26 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0"/><path d="M-14 34 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0"/><path d="M44 22 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0"/><path d="M-48 -8 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0"/></g><g id="stem"><path d="M0 0 q-2 -16 8 -22 q12 -6 14 4 q0 8 -8 6 q-5 -2 -2 -6" fill="none" stroke="#3f7d3a" stroke-width="6" stroke-linecap="round"/><path d="M-2 -6 q-20 -12 -30 2 q16 10 30 -2 Z" fill="#57a64a" stroke="#2f5f2c" stroke-width="2"/></g><path id="f0" d="M0 -48 C34 -48 54 -24 54 4 C54 34 30 50 0 50 C-30 50 -54 34 -54 4 C-54 -24 -34 -48 0 -48 Z"/><clipPath id="k0"><use href="#f0"/></clipPath><path id="f1" d="M0 -50 C20 -50 26 -30 30 -12 C36 8 48 16 46 34 C42 52 16 54 0 54 C-16 54 -42 52 -46 34 C-48 16 -36 8 -30 -12 C-26 -30 -20 -50 0 -50 Z"/><clipPath id="k1"><use href="#f1"/></clipPath><path id="f2" d="M0 -40 C40 -44 62 -22 62 6 C62 34 36 48 0 48 C-36 48 -62 34 -62 6 C-62 -22 -40 -44 0 -40 Z"/><clipPath id="k2"><use href="#f2"/></clipPath><path id="f3" d="M0 -30 C10 -54 54 -50 54 -14 C54 18 20 38 0 54 C-20 38 -54 18 -54 -14 C-54 -50 -10 -54 0 -30 Z"/><clipPath id="k3"><use href="#f3"/></clipPath><path id="f4" d="M0 -52 C26 -40 50 -14 44 18 C40 44 18 54 0 54 C-18 54 -40 44 -44 18 C-50 -14 -26 -40 0 -52 Z"/><clipPath id="k4"><use href="#f4"/></clipPath><path id="f5" d="M-30 -40 C-6 -52 6 -52 30 -40 C56 -26 58 22 34 42 C16 54 -16 54 -34 42 C-58 22 -56 -26 -30 -40 Z"/><clipPath id="k5"><use href="#f5"/></clipPath></defs><text x="40" y="56" font-size="30" text-anchor="start" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#3b2a1a" stroke="#3b2a1a" stroke-width="7.8">DEVIL FRUIT ENCYCLOPEDIA</text><text x="40" y="56" font-size="30" text-anchor="start" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#fff8e1" stroke="#fff8e1" stroke-width="3.6">DEVIL FRUIT ENCYCLOPEDIA</text><text x="40" y="56" font-size="30" text-anchor="start" font-weight="900" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" stroke-linejoin="round"  fill="#e63946">DEVIL FRUIT ENCYCLOPEDIA</text><text x="1160" y="52" text-anchor="end" font-size="14" font-style="italic" font-weight="700" fill="#6b4a22">every fruit my crew has eaten, and the power it grants</text><path d="M40 76 h350 l-10 17 l10 17 h-350 l10 -17 Z" fill="#f2c14e" stroke="#3b2a1a" stroke-width="2.5"/><text x="62" y="100" font-size="19" font-weight="900" fill="#3b2a1a" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" letter-spacing="2">ZOAN</text><text x="370" y="99" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#3b2a1a">languages &amp; data science</text><ellipse cx="76" cy="179" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(76 152)"><g class="fl" style="animation-delay:-1.8s"><g transform="scale(.44)">
+<use href="#f0" fill="#3776ab"/><use href="#sw" stroke="#22496a" clip-path="url(#k0)"/><use href="#f0" fill="url(#shade)"/>
+<use href="#f0" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-46"/></g></g></g>
+<path class="sp" style="animation-delay:1.5s" d="M104 126 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="120" y="146" font-size="18" font-weight="700" fill="#3b2a1a">Python</text>
+<text x="385" y="146" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Py-Py no Mi</text>
+<text x="120" y="165" font-size="13.5" font-style="italic" fill="#6b4a22">bends any data to its will</text><path d="M120 182 H385" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="76" cy="245" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(76 218)"><g class="fl" style="animation-delay:-3.7s"><g transform="scale(.44)">
+<use href="#f5" fill="#ee4c2c"/><use href="#sw" stroke="#932f1b" clip-path="url(#k5)"/><use href="#f5" fill="url(#shade)"/>
+<use href="#f5" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-44"/></g></g></g>
+<path class="sp" style="animation-delay:1.2s" d="M104 192 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="120" y="212" font-size="18" font-weight="700" fill="#3b2a1a">PyTorch</text>
+<text x="385" y="212" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Torch-Torch no Mi</text>
+<text x="120" y="231" font-size="13.5" font-style="italic" fill="#6b4a22">sets tensors on fire</text><path d="M120 248 H385" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="76" cy="311" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(76 284)"><g class="fl" style="animation-delay:-2.0s"><g transform="scale(.44)">
+<use href="#f4" fill="#ff6f00"/><use href="#sw" stroke="#9e4400" clip-path="url(#k4)"/><use href="#f4" fill="url(#shade)"/>
+<use href="#f4" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-48"/></g></g></g>
+<path class="sp" style="animation-delay:1.5s" d="M104 258 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="120" y="278" font-size="18" font-weight="700" fill="#3b2a1a">TensorFlow</text>
+<text x="385" y="278" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Flow-Flow no Mi</text>
+<text x="120" y="297" font-size="13.5" font-style="italic" fill="#6b4a22">gradients flow like water</text><path d="M120 314 H385" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="76" cy="377" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(76 350)"><g class="fl" style="animation-delay:-0.7s"><g transform="scale(.44)">
+<use href="#f3" fill="#f7931e"/><use href="#sw" stroke="#995b12" clip-path="url(#k3)"/><use href="#f3" fill="url(#shade)"/>
+<use href="#f3" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-32"/></g></g></g>
+<path class="sp" style="animation-delay:1.3s" d="M104 324 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="120" y="344" font-size="18" font-weight="700" fill="#3b2a1a">scikit-learn</text>
+<text x="385" y="344" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Kit-Kit no Mi</text>
+<text x="120" y="363" font-size="13.5" font-style="italic" fill="#6b4a22">a model for every occasion</text><path d="M120 380 H385" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="76" cy="443" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(76 416)"><g class="fl" style="animation-delay:-2.5s"><g transform="scale(.44)">
+<use href="#f2" fill="#e16737"/><use href="#sw" stroke="#8b3f22" clip-path="url(#k2)"/><use href="#f2" fill="url(#shade)"/>
+<use href="#f2" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-40"/></g></g></g>
+<path class="sp" style="animation-delay:2.1s" d="M104 390 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="120" y="410" font-size="18" font-weight="700" fill="#3b2a1a">MATLAB</text>
+<text x="385" y="410" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Mat-Mat no Mi</text>
+<text x="120" y="429" font-size="13.5" font-style="italic" fill="#6b4a22">total matrix mastery</text><path d="M120 446 H385" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="76" cy="509" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(76 482)"><g class="fl" style="animation-delay:-0.4s"><g transform="scale(.44)">
+<use href="#f1" fill="#008080"/><use href="#sw" stroke="#004f4f" clip-path="url(#k1)"/><use href="#f1" fill="url(#shade)"/>
+<use href="#f1" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-48"/></g></g></g>
+<path class="sp" style="animation-delay:0.8s" d="M104 456 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="120" y="476" font-size="18" font-weight="700" fill="#3b2a1a">LaTeX</text>
+<text x="385" y="476" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Tex-Tex no Mi</text>
+<text x="120" y="495" font-size="13.5" font-style="italic" fill="#6b4a22">papers that typeset themselves</text><path d="M420 76 h350 l-10 17 l10 17 h-350 l10 -17 Z" fill="#f2c14e" stroke="#3b2a1a" stroke-width="2.5"/><text x="442" y="100" font-size="19" font-weight="900" fill="#3b2a1a" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" letter-spacing="2">PARAMECIA</text><text x="750" y="99" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#3b2a1a">development &amp; tools</text><path d="M405 84 V528" stroke="#3b2a1a" stroke-width="1.2" stroke-dasharray="3 6" opacity=".6"/><ellipse cx="456" cy="179" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(456 152)"><g class="fl" style="animation-delay:-0.4s"><g transform="scale(.44)">
+<use href="#f1" fill="#009688"/><use href="#sw" stroke="#005d54" clip-path="url(#k1)"/><use href="#f1" fill="url(#shade)"/>
+<use href="#f1" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-48"/></g></g></g>
+<path class="sp" style="animation-delay:2.1s" d="M484 126 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="500" y="146" font-size="18" font-weight="700" fill="#3b2a1a">FastAPI</text>
+<text x="765" y="146" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Fast-Fast no Mi</text>
+<text x="500" y="165" font-size="13.5" font-style="italic" fill="#6b4a22">APIs at lightning speed</text><path d="M500 182 H765" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="456" cy="245" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(456 218)"><g class="fl" style="animation-delay:-2.8s"><g transform="scale(.44)">
+<use href="#f0" fill="#3b2a1a"/><use href="#sw" stroke="#938981" clip-path="url(#k0)"/><use href="#f0" fill="url(#shade)"/>
+<use href="#f0" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-46"/></g></g></g>
+<path class="sp" style="animation-delay:0.1s" d="M484 192 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="500" y="212" font-size="18" font-weight="700" fill="#3b2a1a">Flask</text>
+<text x="765" y="212" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Flask-Flask no Mi</text>
+<text x="500" y="231" font-size="13.5" font-style="italic" fill="#6b4a22">web apps in a bottle</text><path d="M500 248 H765" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="456" cy="311" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(456 284)"><g class="fl" style="animation-delay:-3.9s"><g transform="scale(.44)">
+<use href="#f5" fill="#2496ed"/><use href="#sw" stroke="#165d92" clip-path="url(#k5)"/><use href="#f5" fill="url(#shade)"/>
+<use href="#f5" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-44"/></g></g></g>
+<path class="sp" style="animation-delay:2.5s" d="M484 258 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="500" y="278" font-size="18" font-weight="700" fill="#3b2a1a">Docker</text>
+<text x="765" y="278" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Dock-Dock no Mi</text>
+<text x="500" y="297" font-size="13.5" font-style="italic" fill="#6b4a22">ships anything in a container</text><path d="M500 314 H765" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="456" cy="377" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(456 350)"><g class="fl" style="animation-delay:-2.6s"><g transform="scale(.44)">
+<use href="#f4" fill="#f2c14e"/><use href="#sw" stroke="#967730" clip-path="url(#k4)"/><use href="#f4" fill="url(#shade)"/>
+<use href="#f4" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-48"/></g></g></g>
+<path class="sp" style="animation-delay:1.6s" d="M484 324 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="500" y="344" font-size="18" font-weight="700" fill="#3b2a1a">Linux</text>
+<text x="765" y="344" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Nix-Nix no Mi</text>
+<text x="500" y="363" font-size="13.5" font-style="italic" fill="#6b4a22">commands the whole ship</text><path d="M500 380 H765" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="456" cy="443" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(456 416)"><g class="fl" style="animation-delay:-0.6s"><g transform="scale(.44)">
+<use href="#f3" fill="#f05032"/><use href="#sw" stroke="#94311f" clip-path="url(#k3)"/><use href="#f3" fill="url(#shade)"/>
+<use href="#f3" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-32"/></g></g></g>
+<path class="sp" style="animation-delay:0.0s" d="M484 390 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="500" y="410" font-size="18" font-weight="700" fill="#3b2a1a">Git</text>
+<text x="765" y="410" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Git-Git no Mi</text>
+<text x="500" y="429" font-size="13.5" font-style="italic" fill="#6b4a22">rewinds time itself</text><path d="M500 446 H765" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="456" cy="509" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(456 482)"><g class="fl" style="animation-delay:-2.1s"><g transform="scale(.44)">
+<use href="#f2" fill="#6e5494"/><use href="#sw" stroke="#44345b" clip-path="url(#k2)"/><use href="#f2" fill="url(#shade)"/>
+<use href="#f2" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-40"/></g></g></g>
+<path class="sp" style="animation-delay:0.2s" d="M484 456 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="500" y="476" font-size="18" font-weight="700" fill="#3b2a1a">GitHub Actions</text>
+<text x="765" y="476" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Act-Act no Mi</text>
+<text x="500" y="495" font-size="13.5" font-style="italic" fill="#6b4a22">chores that do themselves</text><path d="M800 76 h350 l-10 17 l10 17 h-350 l10 -17 Z" fill="#f2c14e" stroke="#3b2a1a" stroke-width="2.5"/><text x="822" y="100" font-size="19" font-weight="900" fill="#3b2a1a" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif" letter-spacing="2">LOGIA</text><text x="1130" y="99" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#3b2a1a">AI &amp; automation</text><path d="M785 84 V528" stroke="#3b2a1a" stroke-width="1.2" stroke-dasharray="3 6" opacity=".6"/><ellipse cx="836" cy="179" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(836 152)"><g class="fl" style="animation-delay:-0.8s"><g transform="scale(.44)">
+<use href="#f2" fill="#d97757"/><use href="#sw" stroke="#864935" clip-path="url(#k2)"/><use href="#f2" fill="url(#shade)"/>
+<use href="#f2" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-40"/></g></g></g>
+<path class="sp" style="animation-delay:0.6s" d="M864 126 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="880" y="146" font-size="18" font-weight="700" fill="#3b2a1a">Claude</text>
+<text x="1145" y="146" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Clau-Clau no Mi</text>
+<text x="880" y="165" font-size="13.5" font-style="italic" fill="#6b4a22">a navigator that thinks along</text><path d="M880 182 H1145" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="836" cy="245" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(836 218)"><g class="fl" style="animation-delay:-0.1s"><g transform="scale(.44)">
+<use href="#f1" fill="#191919"/><use href="#sw" stroke="#808080" clip-path="url(#k1)"/><use href="#f1" fill="url(#shade)"/>
+<use href="#f1" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-48"/></g></g></g>
+<path class="sp" style="animation-delay:1.2s" d="M864 192 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="880" y="212" font-size="18" font-weight="700" fill="#3b2a1a">Claude Code</text>
+<text x="1145" y="212" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Code-Code no Mi</text>
+<text x="880" y="231" font-size="13.5" font-style="italic" fill="#6b4a22">writes code at full sail</text><path d="M880 248 H1145" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="836" cy="311" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(836 284)"><g class="fl" style="animation-delay:-1.8s"><g transform="scale(.44)">
+<use href="#f0" fill="#74aa9c"/><use href="#sw" stroke="#476960" clip-path="url(#k0)"/><use href="#f0" fill="url(#shade)"/>
+<use href="#f0" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-46"/></g></g></g>
+<path class="sp" style="animation-delay:2.2s" d="M864 258 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="880" y="278" font-size="18" font-weight="700" fill="#3b2a1a">ChatGPT</text>
+<text x="1145" y="278" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Chat-Chat no Mi</text>
+<text x="880" y="297" font-size="13.5" font-style="italic" fill="#6b4a22">answers on demand</text><path d="M880 314 H1145" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="836" cy="377" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(836 350)"><g class="fl" style="animation-delay:-2.1s"><g transform="scale(.44)">
+<use href="#f5" fill="#ffd21e"/><use href="#sw" stroke="#9e8212" clip-path="url(#k5)"/><use href="#f5" fill="url(#shade)"/>
+<use href="#f5" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-44"/></g></g></g>
+<path class="sp" style="animation-delay:1.7s" d="M864 324 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="880" y="344" font-size="18" font-weight="700" fill="#3b2a1a">Hugging Face</text>
+<text x="1145" y="344" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Hug-Hug no Mi</text>
+<text x="880" y="363" font-size="13.5" font-style="italic" fill="#6b4a22">a whole library of models</text><path d="M880 380 H1145" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="836" cy="443" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(836 416)"><g class="fl" style="animation-delay:-2.0s"><g transform="scale(.44)">
+<use href="#f4" fill="#1c3c3c"/><use href="#sw" stroke="#829393" clip-path="url(#k4)"/><use href="#f4" fill="url(#shade)"/>
+<use href="#f4" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-48"/></g></g></g>
+<path class="sp" style="animation-delay:1.7s" d="M864 390 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="880" y="410" font-size="18" font-weight="700" fill="#3b2a1a">LangChain</text>
+<text x="1145" y="410" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Chain-Chain no Mi</text>
+<text x="880" y="429" font-size="13.5" font-style="italic" fill="#6b4a22">links models into a crew</text><path d="M880 446 H1145" stroke="#3b2a1a" stroke-width="1" stroke-dasharray="2 5" opacity=".4"/><ellipse cx="836" cy="509" rx="20" ry="3.5" fill="#3b2a1a" opacity=".22"/>
+<g transform="translate(836 482)"><g class="fl" style="animation-delay:-1.8s"><g transform="scale(.44)">
+<use href="#f3" fill="#ea4b71"/><use href="#sw" stroke="#912e46" clip-path="url(#k3)"/><use href="#f3" fill="url(#shade)"/>
+<use href="#f3" fill="none" stroke="#3b2a1a" stroke-width="4"/><use href="#stem" y="-32"/></g></g></g>
+<path class="sp" style="animation-delay:0.7s" d="M864 456 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#ff9f1c" stroke="#3b2a1a" stroke-width=".7"/>
+<text x="880" y="476" font-size="18" font-weight="700" fill="#3b2a1a">n8n</text>
+<text x="1145" y="476" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#a12a1e">Node-Node no Mi</text>
+<text x="880" y="495" font-size="13.5" font-style="italic" fill="#6b4a22">automates the entire deck</text><text x="600" y="556" text-anchor="middle" font-size="14" font-style="italic" font-weight="700" fill="#6b4a22">also aboard: Anaconda · Jupyter · VS Code · Power Automate</text>
+</svg>
