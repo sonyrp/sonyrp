@@ -107,6 +107,12 @@ def header():
 .fish{animation:jump 7s ease-in-out infinite;transform-origin:700px 300px}
 @keyframes jump{0%,60%{transform:rotate(-70deg)}80%{transform:rotate(20deg)}100%{transform:rotate(70deg)}}
 .palm{animation:sway 5s ease-in-out infinite;transform-origin:150px 236px}
+.coin{animation:fall 7s ease-in infinite}
+@keyframes fall{0%{transform:translateY(-30px)}55%,100%{transform:translateY(330px)}}
+.flip{animation:flip .7s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes flip{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.15)}}
+.spk{animation:spk 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spk{0%,100%{transform:scale(0)}50%{transform:scale(1)}}
 @keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
 """
     rays = "".join(f'<path d="M1085 14 l7 18 h-14 Z" transform="rotate({a} 1085 70)"/>' for a in range(0, 360, 30))
@@ -129,6 +135,8 @@ def header():
 <path d="M60 252 Q150 236 255 252 Z" fill="#f6e2a8" stroke="{INK}" stroke-width="1.5"/>
 <g class="palm"><path d="M150 236 q-6 -34 6 -62" fill="none" stroke="#8b5a2b" stroke-width="6" stroke-linecap="round"/>
 <path d="M156 174 q-30 -16 -44 6 M156 174 q30 -16 44 6 M156 174 q-12 -30 -38 -24 M156 174 q12 -30 38 -24 M156 174 q-2 -30 2 -36" fill="none" stroke="#2f8f3a" stroke-width="6" stroke-linecap="round"/></g>
+{"".join(f'<g class="coin" style="animation-delay:-{d}s"><g class="flip"><circle cx="{x}" cy="0" r="9" fill="#ffd23f" stroke="{INK}" stroke-width="2"/><circle cx="{x}" cy="0" r="4.5" fill="none" stroke="#c9952c" stroke-width="1.5"/></g></g>' for x, d in ((300, 0), (470, 2.4), (640, 4.6), (800, 1.2), (560, 5.8)))}
+{"".join(f'<path class="spk" style="animation-delay:{d}s" d="M{x} {y - 9} l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 Z" fill="#fff"/>' for d, (x, y) in enumerate(((228, 150), (868, 96), (430, 96), (700, 190), (1010, 60))))}
 {wave(252, 10, "#2ec4c6", "w3", bottom=340)}
 <g class="fish"><path d="M700 232 q14 -10 24 0 q-10 10 -24 0 Z M700 232 l-9 -7 v14 Z" fill="#ff7f50" stroke="{INK}" stroke-width="1.2"/></g>
 <g class="ship"><g transform="translate(960 262)">{SHIP}</g></g>
@@ -492,10 +500,160 @@ def dividers():
                      f'<path d="{d}" fill="none" stroke="#d2ae6c" stroke-width="6" stroke-linecap="round"/>'
                      f'<path class="twist" d="{d}" fill="none" stroke="#8a5a12" stroke-width="6" stroke-dasharray="2 8"/>')
         knots = "".join(f'<circle cx="{x}" cy="36" r="7" fill="#d2ae6c" stroke="{INK}" stroke-width="2.5"/>' for x in (24, 536, 664, 1176))
-        style = ".twist{animation:tw 1.2s linear infinite}@keyframes tw{to{stroke-dashoffset:-10}}." + css
-        body = f'{rope}{knots}<g transform="translate(600 36)">{icon}</g>'
+        lag = list(icons).index(name) * 5
+        style = (".twist{animation:tw 1.2s linear infinite}@keyframes tw{to{stroke-dashoffset:-10}}"
+                 f".boat{{animation:bt 40s linear -{lag}s infinite}}@keyframes bt{{from{{transform:translateX(30px)}}to{{transform:translateX(1170px)}}}}"
+                 ".rock{animation:rk 1.4s ease-in-out infinite}@keyframes rk{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}." + css)
+        boat = f'<g class="boat"><g transform="translate(0 30)"><g class="rock"><g transform="scale(.42)">{SMALL_SHIP}</g></g></g></g>'
+        body = f'{rope}{knots}{boat}<g transform="translate(600 36)">{icon}</g>'
         save(f"divider-{name}.svg", svg(1200, 72, style, body, framed=False))
+        glow = ('<defs><filter id="glow" x="-5%" y="-60%" width="110%" height="220%">'
+                '<feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#ffe9a8" flood-opacity=".8"/></filter></defs>')
+        save(f"divider-{name}-dark.svg", svg(1200, 72, style, f'{glow}<g filter="url(#glow)">{body}</g>', framed=False))
+
+
+# ─────────────────── crew wanted board ───────────────────
+def crew_board():
+    crew = [
+        ("Python", "Py", "#3776ab", "#fff", "The Swordsman", "1,500,000,000"),
+        ("PyTorch", "Pt", "#ee4c2c", "#fff", "Fire Fist", "860,000,000"),
+        ("TensorFlow", "TF", "#ff6f00", "#fff", "Tensor Blade", "720,000,000"),
+        ("scikit-learn", "sk", "#f7931e", INK, "The Sniper", "610,000,000"),
+        ("MATLAB", "ML", "#e16737", "#fff", "Old Guard", "330,000,000"),
+        ("LaTeX", "TeX", "#008080", "#fff", "The Scribe", "250,000,000"),
+        ("FastAPI", "API", "#009688", "#fff", "Speedster", "540,000,000"),
+        ("Flask", "Fk", "#3b2a1a", "#fff", "The Alchemist", "420,000,000"),
+        ("Docker", "Dk", "#2496ed", "#fff", "The Shipwright", "930,000,000"),
+        ("Linux", "Lx", "#f2c14e", INK, "The Helmsman", "1,100,000,000"),
+        ("Git", "Git", "#f05032", "#fff", "The Chronicler", "1,200,000,000"),
+        ("GitHub Actions", "GA", "#6e5494", "#fff", "Cabin Crew", "480,000,000"),
+        ("Claude", "Cl", "#d97757", "#fff", "The Navigator", "2,000,000,000"),
+        ("Claude Code", "CC", "#191919", "#fff", "First Mate", "1,800,000,000"),
+        ("ChatGPT", "GPT", "#74aa9c", "#fff", "The Strategist", "900,000,000"),
+        ("Hugging Face", "HF", "#ffd21e", INK, "The Archaeologist", "770,000,000"),
+        ("LangChain", "LC", "#1c3c3c", "#fff", "Chain Master", "650,000,000"),
+        ("n8n", "n8n", "#ea4b71", "#fff", "The Automaton", "580,000,000"),
+    ]
+    rnd = random.Random(7)
+    w, h = 1200, 700
+    style = """
+.sw{animation:sw 5s ease-in-out infinite;transform-origin:84px 6px}
+@keyframes sw{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+.b{animation:bl 3s ease-in-out infinite}
+@keyframes bl{0%,100%{fill:#a12a1e}50%{fill:#e63946}}
+"""
+    planks = "".join(f'<path d="M0 {y} H{w}" stroke="#4a2f16" stroke-width="3"/>' for y in range(70, h, 70))
+    knots = "".join(f'<ellipse cx="{rnd.randint(40, w - 40)}" cy="{35 + 70 * i}" rx="{rnd.randint(8, 16)}" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/>' for i in range(10))
+    posters = ""
+    for i, (name, mono, col, tc, epi, bounty) in enumerate(crew):
+        x, y = 36 + (i % 6) * 190, 84 + (i // 6) * 196
+        ms = 24 if len(mono) <= 2 else 19
+        posters += f'''<g transform="translate({x} {y}) rotate({rnd.uniform(-2.5, 2.5):.1f} 84 0)"><g class="sw" style="animation-delay:-{rnd.uniform(0, 5):.1f}s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="{INK}" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="{INK}" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="{INK}" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="{col}" stroke="{INK}" stroke-width="2"/>
+<text x="84" y="{76 + ms * .35:.0f}" text-anchor="middle" font-size="{ms}" font-weight="900" fill="{tc}" style="font-family:{HEAVY}">{mono}</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="{INK}">{name}</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“{epi}”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ {bounty}-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g>'''
+    body = f'''<defs><clipPath id="frame"><rect width="{w}" height="{h}" rx="14"/></clipPath></defs>
+<g clip-path="url(#frame)"><rect width="{w}" height="{h}" fill="#7a4f2a"/>{planks}{knots}</g>
+<rect x="1.5" y="1.5" width="{w - 3}" height="{h - 3}" rx="13" fill="none" stroke="{INK}" stroke-width="3"/>
+<path d="M330 18 h540 l-14 22 l14 22 h-540 l14 -22 Z" fill="{STRAW}" stroke="{INK}" stroke-width="2.5"/>
+<text x="600" y="48" text-anchor="middle" font-size="24" font-weight="700" fill="{INK}" letter-spacing="4">THE CREW · WANTED BOARD</text>
+{posters}
+<text x="600" y="{h - 16}" text-anchor="middle" font-size="15" font-style="italic" font-weight="700" fill="#ffe9a8">also aboard: Anaconda · Jupyter · VS Code · Power Automate</text>'''
+    save("crew-board.svg", svg(w, h, style, body, framed=False))
+
+
+# ───────────────────────── sagas ─────────────────────────
+def sagas():
+    style = """
+.pn{animation:pn 10s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pn{0%,20%,100%{transform:scale(1)}8%{transform:scale(1.045) rotate(-.6deg)}}
+.air{animation:air 1.2s steps(1) infinite}
+@keyframes air{0%{opacity:1}55%{opacity:.25}}
+.march{stroke-dasharray:10 9;animation:mr 1.2s linear infinite}
+@keyframes mr{to{stroke-dashoffset:-19}}
+.sail{animation:sl 10s ease-in-out infinite}
+@keyframes sl{0%{transform:translateX(172px)}22%,25%{transform:translateX(172px)}47%,50%{transform:translateX(457px)}72%,75%{transform:translateX(742px)}97%,100%{transform:translateX(1027px)}}
+.bob{animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+"""
+    icons = [
+        f'<g fill="none" stroke="{INK}" stroke-width="2.5"><ellipse rx="30" ry="11"/><ellipse rx="30" ry="11" transform="rotate(60)"/><ellipse rx="30" ry="11" transform="rotate(-60)"/></g><circle r="6" fill="#e63946" stroke="{INK}" stroke-width="2"/>',
+        f'<path d="M-9 -30 h18 M-6 -30 v18 l-18 34 q-4 10 8 10 h32 q12 0 8 -10 l-18 -34 v-18" fill="#fffaf0" stroke="{INK}" stroke-width="2.5" stroke-linejoin="round"/><path d="M-17 8 h34 l7 14 q3 8 -6 8 h-36 q-9 0 -6 -8 Z" fill="#ff9f1c" stroke="{INK}" stroke-width="2"/><circle cx="-3" cy="18" r="3" fill="#fff"/><circle cx="8" cy="12" r="2" fill="#fff"/>',
+        f'<rect x="-34" y="-12" width="68" height="34" rx="8" fill="#fff3d1" stroke="{INK}" stroke-width="2.5"/><path d="M-34 10 h68 v4 q0 8 -8 8 h-52 q-8 0 -8 -8 Z" fill="#e63946" stroke="{INK}" stroke-width="2"/><g fill="#9be7f5" stroke="{INK}" stroke-width="1.5"><rect x="-28" y="-6" width="13" height="12" rx="2"/><rect x="-11" y="-6" width="13" height="12" rx="2"/><rect x="6" y="-6" width="13" height="12" rx="2"/></g><circle cx="-18" cy="24" r="6" fill="#222"/><circle cx="18" cy="24" r="6" fill="#222"/><path d="M4 -40 l-10 14 h8 l-4 12 l14 -18 h-8 Z" fill="#ffd23f" stroke="{INK}" stroke-width="1.8"/>',
+        f'<path d="M-26 0 Q-26 -24 0 -24 Q26 -24 26 0 Z" fill="#8b5a2b" stroke="{INK}" stroke-width="2.5"/><rect x="-26" y="0" width="52" height="26" rx="3" fill="#a0672f" stroke="{INK}" stroke-width="2.5"/><path d="M-13 -21 V26 M13 -21 V26" stroke="{STRAW}" stroke-width="6"/><text x="0" y="-32" text-anchor="middle" font-size="26" font-weight="900" fill="#e63946" style="font-family:{HEAVY}">?</text>',
+    ]
+    data = [("EAST BLUE SAGA", "Physics Engineering", "Universidad Tecnológica de Pereira", STRAW, "COMPLETED", "#6b4a22"),
+            ("GRAND LINE SAGA", "Data &amp; AI Engineer", "R&amp;D&amp;I · Integra S.A.", "#ff9f1c", "ON AIR", "#a12a1e"),
+            ("NEW WORLD SAGA", "M.Sc. + Megabús research", "Minciencias scholarship · UTP", "#ff6b6b", "ON AIR", "#a12a1e"),
+            ("FINAL SAGA", "Open-source release", "to be continued…", "#3b2a1a", "COMING SOON", "#6b4a22")]
+    panels = ""
+    for i, (saga, t1, t2, col, tag, tagc) in enumerate(data):
+        x = 40 + i * 285
+        tc = CREAM if col == "#3b2a1a" else INK
+        blink = ' class="air"' if tag == "ON AIR" else ""
+        panels += f'''<g class="pn" style="animation-delay:{i * 2.5}s">
+<rect x="{x + 5}" y="77" width="265" height="186" fill="{INK}" opacity=".3"/>
+<rect x="{x}" y="72" width="265" height="186" fill="#fdf8ea" stroke="{INK}" stroke-width="3"/>
+<rect x="{x}" y="72" width="265" height="34" fill="{col}" stroke="{INK}" stroke-width="3"/>
+<text x="{x + 132}" y="96" text-anchor="middle" font-size="17" font-weight="900" fill="{tc}" style="font-family:{HEAVY}" letter-spacing="1">{saga}</text>
+<g transform="translate({x + 132} 152)">{icons[i]}</g>
+<text x="{x + 132}" y="212" text-anchor="middle" font-size="17" font-weight="700" fill="{INK}">{t1}</text>
+<text x="{x + 132}" y="230" text-anchor="middle" font-size="12.5" font-style="italic" fill="#6b4a22">{t2}</text>
+<g{blink}><rect x="{x + 259 - len(tag) * 8.4 - 12:.0f}" y="112" width="{len(tag) * 8.4 + 12:.0f}" height="18" rx="3" fill="#fdf8ea" stroke="{tagc}" stroke-width="2"/>
+<text x="{x + 259 - (len(tag) * 8.4 + 12) / 2:.0f}" y="125" text-anchor="middle" font-size="10.5" font-weight="700" fill="{tagc}" letter-spacing="1">{tag}</text></g></g>'''
+    stops = "".join(f'<circle cx="{172 + i * 285}" cy="292" r="7" fill="{STRAW}" stroke="{INK}" stroke-width="2.5"/>' for i in range(4))
+    body = f'''{otext(40, 52, "THE SAGAS SO FAR", 30, "#e63946")}
+<text x="1160" y="50" text-anchor="end" font-size="14" font-style="italic" font-weight="700" fill="#6b4a22">one arc at a time, like any good 1,100-chapter story</text>
+{panels}
+<path class="march" d="M60 292 H1140" fill="none" stroke="{RED}" stroke-width="3.5" stroke-linecap="round"/>{stops}
+<g class="sail"><g transform="translate(0 286)"><g class="bob"><g transform="scale(.55)">{SMALL_SHIP}</g></g></g></g>'''
+    save("sagas.svg", svg(1200, 322, style, body))
+
+
+# ───────────── banner for the phishing-detector repo ─────────────
+def repo_banner():
+    style = """
+.rod{animation:rod 3.4s ease-in-out infinite;transform-origin:190px 18px}
+@keyframes rod{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+.w1{animation:wv 6s linear infinite}
+@keyframes wv{to{transform:translateX(-200px)}}
+.ph{animation:ph 9s linear infinite}.ph2{animation:ph 13s linear -5s infinite}
+@keyframes ph{from{transform:translateX(-40px)}to{transform:translateX(380px)}}
+.seal{animation:sl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes sl{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+"""
+    fish = (f'<path d="M0 0 q14 -11 28 0 q-14 11 -28 0 Z M0 0 l-10 -8 v16 Z" fill="#ff6b6b" stroke="{INK}" stroke-width="1.5"/>'
+            f'<text x="13" y="4" text-anchor="middle" font-size="10" font-weight="700" fill="{INK}">@</text>')
+    body = f'''<defs><clipPath id="pond"><rect x="40" y="30" width="300" height="220" rx="10"/></clipPath></defs>
+<g clip-path="url(#pond)">
+<rect x="40" y="30" width="300" height="220" fill="#c8f1fb"/>
+<rect x="40" y="186" width="300" height="70" fill="#2ec4c6"/>
+<g class="ph"><g transform="translate(40 214)">{fish}</g></g><g class="ph2"><g transform="translate(40 236)">{fish}</g></g>
+<g class="w1"><path d="M0 188 q50 -10 100 0 {"t100 0 " * 6}" fill="none" stroke="#fff" stroke-width="3"/></g>
+<g class="rod"><path d="M190 18 V112" stroke="{INK}" stroke-width="2.5"/>
+<path d="M190 112 v16 q0 12 -12 12 q-12 0 -12 -12" fill="none" stroke="#8a8a8a" stroke-width="5" stroke-linecap="round"/>
+<g transform="rotate(-8 178 150)"><rect x="138" y="124" width="92" height="60" rx="4" fill="#fffaf0" stroke="{INK}" stroke-width="2.5"/>
+<path d="M138 126 l46 32 l46 -32" fill="none" stroke="{INK}" stroke-width="2.5"/>
+<g class="seal"><circle cx="184" cy="160" r="13" fill="#e63946" stroke="{INK}" stroke-width="2"/><circle cx="184" cy="158" r="6" fill="#fff"/><rect x="180.500" y="162" width="7" height="5" rx="1.500" fill="#fff"/>
+<circle cx="181.500" cy="158" r="1.600" fill="{INK}"/><circle cx="186.500" cy="158" r="1.600" fill="{INK}"/></g></g></g>
+</g>
+<rect x="40" y="30" width="300" height="220" rx="10" fill="none" stroke="{INK}" stroke-width="4"/>
+<text x="376" y="70" font-size="14" font-weight="700" fill="#a12a1e" letter-spacing="6">CAUGHT ON THE GRAND LINE</text>
+{otext(376, 124, "phishing-detector", 46, "#e63946")}
+<text x="376" y="162" font-size="19" font-weight="700" fill="{INK}">Detecta emails y mensajes de phishing con NLP y Machine Learning</text>
+<text x="376" y="186" font-size="15" font-style="italic" fill="#6b4a22">ningún mensaje falso pasa sin ser atrapado · API REST lista para integrarse</text>
+{chip(376, 206, 130, "98.2% accuracy", STRAW)}{chip(514, 206, 190, "TF-IDF + Naive Bayes", "#ff9f1c")}{chip(712, 206, 150, "API REST · Flask", "#ff6b6b")}
+<text x="1160" y="226" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#6b4a22">a treasure from github.com/sonyrp ⟶</text>'''
+    save("phishing-banner.svg", svg(1200, 280, style, body))
 
 
 if __name__ == "__main__":
     header(); footer(); current_arc(); crew_flag(); news(); chest(); poneglyph(); dividers()
+    crew_board(); sagas(); repo_banner()

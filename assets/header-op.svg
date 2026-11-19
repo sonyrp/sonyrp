@@ -19,6 +19,12 @@
 .fish{animation:jump 7s ease-in-out infinite;transform-origin:700px 300px}
 @keyframes jump{0%,60%{transform:rotate(-70deg)}80%{transform:rotate(20deg)}100%{transform:rotate(70deg)}}
 .palm{animation:sway 5s ease-in-out infinite;transform-origin:150px 236px}
+.coin{animation:fall 7s ease-in infinite}
+@keyframes fall{0%{transform:translateY(-30px)}55%,100%{transform:translateY(330px)}}
+.flip{animation:flip .7s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes flip{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.15)}}
+.spk{animation:spk 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spk{0%,100%{transform:scale(0)}50%{transform:scale(1)}}
 @keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
 </style>
 <defs>
@@ -40,6 +46,8 @@
 <path d="M60 252 Q150 236 255 252 Z" fill="#f6e2a8" stroke="#3b2a1a" stroke-width="1.5"/>
 <g class="palm"><path d="M150 236 q-6 -34 6 -62" fill="none" stroke="#8b5a2b" stroke-width="6" stroke-linecap="round"/>
 <path d="M156 174 q-30 -16 -44 6 M156 174 q30 -16 44 6 M156 174 q-12 -30 -38 -24 M156 174 q12 -30 38 -24 M156 174 q-2 -30 2 -36" fill="none" stroke="#2f8f3a" stroke-width="6" stroke-linecap="round"/></g>
+<g class="coin" style="animation-delay:-0s"><g class="flip"><circle cx="300" cy="0" r="9" fill="#ffd23f" stroke="#3b2a1a" stroke-width="2"/><circle cx="300" cy="0" r="4.5" fill="none" stroke="#c9952c" stroke-width="1.5"/></g></g><g class="coin" style="animation-delay:-2.4s"><g class="flip"><circle cx="470" cy="0" r="9" fill="#ffd23f" stroke="#3b2a1a" stroke-width="2"/><circle cx="470" cy="0" r="4.5" fill="none" stroke="#c9952c" stroke-width="1.5"/></g></g><g class="coin" style="animation-delay:-4.6s"><g class="flip"><circle cx="640" cy="0" r="9" fill="#ffd23f" stroke="#3b2a1a" stroke-width="2"/><circle cx="640" cy="0" r="4.5" fill="none" stroke="#c9952c" stroke-width="1.5"/></g></g><g class="coin" style="animation-delay:-1.2s"><g class="flip"><circle cx="800" cy="0" r="9" fill="#ffd23f" stroke="#3b2a1a" stroke-width="2"/><circle cx="800" cy="0" r="4.5" fill="none" stroke="#c9952c" stroke-width="1.5"/></g></g><g class="coin" style="animation-delay:-5.8s"><g class="flip"><circle cx="560" cy="0" r="9" fill="#ffd23f" stroke="#3b2a1a" stroke-width="2"/><circle cx="560" cy="0" r="4.5" fill="none" stroke="#c9952c" stroke-width="1.5"/></g></g>
+<path class="spk" style="animation-delay:0s" d="M228 141 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 Z" fill="#fff"/><path class="spk" style="animation-delay:1s" d="M868 87 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 Z" fill="#fff"/><path class="spk" style="animation-delay:2s" d="M430 87 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 Z" fill="#fff"/><path class="spk" style="animation-delay:3s" d="M700 181 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 Z" fill="#fff"/><path class="spk" style="animation-delay:4s" d="M1010 51 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 Z" fill="#fff"/>
 <g class="w3"><path d="M0 252 q50 -10 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V340 H0 Z" fill="#2ec4c6" /></g>
 <g class="fish"><path d="M700 232 q14 -10 24 0 q-10 10 -24 0 Z M700 232 l-9 -7 v14 Z" fill="#ff7f50" stroke="#3b2a1a" stroke-width="1.2"/></g>
 <g class="ship"><g transform="translate(960 262)"><rect x="-3" y="-150" width="5" height="126" fill="#3b2a1a"/><rect x="-50" y="-108" width="4" height="84" fill="#3b2a1a"/>

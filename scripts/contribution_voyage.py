@@ -23,6 +23,7 @@ LEVELS = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2,
           "THIRD_QUARTILE": 3, "FOURTH_QUARTILE": 4}
 TILE = {1: "#f2c14e", 2: "#ff9f1c", 3: "#e8612d", 4: "#c0392b"}
 CELL, PITCH, W = 14, 18, 1100
+BASE_BOUNTY, BERRIES_PER_CONTRIBUTION = 1_000_000_000, 10_000_000
 FRAME = """<defs>
 <radialGradient id="parch" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#f8ebc8"/><stop offset=".75" stop-color="#eed9a4"/><stop offset="1" stop-color="#d2ae6c"/></radialGradient>
 <filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="4" seed="5"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .30  0 0 0 0 .12  0 0 0 .5 -.12"/><feComposite operator="in" in2="SourceGraphic"/></filter>
@@ -101,6 +102,7 @@ def build(days, total):
     T = round(max(18.0, length / 55), 1)
 
     rnd = random.Random(1997)
+    bursts = []
     o = []
     o.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">')
     o.append(f"""<defs>
@@ -115,6 +117,10 @@ text{{font-family:Georgia,'Times New Roman',serif}}
 @keyframes tw{{0%,100%{{opacity:1}}50%{{opacity:.6}}}}
 .coin{{animation:coin 2.2s ease-in-out infinite}}
 @keyframes coin{{0%,100%{{opacity:.25}}50%{{opacity:.95}}}}
+.boom{{opacity:0;transform-box:fill-box;transform-origin:center;animation:boom {T}s linear infinite}}
+@keyframes boom{{0%{{opacity:1;transform:scale(.2)}}3%{{opacity:0;transform:scale(2)}}100%{{opacity:0;transform:scale(2)}}}}
+.king{{animation:king 5s ease-in-out infinite}}
+@keyframes king{{0%,100%{{transform:translateY(0)}}50%{{transform:translateY(6px)}}}}
 .bob{{animation:bob 1.6s ease-in-out infinite}}
 @keyframes bob{{0%,100%{{transform:rotate(-5deg)}}50%{{transform:rotate(5deg) translateY(-1.5px)}}}}
 </style></defs>""")
@@ -125,6 +131,11 @@ text{{font-family:Georgia,'Times New Roman',serif}}
     o.append(f'<text x="{x0:.0f}" y="65" font-size="13" font-style="italic" fill="#3b2a1a">every contribution is a treasure, and my ship plunders them all</text>')
     o.append(f'<text x="{x0 + grid_w:.0f}" y="48" text-anchor="end" font-size="19" font-weight="700" fill="#3b2a1a">'
              f'<tspan fill="#c0392b">{total:,}</tspan> treasures in the last year</text>')
+
+    today = days[-1][0]
+    month_days = sum(1 for _, _, d, lv in cells if lv and (d.year, d.month) == (today.year, today.month))
+    o.append(f'<text x="{x0 + grid_w:.0f}" y="68" text-anchor="end" font-size="13" font-style="italic" font-weight="700" fill="#6b4a22">'
+             f'{month_days} treasure day{"" if month_days == 1 else "s"} in {today.strftime("%B")}</text>')
 
     # month labels
     last_month, last_col = None, -9
@@ -145,12 +156,36 @@ text{{font-family:Georgia,'Times New Roman',serif}}
             continue
         delay = f"{T * dist[loot[(c, r)]] / length:.2f}s"
         cx, cy = x + CELL / 2, y + CELL / 2
+        bursts.append(f'<circle class="boom" style="animation-delay:{delay}" cx="{cx:.1f}" cy="{cy}" r="10" fill="none" stroke="#ff9f1c" stroke-width="3"/>'
+                      f'<circle class="boom" style="animation-delay:{delay}" cx="{cx:.1f}" cy="{cy}" r="5" fill="#ffd23f"/>')
         shine = (f'<circle class="coin" cx="{cx:.1f}" cy="{cy}" r="3" fill="#fff8e1" style="animation-delay:{rnd.uniform(0, 2):.1f}s"/>'
                  if lv >= 3 else "")
         o.append(
             f'<rect x="{x:.1f}" y="{y}" width="{CELL}" height="{CELL}" rx="3" fill="#f3e3b8" stroke="#c9a868" stroke-width="1"/>'
             f'<path class="x" style="animation-delay:{delay}" d="M{cx - 3.5:.1f} {cy - 3.5}l7 7m0 -7l-7 7" stroke="#e63946" stroke-width="2" stroke-linecap="round"/>'
             f'<g class="loot" style="animation-delay:{delay}"><rect x="{x:.1f}" y="{y}" width="{CELL}" height="{CELL}" rx="3" fill="{TILE[lv]}"/>{shine}</g>')
+
+    o.extend(bursts)
+
+    # a sea king surfaces in the longest stretch of calm sea
+    busy = {c for c, _, _, lv in cells if lv}
+    best, run = (0, 0), 0
+    for c in range(cols + 1):
+        if c < cols and c not in busy:
+            run += 1
+            continue
+        if run > best[0]:
+            best = (run, c - run)
+        run = 0
+    if best[0] >= 5:
+        kx = x0 + (best[1] + best[0] / 2) * PITCH
+        ky = Y0 + 4 * PITCH + CELL
+        o.append(f"""<g transform="translate({kx:.0f} {ky}) scale(.5) translate(-866 -110)"><g class="king">
+<g fill="#4f8a6d" stroke="#3b2a1a" stroke-width="3"><path d="M840 110 q22 -52 44 0 Z"/><path d="M892 110 q18 -38 36 0 Z"/>
+<path d="M800 110 q-6 -58 22 -70 q30 -8 30 16 q-2 14 -22 14 q10 8 6 40 Z"/></g>
+<circle cx="832" cy="56" r="4.5" fill="#fff" stroke="#3b2a1a" stroke-width="2"/><circle cx="833" cy="56" r="1.8" fill="#3b2a1a"/>
+<path d="M836 70 l5 7 l4 -7" fill="#fff" stroke="#3b2a1a" stroke-width="1.6"/></g>
+<path d="M786 112 q8 -7 16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0" fill="none" stroke="#3b2a1a" stroke-width="2.4"/></g>""")
 
     # legend
     lx, ly = x0 + grid_w - 5 * PITCH - 62, Y0 + 7 * PITCH + 12
@@ -183,6 +218,18 @@ def main():
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:
         f.write(build(days, total))
     print(f"{USER}: {len(days)} days, {total} contributions -> {OUT}")
+
+    # the bounty on the wanted poster follows the logbook
+    tpl = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "wanted.svg")
+    if os.path.exists(tpl):
+        bounty = BASE_BOUNTY + total * BERRIES_PER_CONTRIBUTION
+        with open(tpl, encoding="utf-8") as f:
+            poster, n = re.subn(r"\u0e3f [\d,]+-", f"\u0e3f {bounty:,}-", f.read(), count=1)
+        if n:
+            dest = os.path.join(os.path.dirname(OUT) or ".", "wanted.svg")
+            with open(dest, "w", encoding="utf-8", newline="\n") as f:
+                f.write(poster)
+            print(f"bounty: {bounty:,} berries -> {dest}")
 
 
 if __name__ == "__main__":

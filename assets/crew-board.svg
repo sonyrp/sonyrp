@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<style>text{font-family:Georgia,'Times New Roman',serif}.mono{font-family:Consolas,'Courier New',monospace}
+.sw{animation:sw 5s ease-in-out infinite;transform-origin:84px 6px}
+@keyframes sw{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+.b{animation:bl 3s ease-in-out infinite}
+@keyframes bl{0%,100%{fill:#a12a1e}50%{fill:#e63946}}
+</style>
+<defs><clipPath id="frame"><rect width="1200" height="700" rx="14"/></clipPath></defs>
+<g clip-path="url(#frame)"><rect width="1200" height="700" fill="#7a4f2a"/><path d="M0 70 H1200" stroke="#4a2f16" stroke-width="3"/><path d="M0 140 H1200" stroke="#4a2f16" stroke-width="3"/><path d="M0 210 H1200" stroke="#4a2f16" stroke-width="3"/><path d="M0 280 H1200" stroke="#4a2f16" stroke-width="3"/><path d="M0 350 H1200" stroke="#4a2f16" stroke-width="3"/><path d="M0 420 H1200" stroke="#4a2f16" stroke-width="3"/><path d="M0 490 H1200" stroke="#4a2f16" stroke-width="3"/><path d="M0 560 H1200" stroke="#4a2f16" stroke-width="3"/><path d="M0 630 H1200" stroke="#4a2f16" stroke-width="3"/><ellipse cx="703" cy="35" rx="10" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/><ellipse cx="848" cy="105" rx="8" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/><ellipse cx="188" cy="175" rx="16" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/><ellipse cx="232" cy="245" rx="13" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/><ellipse cx="158" cy="315" rx="16" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/><ellipse cx="479" cy="385" rx="8" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/><ellipse cx="216" cy="455" rx="14" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/><ellipse cx="896" cy="525" rx="9" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/><ellipse cx="532" cy="595" rx="9" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/><ellipse cx="909" cy="665" rx="8" ry="5" fill="none" stroke="#5f3d1c" stroke-width="2" opacity=".7"/></g>
+<rect x="1.5" y="1.5" width="1197" height="697" rx="13" fill="none" stroke="#3b2a1a" stroke-width="3"/>
+<path d="M330 18 h540 l-14 22 l14 22 h-540 l14 -22 Z" fill="#f2c14e" stroke="#3b2a1a" stroke-width="2.5"/>
+<text x="600" y="48" text-anchor="middle" font-size="24" font-weight="700" fill="#3b2a1a" letter-spacing="4">THE CREW · WANTED BOARD</text>
+<g transform="translate(36 84) rotate(1.6 84 0)"><g class="sw" style="animation-delay:-0.6s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#3776ab" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">Py</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">Python</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Swordsman”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 1,500,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(226 84) rotate(-1.4 84 0)"><g class="sw" style="animation-delay:-3.1s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#ee4c2c" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">Pt</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">PyTorch</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“Fire Fist”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 860,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(416 84) rotate(2.2 84 0)"><g class="sw" style="animation-delay:-2.9s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#ff6f00" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">TF</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">TensorFlow</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“Tensor Blade”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 720,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(606 84) rotate(-0.5 84 0)"><g class="sw" style="animation-delay:-4.9s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#f7931e" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#3b2a1a" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">sk</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">scikit-learn</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Sniper”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 610,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(796 84) rotate(-2.3 84 0)"><g class="sw" style="animation-delay:-4.3s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#e16737" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">ML</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">MATLAB</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“Old Guard”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 330,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(986 84) rotate(-1.1 84 0)"><g class="sw" style="animation-delay:-0.7s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#008080" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="83" text-anchor="middle" font-size="19" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">TeX</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">LaTeX</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Scribe”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 250,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(36 280) rotate(-1.9 84 0)"><g class="sw" style="animation-delay:-1.5s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#009688" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="83" text-anchor="middle" font-size="19" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">API</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">FastAPI</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“Speedster”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 540,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(226 280) rotate(1.6 84 0)"><g class="sw" style="animation-delay:-0.9s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#3b2a1a" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">Fk</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">Flask</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Alchemist”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 420,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(416 280) rotate(0.4 84 0)"><g class="sw" style="animation-delay:-3.2s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#2496ed" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">Dk</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">Docker</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Shipwright”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 930,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(606 280) rotate(-0.6 84 0)"><g class="sw" style="animation-delay:-2.7s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#f2c14e" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#3b2a1a" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">Lx</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">Linux</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Helmsman”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 1,100,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(796 280) rotate(-2.2 84 0)"><g class="sw" style="animation-delay:-0.3s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#f05032" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="83" text-anchor="middle" font-size="19" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">Git</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">Git</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Chronicler”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 1,200,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(986 280) rotate(-1.5 84 0)"><g class="sw" style="animation-delay:-3.4s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#6e5494" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">GA</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">GitHub Actions</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“Cabin Crew”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 480,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(36 476) rotate(-0.4 84 0)"><g class="sw" style="animation-delay:-1.6s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#d97757" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">Cl</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">Claude</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Navigator”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 2,000,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(226 476) rotate(0.4 84 0)"><g class="sw" style="animation-delay:-2.3s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#191919" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">CC</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">Claude Code</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“First Mate”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 1,800,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(416 476) rotate(-1.0 84 0)"><g class="sw" style="animation-delay:-4.0s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#74aa9c" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="83" text-anchor="middle" font-size="19" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">GPT</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">ChatGPT</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Strategist”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 900,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(606 476) rotate(1.0 84 0)"><g class="sw" style="animation-delay:-1.2s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#ffd21e" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#3b2a1a" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">HF</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">Hugging Face</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Archaeologist”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 770,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(796 476) rotate(0.4 84 0)"><g class="sw" style="animation-delay:-2.6s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#1c3c3c" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="84" text-anchor="middle" font-size="24" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">LC</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">LangChain</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“Chain Master”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 650,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g><g transform="translate(986 476) rotate(1.9 84 0)"><g class="sw" style="animation-delay:-3.6s">
+<rect x="3" y="4" width="168" height="182" fill="#000" opacity=".3"/>
+<rect width="168" height="182" rx="3" fill="#f4e3b5" stroke="#3b2a1a" stroke-width="1.5"/>
+<text x="84" y="31" text-anchor="middle" font-size="25" font-weight="700" fill="#3b2a1a" textLength="128" lengthAdjust="spacingAndGlyphs">WANTED</text>
+<rect x="24" y="38" width="120" height="76" fill="#e2cf9e" stroke="#3b2a1a" stroke-width="2"/>
+<circle cx="84" cy="76" r="30" fill="#ea4b71" stroke="#3b2a1a" stroke-width="2"/>
+<text x="84" y="83" text-anchor="middle" font-size="19" font-weight="900" fill="#fff" style="font-family:'Arial Black',Impact,'Segoe UI Black','Helvetica Neue',Arial,sans-serif">n8n</text>
+<text x="84" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#3b2a1a">n8n</text>
+<text x="84" y="147" text-anchor="middle" font-size="11" font-style="italic" fill="#6b4a22">“The Automaton”</text>
+<text class="b" x="84" y="169" text-anchor="middle" font-size="14" font-weight="700" fill="#a12a1e">฿ 580,000,000-</text>
+<circle cx="84" cy="6" r="4.5" fill="#8a8a8a" stroke="#2b2b2b" stroke-width="1.5"/></g></g>
+<text x="600" y="684" text-anchor="middle" font-size="15" font-style="italic" font-weight="700" fill="#ffe9a8">also aboard: Anaconda · Jupyter · VS Code · Power Automate</text>
+</svg>
